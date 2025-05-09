@@ -39,8 +39,39 @@ namespace WindowsFormsApp1
                 this.Location=new Point(this.Location.X + e.X -mPoint.X,this.Location.Y+e.Y-mPoint.Y);
             }
         }
+
+        #endregion
+        #region 右上角控件
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized; //最小化
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Maximized) //若最大化
+            {
+                this.WindowState = FormWindowState.Normal; //则正常化
+            }
+            else if (this.WindowState == FormWindowState.Normal) //若正常化
+            {
+                this.WindowState = FormWindowState.Maximized; //则最大化
+            }
+        }
         #endregion
 
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
 
+        private void panel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
