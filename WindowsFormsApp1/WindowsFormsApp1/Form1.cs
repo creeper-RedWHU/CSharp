@@ -7,14 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using WindowsFormsApp1.Form1Tea.zy;
 namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
+        public zyovw ovw;//创建用户控件一变量
+        public zyinput zyinput;
+        public zyrecycle zyrecycle;
         public Form1()
         {
             InitializeComponent();
+            ovw = new zyovw();//实例化ovw
+            zyrecycle = new zyrecycle();
+            zyinput = new zyinput();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -72,6 +78,33 @@ namespace WindowsFormsApp1
         private void panel1_Paint_1(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            ovw.Show();
+            panel3.Controls.Clear();
+            panel3.Controls.Add(ovw);
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            panel3.Controls.Clear();
+            zyinput.Show();
+            panel3.Controls.Add(zyinput);
+        }
+
+        private void button23_Click(object sender, EventArgs e)
+        {
+            panel3.Controls.Clear();
+            zyrecycle.Show();
+            panel3.Controls.Add(zyrecycle);
         }
     }
 }
