@@ -40,12 +40,12 @@
             this.button1.Text = "this is input";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // input
+            // zyinput
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.button1);
-            this.Name = "input";
+            this.Name = "zyinput";
             this.Size = new System.Drawing.Size(871, 750);
             this.ResumeLayout(false);
 

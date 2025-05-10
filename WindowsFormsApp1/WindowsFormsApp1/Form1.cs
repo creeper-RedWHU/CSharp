@@ -89,6 +89,7 @@ namespace WindowsFormsApp1
 
         #endregion
         #region 右上角控件
+        
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
