@@ -7,20 +7,61 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.Form1Tea._2zygl;
+using WindowsFormsApp1.Form1Tea._3test;
+using WindowsFormsApp1.Form1Tea._4test;
+using WindowsFormsApp1.Form1Tea._5exam;
 using WindowsFormsApp1.Form1Tea.zy;
 namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
+        #region 教师区域
         public zyovw ovw;//创建用户控件一变量
         public zyinput zyinput;
         public zyrecycle zyrecycle;
+
+        public glinput glinput;
+        public glovw glovw;
+        public glrecycle glrecycle;
+
+        public tstinput tstinput;
+        public tstovw tstovw;
+        public tstrcycle tstrcycle;
+
+        public testinput testinput;
+        public testovw testovw;
+        public testrecycle testrecycle;
+
+        public examipt examipt;
+        public examovw examovw;
+        public examrecycle examrecycle;
+
+        #endregion
         public Form1()
         {
             InitializeComponent();
+            #region 实例化
             ovw = new zyovw();//实例化ovw
             zyrecycle = new zyrecycle();
             zyinput = new zyinput();
+
+            glinput = new glinput();
+            glovw = new glovw();
+            glrecycle = new glrecycle();
+
+            testovw = new testovw();
+            testinput = new testinput();
+            testrecycle= new testrecycle();
+
+            tstinput = new tstinput();
+            tstovw = new tstovw();
+            tstrcycle = new tstrcycle();
+
+            examipt = new examipt();
+            examovw = new examovw();
+            examrecycle = new examrecycle();
+            #endregion
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -105,6 +146,90 @@ namespace WindowsFormsApp1
             panel3.Controls.Clear();
             zyrecycle.Show();
             panel3.Controls.Add(zyrecycle);
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            panel3.Controls.Clear();
+            glovw.Show();
+            panel3.Controls.Add(glovw);
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            panel3.Controls.Clear();
+            glinput.Show();
+            panel3.Controls.Add(glinput);
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            panel3.Controls.Clear();
+            glrecycle.Show();
+            panel3.Controls.Add(glrecycle);
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            panel3.Controls.Clear();
+            tstovw.Show();
+            panel3.Controls.Add(tstovw);
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            panel3.Controls.Clear();
+            tstinput.Show();
+            panel3.Controls.Add(tstinput);
+        }
+
+        private void button24_Click(object sender, EventArgs e)
+        {
+            panel3.Controls.Clear();
+            tstrcycle.Show();
+            panel3.Controls.Add(tstrcycle);
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            panel3.Controls.Clear();
+            testovw.Show();
+            panel3.Controls.Add(testovw);
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            panel3.Controls.Clear();
+            testinput.Show();
+            panel3.Controls.Add(testinput);
+        }
+
+        private void button25_Click(object sender, EventArgs e)
+        {
+            panel3.Controls.Clear();
+            testrecycle.Show();
+            panel3.Controls.Add(testrecycle);
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            panel3.Controls.Clear();
+            examovw.Show();
+            panel3.Controls.Add(examovw);
+        }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+            panel3.Controls.Clear();
+            examipt.Show();
+            panel3.Controls.Add(examipt);
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+            panel3.Controls.Clear();
+            examrecycle.Show();
+            panel3.Controls.Add(examrecycle);
         }
     }
 }

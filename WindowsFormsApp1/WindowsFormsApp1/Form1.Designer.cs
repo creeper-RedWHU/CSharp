@@ -178,6 +178,7 @@
             this.button25.TabIndex = 22;
             this.button25.Text = "回收站";
             this.button25.UseVisualStyleBackColor = true;
+            this.button25.Click += new System.EventHandler(this.button25_Click);
             // 
             // button24
             // 
@@ -188,6 +189,7 @@
             this.button24.TabIndex = 21;
             this.button24.Text = "回收站";
             this.button24.UseVisualStyleBackColor = true;
+            this.button24.Click += new System.EventHandler(this.button24_Click);
             // 
             // button23
             // 
@@ -209,6 +211,7 @@
             this.button22.TabIndex = 13;
             this.button22.Text = "回收站";
             this.button22.UseVisualStyleBackColor = true;
+            this.button22.Click += new System.EventHandler(this.button22_Click);
             // 
             // button21
             // 
@@ -219,6 +222,7 @@
             this.button21.TabIndex = 20;
             this.button21.Text = "组织考试";
             this.button21.UseVisualStyleBackColor = true;
+            this.button21.Click += new System.EventHandler(this.button21_Click);
             // 
             // button20
             // 
@@ -229,6 +233,7 @@
             this.button20.TabIndex = 19;
             this.button20.Text = "考试概览";
             this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
             // button19
             // 
@@ -248,6 +253,7 @@
             this.button18.TabIndex = 18;
             this.button18.Text = "试卷命题";
             this.button18.UseVisualStyleBackColor = true;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
             // 
             // button17
             // 
@@ -258,6 +264,7 @@
             this.button17.TabIndex = 17;
             this.button17.Text = "试卷概览";
             this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
             // button16
             // 
@@ -277,6 +284,7 @@
             this.button15.TabIndex = 15;
             this.button15.Text = "录入题目";
             this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // button14
             // 
@@ -287,6 +295,7 @@
             this.button14.TabIndex = 14;
             this.button14.Text = "题目概览";
             this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // button13
             // 
@@ -306,6 +315,7 @@
             this.button12.TabIndex = 12;
             this.button12.Text = "回收站";
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // button11
             // 
@@ -316,6 +326,7 @@
             this.button11.TabIndex = 11;
             this.button11.Text = "作业布置";
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button10
             // 
@@ -326,6 +337,7 @@
             this.button10.TabIndex = 10;
             this.button10.Text = "作业概览";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button9
             // 
