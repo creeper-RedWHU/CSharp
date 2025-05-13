@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.DirectoryServices.ActiveDirectory;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -28,5 +29,34 @@ namespace WindowsFormsApp1.Form1Tea.zy
         {
 
         }
+        #region 跳转界面
+        //父窗体panel控件跳转到编辑界面
+        public event Action<string> GoToEditPage;
+
+        #endregion
+
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.Columns[e.ColumnIndex].Name == "Edit")
+            {
+                MessageBox.Show("行: " + e.RowIndex.ToString() + ", 列: " + e.ColumnIndex.ToString() + "; 被点击了");
+                string x = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                GoToEditPage?.Invoke(x);
+
+            }
+            else if (dataGridView1.Columns[e.ColumnIndex].Name == "Delete")
+            {
+                MessageBox.Show("成功删除:第" + dataGridView1.Rows[e.RowIndex].Cells[0].Value + "题");
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.Form1Tea._1zy;
 using WindowsFormsApp1.Form1Tea._2zygl;
 using WindowsFormsApp1.Form1Tea._3test;
 using WindowsFormsApp1.Form1Tea._4test;
@@ -20,6 +21,7 @@ namespace WindowsFormsApp1
         public zyovw ovw;//创建用户控件一变量
         public zyinput zyinput;
         public zyrecycle zyrecycle;
+        public zyedit zyedit;
 
         public glinput glinput;
         public glovw glovw;
@@ -38,11 +40,15 @@ namespace WindowsFormsApp1
         public examrecycle examrecycle;
 
         #endregion
+
+        
+
         public Form1()
         {
             InitializeComponent();
             #region 实例化
             ovw = new zyovw();//实例化ovw
+            ovw.GoToEditPage +=ovw_GoToEditPage;//绑定事件
             zyrecycle = new zyrecycle();
             zyinput = new zyinput();
 
@@ -231,6 +237,14 @@ namespace WindowsFormsApp1
             panel3.Controls.Clear();
             examrecycle.Show();
             panel3.Controls.Add(examrecycle);
+        }
+
+        public void ovw_GoToEditPage(string t)
+        {
+            zyedit = new zyedit(t);
+            panel3.Controls.Clear();
+            zyedit.Show();
+            panel3.Controls.Add(zyedit);
         }
     }
 }

@@ -118,6 +118,12 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1Tea\1zy\tmmodel.cs" />
+    <Compile Include="Form1Tea\1zy\zyedit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form1Tea\1zy\zyedit.Designer.cs">
+      <DependentUpon>zyedit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1Tea\1zy\zyinput.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -212,6 +218,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1Tea\1zy\zyedit.resx">
+      <DependentUpon>zyedit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1Tea\1zy\zyinput.resx">
       <DependentUpon>zyinput.cs</DependentUpon>
