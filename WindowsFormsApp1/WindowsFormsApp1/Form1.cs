@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.Form1Tea;
 using WindowsFormsApp1.Form1Tea._1zy;
 using WindowsFormsApp1.Form1Tea._2zygl;
 using WindowsFormsApp1.Form1Tea._3test;
@@ -40,8 +41,10 @@ namespace WindowsFormsApp1
         public examrecycle examrecycle;
 
         #endregion
+        #region 公共变量
+        public string TeacherName;
+        #endregion
 
-        
 
         public Form1()
         {
@@ -67,6 +70,8 @@ namespace WindowsFormsApp1
             examipt = new examipt();
             examovw = new examovw();
             examrecycle = new examrecycle();
+
+            TeacherName = "";
             #endregion
         }
 
@@ -245,6 +250,19 @@ namespace WindowsFormsApp1
             panel3.Controls.Clear();
             zyedit.Show();
             panel3.Controls.Add(zyedit);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            home home = new home(TeacherName);
+            panel3.Controls.Clear();
+
+            
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
