@@ -256,7 +256,9 @@ namespace WindowsFormsApp1
         {
             home home = new home(TeacherName);
             panel3.Controls.Clear();
-
+            panel2.Hide();
+            home.Show();
+            panel3.Controls.Add(home);
             
         }
 

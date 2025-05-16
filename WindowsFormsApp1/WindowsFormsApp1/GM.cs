@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp1.Form1Tea
+namespace WindowsFormsApp1
 {
-    public partial class home : UserControl
+    public partial class GM : Form
     {
-        public home()
+        public GM()
         {
             InitializeComponent();
-        }
-        public home(string TeaName)
-        {
-            InitializeComponent();
-            label1.Text = TeaName + "老师，您好！";
         }
     }
 }
