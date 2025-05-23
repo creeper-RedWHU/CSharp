@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SQLite;
 using System.IO;
@@ -34,14 +35,14 @@ namespace WindowsFormsApp1
                     // 创建用户表
                     using (SQLiteCommand command = new SQLiteCommand(connection))
                     {
-                        command.CommandText = @"
-                            CREATE TABLE IF NOT EXISTS Users (
-                                ID INTEGER PRIMARY KEY AUTOINCREMENT,
-                                Username TEXT NOT NULL UNIQUE,
-                                Password TEXT NOT NULL,
-                                Role TEXT NOT NULL
-                            );";
-                        command.ExecuteNonQuery();
+                        string filename = "DataBase.txt";
+                        string[] line = File.ReadAllLines(filename);
+                        for (int i = 0; i < line.Length; i++) {
+                        {
+                            command.CommandText = line[i];
+                            command.ExecuteNonQuery();
+                        }
+                        
                     }
 
                     // 如果是新数据库，插入默认用户
