@@ -148,6 +148,12 @@
     <Compile Include="Form1Tea\2zygl\glinput.Designer.cs">
       <DependentUpon>glinput.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form1Tea\2zygl\glinputSec.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form1Tea\2zygl\glinputSec.Designer.cs">
+      <DependentUpon>glinputSec.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1Tea\2zygl\glovw.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -160,29 +166,17 @@
     <Compile Include="Form1Tea\2zygl\glrecycle.Designer.cs">
       <DependentUpon>glrecycle.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1Tea\3test\tstinput.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Form1Tea\3test\tstinput.Designer.cs">
-      <DependentUpon>tstinput.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form1Tea\3test\tstovw.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Form1Tea\3test\tstovw.Designer.cs">
-      <DependentUpon>tstovw.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form1Tea\3test\tstrcycle.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Form1Tea\3test\tstrcycle.Designer.cs">
-      <DependentUpon>tstrcycle.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form1Tea\4test\testinput.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Form1Tea\4test\testinput.Designer.cs">
       <DependentUpon>testinput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1Tea\4test\testinputSec.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form1Tea\4test\testinputSec.Designer.cs">
+      <DependentUpon>testinputSec.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1Tea\4test\testovw.cs">
       <SubType>UserControl</SubType>
@@ -246,23 +240,20 @@
     <EmbeddedResource Include="Form1Tea\2zygl\glinput.resx">
       <DependentUpon>glinput.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form1Tea\2zygl\glinputSec.resx">
+      <DependentUpon>glinputSec.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1Tea\2zygl\glovw.resx">
       <DependentUpon>glovw.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1Tea\2zygl\glrecycle.resx">
       <DependentUpon>glrecycle.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1Tea\3test\tstinput.resx">
-      <DependentUpon>tstinput.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1Tea\3test\tstovw.resx">
-      <DependentUpon>tstovw.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1Tea\3test\tstrcycle.resx">
-      <DependentUpon>tstrcycle.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form1Tea\4test\testinput.resx">
       <DependentUpon>testinput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1Tea\4test\testinputSec.resx">
+      <DependentUpon>testinputSec.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1Tea\4test\testovw.resx">
       <DependentUpon>testovw.cs</DependentUpon>

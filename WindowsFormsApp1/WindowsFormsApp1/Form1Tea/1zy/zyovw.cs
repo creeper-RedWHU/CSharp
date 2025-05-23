@@ -57,6 +57,9 @@ namespace WindowsFormsApp1.Form1Tea.zy
 
         }
 
-        
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

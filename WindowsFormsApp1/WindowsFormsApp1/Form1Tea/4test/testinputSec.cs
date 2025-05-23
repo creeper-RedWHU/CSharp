@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp1.Form1Tea._3test
+namespace WindowsFormsApp1.Form1Tea._4test
 {
-    public partial class tstovw : UserControl
+    public partial class testinputSec : UserControl
     {
-        public tstovw()
+        public testinputSec()
         {
             InitializeComponent();
         }

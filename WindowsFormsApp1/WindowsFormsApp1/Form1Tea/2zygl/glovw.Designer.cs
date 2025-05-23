@@ -29,15 +29,16 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.customSearchBar2 = new WindowsFormsApp1.CustomSearchBar();
             this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.customSearchBar2 = new WindowsFormsApp1.CustomSearchBar();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -45,6 +46,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label6);
@@ -56,10 +58,19 @@
             this.panel2.Size = new System.Drawing.Size(871, 44);
             this.panel2.TabIndex = 3;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(227, 15);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(67, 15);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "起止时间";
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(726, 15);
+            this.label7.Location = new System.Drawing.Point(763, 15);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(37, 15);
             this.label7.TabIndex = 11;
@@ -68,7 +79,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(475, 15);
+            this.label6.Location = new System.Drawing.Point(574, 15);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(105, 15);
             this.label6.TabIndex = 4;
@@ -102,14 +113,6 @@
             this.panel1.Size = new System.Drawing.Size(871, 100);
             this.panel1.TabIndex = 2;
             // 
-            // customSearchBar2
-            // 
-            this.customSearchBar2.Location = new System.Drawing.Point(653, 36);
-            this.customSearchBar2.Name = "customSearchBar2";
-            this.customSearchBar2.Size = new System.Drawing.Size(147, 25);
-            this.customSearchBar2.TabIndex = 2;
-            this.customSearchBar2.WaterText = " 题目标题的索引词  ";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -120,15 +123,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "所有作业";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(313, 15);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 15);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "起止时间";
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
@@ -136,6 +130,7 @@
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.ColumnHeadersVisible = false;
@@ -148,6 +143,24 @@
             this.dataGridView1.ShowCellErrors = false;
             this.dataGridView1.Size = new System.Drawing.Size(871, 606);
             this.dataGridView1.TabIndex = 4;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // customSearchBar2
+            // 
+            this.customSearchBar2.Location = new System.Drawing.Point(653, 36);
+            this.customSearchBar2.Name = "customSearchBar2";
+            this.customSearchBar2.Size = new System.Drawing.Size(147, 25);
+            this.customSearchBar2.TabIndex = 2;
+            this.customSearchBar2.WaterText = "   标题的索引词  ";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(402, 15);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(67, 15);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "当前状态";
             // 
             // glovw
             // 
@@ -179,5 +192,6 @@
         private CustomSearchBar customSearchBar2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label5;
     }
 }

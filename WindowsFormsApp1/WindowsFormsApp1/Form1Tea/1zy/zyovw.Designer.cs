@@ -31,16 +31,16 @@ namespace WindowsFormsApp1.Form1Tea.zy
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.customSearchBar2 = new WindowsFormsApp1.CustomSearchBar();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.customSearchBar2 = new WindowsFormsApp1.CustomSearchBar();
-            this.label7 = new System.Windows.Forms.Label();
             this.Num = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,6 +48,9 @@ namespace WindowsFormsApp1.Form1Tea.zy
             this.TimeStamp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -55,6 +58,9 @@ namespace WindowsFormsApp1.Form1Tea.zy
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.radioButton3);
+            this.panel1.Controls.Add(this.radioButton2);
+            this.panel1.Controls.Add(this.radioButton1);
             this.panel1.Controls.Add(this.customSearchBar2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -62,6 +68,15 @@ namespace WindowsFormsApp1.Form1Tea.zy
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(871, 100);
             this.panel1.TabIndex = 0;
+            // 
+            // customSearchBar2
+            // 
+            this.customSearchBar2.Location = new System.Drawing.Point(653, 36);
+            this.customSearchBar2.Name = "customSearchBar2";
+            this.customSearchBar2.Size = new System.Drawing.Size(147, 25);
+            this.customSearchBar2.TabIndex = 2;
+            this.customSearchBar2.WaterText = " 题目标题的索引词  ";
+            this.customSearchBar2.TextChanged += new System.EventHandler(this.customSearchBar2_TextChanged);
             // 
             // label1
             // 
@@ -86,6 +101,15 @@ namespace WindowsFormsApp1.Form1Tea.zy
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(871, 44);
             this.panel2.TabIndex = 1;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(726, 15);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(37, 15);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "操作";
             // 
             // label6
             // 
@@ -163,24 +187,6 @@ namespace WindowsFormsApp1.Form1Tea.zy
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // customSearchBar2
-            // 
-            this.customSearchBar2.Location = new System.Drawing.Point(653, 36);
-            this.customSearchBar2.Name = "customSearchBar2";
-            this.customSearchBar2.Size = new System.Drawing.Size(147, 25);
-            this.customSearchBar2.TabIndex = 2;
-            this.customSearchBar2.WaterText = " 题目标题的索引词  ";
-            this.customSearchBar2.TextChanged += new System.EventHandler(this.customSearchBar2_TextChanged);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(726, 15);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(37, 15);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "操作";
-            // 
             // Num
             // 
             this.Num.DataPropertyName = "Num";
@@ -248,6 +254,45 @@ namespace WindowsFormsApp1.Form1Tea.zy
             this.Delete.UseColumnTextForButtonValue = true;
             this.Delete.Width = 125;
             // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.radioButton1.Checked = true;
+            this.radioButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.radioButton1.Location = new System.Drawing.Point(211, 56);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(58, 19);
+            this.radioButton1.TabIndex = 3;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "全部";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.radioButton2.Location = new System.Drawing.Point(308, 56);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(133, 19);
+            this.radioButton2.TabIndex = 4;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "仅查看考试题目";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.radioButton3.Location = new System.Drawing.Point(475, 56);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(133, 19);
+            this.radioButton3.TabIndex = 5;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "仅查看练习题目";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
             // zyovw
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -287,5 +332,8 @@ namespace WindowsFormsApp1.Form1Tea.zy
         private DataGridViewTextBoxColumn TimeStamp;
         private DataGridViewButtonColumn Edit;
         private DataGridViewButtonColumn Delete;
+        private RadioButton radioButton3;
+        private RadioButton radioButton2;
+        private RadioButton radioButton1;
     }
 }

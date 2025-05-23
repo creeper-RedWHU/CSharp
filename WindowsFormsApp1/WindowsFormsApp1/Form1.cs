@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using WindowsFormsApp1.Form1Tea;
 using WindowsFormsApp1.Form1Tea._1zy;
 using WindowsFormsApp1.Form1Tea._2zygl;
-using WindowsFormsApp1.Form1Tea._3test;
 using WindowsFormsApp1.Form1Tea._4test;
 using WindowsFormsApp1.Form1Tea._5exam;
 using WindowsFormsApp1.Form1Tea.zy;
@@ -26,14 +25,13 @@ namespace WindowsFormsApp1
 
         public glinput glinput;
         public glovw glovw;
+        public glinputSec glinputSec;
         public glrecycle glrecycle;
 
-        public tstinput tstinput;
-        public tstovw tstovw;
-        public tstrcycle tstrcycle;
 
         public testinput testinput;
         public testovw testovw;
+        public testinputSec testinputSec;
         public testrecycle testrecycle;
 
         public examipt examipt;
@@ -56,16 +54,17 @@ namespace WindowsFormsApp1
             zyinput = new zyinput();
 
             glinput = new glinput();
+            glinput.NextPage += NextPage;
+            glinputSec = new glinputSec();
             glovw = new glovw();
             glrecycle = new glrecycle();
 
             testovw = new testovw();
             testinput = new testinput();
+            testinput.NextPageTest += NextPageTest;
             testrecycle= new testrecycle();
+            testinputSec = new testinputSec();
 
-            tstinput = new tstinput();
-            tstovw = new tstovw();
-            tstrcycle = new tstrcycle();
 
             examipt = new examipt();
             examovw = new examovw();
@@ -133,6 +132,20 @@ namespace WindowsFormsApp1
 
         }
 
+        public void NextPageTest(object sender, EventArgs e)
+        {
+            testinputSec.Show();
+            panel3.Controls.Clear();
+            panel3.Controls.Add(testinputSec);
+        }
+
+        private void NextPage(object sender, EventArgs e)
+        {
+            glinputSec.Show();
+            panel3.Controls.Clear();
+            panel3.Controls.Add(glinputSec);
+        }
+
         private void button7_Click(object sender, EventArgs e)
         {
             ovw.Show();
@@ -181,26 +194,8 @@ namespace WindowsFormsApp1
             panel3.Controls.Add(glrecycle);
         }
 
-        private void button14_Click(object sender, EventArgs e)
-        {
-            panel3.Controls.Clear();
-            tstovw.Show();
-            panel3.Controls.Add(tstovw);
-        }
-
-        private void button15_Click(object sender, EventArgs e)
-        {
-            panel3.Controls.Clear();
-            tstinput.Show();
-            panel3.Controls.Add(tstinput);
-        }
-
-        private void button24_Click(object sender, EventArgs e)
-        {
-            panel3.Controls.Clear();
-            tstrcycle.Show();
-            panel3.Controls.Add(tstrcycle);
-        }
+        
+        
 
         private void button17_Click(object sender, EventArgs e)
         {

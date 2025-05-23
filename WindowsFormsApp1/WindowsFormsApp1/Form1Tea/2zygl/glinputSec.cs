@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp1.Form1Tea._3test
+namespace WindowsFormsApp1.Form1Tea._2zygl
 {
-    public partial class tstrcycle : UserControl
+    public partial class glinputSec : UserControl
     {
-        public tstrcycle()
+        public glinputSec()
         {
             InitializeComponent();
         }

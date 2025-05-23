@@ -3,27 +3,95 @@
   "WorkspaceRootPath": "E:\\pr\\CSharp\\WindowsFormsApp1\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|e:\\pr\\csharp\\windowsformsapp1\\windowsformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|E:\\pr\\CSharp\\WindowsFormsApp1\\windowsformsapp1\\form1tea\\4test\\testinputsec.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form1tea\\4test\\testinputsec.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|E:\\pr\\CSharp\\WindowsFormsApp1\\windowsformsapp1\\form1tea\\4test\\testinputsec.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form1tea\\4test\\testinputsec.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|E:\\pr\\CSharp\\WindowsFormsApp1\\windowsformsapp1\\form1tea\\4test\\testinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form1tea\\4test\\testinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|E:\\pr\\CSharp\\WindowsFormsApp1\\windowsformsapp1\\form1tea\\4test\\testovw.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form1tea\\4test\\testovw.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|E:\\pr\\CSharp\\WindowsFormsApp1\\windowsformsapp1\\form1tea\\4test\\testrecycle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form1tea\\4test\\testrecycle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|E:\\pr\\CSharp\\WindowsFormsApp1\\windowsformsapp1\\form1tea\\5exam\\examrecycle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form1tea\\5exam\\examrecycle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|E:\\pr\\CSharp\\WindowsFormsApp1\\windowsformsapp1\\form1tea\\2zygl\\glrecycle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form1tea\\2zygl\\glrecycle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|E:\\pr\\CSharp\\WindowsFormsApp1\\windowsformsapp1\\form1tea\\1zy\\zyovw.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form1tea\\1zy\\zyovw.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|E:\\pr\\CSharp\\WindowsFormsApp1\\windowsformsapp1\\form1tea\\1zy\\zyedit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form1tea\\1zy\\zyedit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|E:\\pr\\CSharp\\WindowsFormsApp1\\windowsformsapp1\\form1tea\\1zy\\zyinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form1tea\\1zy\\zyinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|E:\\pr\\CSharp\\WindowsFormsApp1\\windowsformsapp1\\form1tea\\1zy\\zyovw.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form1tea\\1zy\\zyovw.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|E:\\pr\\CSharp\\WindowsFormsApp1\\windowsformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|E:\\pr\\CSharp\\WindowsFormsApp1\\windowsformsapp1\\form1tea\\4test\\testinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form1tea\\4test\\testinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|E:\\pr\\CSharp\\WindowsFormsApp1\\windowsformsapp1\\form1tea\\2zygl\\glinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form1tea\\2zygl\\glinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|E:\\pr\\CSharp\\WindowsFormsApp1\\windowsformsapp1\\form1tea\\2zygl\\glinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form1tea\\2zygl\\glinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|E:\\pr\\CSharp\\WindowsFormsApp1\\windowsformsapp1\\form1tea\\2zygl\\glinputsec.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form1tea\\2zygl\\glinputsec.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|E:\\pr\\CSharp\\WindowsFormsApp1\\windowsformsapp1\\form1tea\\2zygl\\glovw.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form1tea\\2zygl\\glovw.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|e:\\pr\\csharp\\windowsformsapp1\\windowsformsapp1\\form1tea\\1zy\\zyovw.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form1tea\\1zy\\zyovw.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|E:\\pr\\CSharp\\WindowsFormsApp1\\windowsformsapp1\\form1tea\\2zygl\\glovw.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form1tea\\2zygl\\glovw.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|E:\\pr\\CSharp\\WindowsFormsApp1\\windowsformsapp1\\form1tea\\1zy\\zyrecycle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form1tea\\1zy\\zyrecycle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|E:\\pr\\CSharp\\WindowsFormsApp1\\windowsformsapp1\\form1tea\\1zy\\zyrecycle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form1tea\\1zy\\zyrecycle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|E:\\pr\\CSharp\\WindowsFormsApp1\\windowsformsapp1\\form1tea\\1zy\\zyrecycle.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form1tea\\1zy\\zyrecycle.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|e:\\pr\\csharp\\windowsformsapp1\\windowsformsapp1\\form1tea\\6home\\home.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|E:\\pr\\CSharp\\WindowsFormsApp1\\windowsformsapp1\\form1tea\\1zy\\zyrecycle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form1tea\\1zy\\zyrecycle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|E:\\pr\\CSharp\\WindowsFormsApp1\\windowsformsapp1\\form1tea\\6home\\home.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form1tea\\6home\\home.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -31,20 +99,8 @@
       "RelativeMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form1tea\\6home\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|e:\\pr\\csharp\\windowsformsapp1\\windowsformsapp1\\form1tea\\6home\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|E:\\pr\\CSharp\\WindowsFormsApp1\\windowsformsapp1\\form1tea\\6home\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form1tea\\6home\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|e:\\pr\\csharp\\windowsformsapp1\\windowsformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|E:\\pr\\CSharp\\WindowsFormsApp1\\windowsformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|E:\\pr\\CSharp\\WindowsFormsApp1\\windowsformsapp1\\form1tea\\1zy\\zyovw.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form1tea\\1zy\\zyovw.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|E:\\pr\\CSharp\\WindowsFormsApp1\\windowsformsapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -53,10 +109,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|E:\\pr\\CSharp\\WindowsFormsApp1\\windowsformsapp1\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|E:\\pr\\CSharp\\WindowsFormsApp1\\windowsformsapp1\\form1tea\\2zygl\\glinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|solutionrelative:windowsformsapp1\\form1tea\\2zygl\\glinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1BE55413-FF65-4E88-8C4B-077C321C0591}|WindowsFormsApp1\\WindowsFormsApp1.csproj|E:\\pr\\CSharp\\WindowsFormsApp1\\windowsformsapp1\\customsearchbar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -103,118 +155,62 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "zyovw.cs",
-              "DocumentMoniker": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\1zy\\zyovw.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form1Tea\\1zy\\zyovw.cs",
-              "ToolTip": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\1zy\\zyovw.cs",
-              "RelativeToolTip": "WindowsFormsApp1\\Form1Tea\\1zy\\zyovw.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAiwCYAAAAlAAAAAAAAAA==",
+              "Title": "testinputSec.Designer.cs",
+              "DocumentMoniker": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\4test\\testinputSec.Designer.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form1Tea\\4test\\testinputSec.Designer.cs",
+              "ToolTip": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\4test\\testinputSec.Designer.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\Form1Tea\\4test\\testinputSec.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T08:03:38.831Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "zyrecycle.cs [\u8BBE\u8BA1]",
-              "DocumentMoniker": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\1zy\\zyrecycle.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form1Tea\\1zy\\zyrecycle.cs",
-              "ToolTip": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\1zy\\zyrecycle.cs [\u8BBE\u8BA1]",
-              "RelativeToolTip": "WindowsFormsApp1\\Form1Tea\\1zy\\zyrecycle.cs [\u8BBE\u8BA1]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-10T07:35:00.034Z",
-              "EditorCaption": " [\u8BBE\u8BA1]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "zyrecycle.cs",
-              "DocumentMoniker": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\1zy\\zyrecycle.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form1Tea\\1zy\\zyrecycle.cs",
-              "ToolTip": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\1zy\\zyrecycle.cs",
-              "RelativeToolTip": "WindowsFormsApp1\\Form1Tea\\1zy\\zyrecycle.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAywBYAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T06:17:40.056Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "zyrecycle.Designer.cs",
-              "DocumentMoniker": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\1zy\\zyrecycle.Designer.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form1Tea\\1zy\\zyrecycle.Designer.cs",
-              "ToolTip": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\1zy\\zyrecycle.Designer.cs",
-              "RelativeToolTip": "WindowsFormsApp1\\Form1Tea\\1zy\\zyrecycle.Designer.cs",
-              "ViewState": "AgIAABUBAAAAAAAAAAAywAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T06:18:00.335Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "home.cs",
-              "DocumentMoniker": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\home.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form1Tea\\home.cs",
-              "ToolTip": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\home.cs",
-              "RelativeToolTip": "WindowsFormsApp1\\Form1Tea\\home.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAxwBoAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T07:54:55.198Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "glovw.cs [\u8BBE\u8BA1]",
-              "DocumentMoniker": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\2zygl\\glovw.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form1Tea\\2zygl\\glovw.cs",
-              "ToolTip": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\2zygl\\glovw.cs [\u8BBE\u8BA1]",
-              "RelativeToolTip": "WindowsFormsApp1\\Form1Tea\\2zygl\\glovw.cs [\u8BBE\u8BA1]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T07:44:51.172Z",
-              "EditorCaption": " [\u8BBE\u8BA1]"
+              "WhenOpened": "2025-05-16T11:15:34.004Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "home.Designer.cs",
-              "DocumentMoniker": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\6home\\home.Designer.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form1Tea\\6home\\home.Designer.cs",
-              "ToolTip": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\6home\\home.Designer.cs",
-              "RelativeToolTip": "WindowsFormsApp1\\Form1Tea\\6home\\home.Designer.cs",
-              "ViewState": "AgIAAIIAAAAAAAAAAIA0wAMBAAA/AAAAAAAAAA==",
+              "Title": "testrecycle.cs [\u8BBE\u8BA1]",
+              "DocumentMoniker": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\4test\\testrecycle.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form1Tea\\4test\\testrecycle.cs",
+              "ToolTip": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\4test\\testrecycle.cs [\u8BBE\u8BA1]",
+              "RelativeToolTip": "WindowsFormsApp1\\Form1Tea\\4test\\testrecycle.cs [\u8BBE\u8BA1]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T07:58:53.034Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "home.cs [\u8BBE\u8BA1]",
-              "DocumentMoniker": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\6home\\home.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form1Tea\\6home\\home.cs",
-              "ToolTip": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\6home\\home.cs [\u8BBE\u8BA1]",
-              "RelativeToolTip": "WindowsFormsApp1\\Form1Tea\\6home\\home.cs [\u8BBE\u8BA1]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T07:46:43.098Z",
-              "EditorCaption": " [\u8BBE\u8BA1]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Program.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp1\\Program.cs",
-              "ToolTip": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Program.cs",
-              "RelativeToolTip": "WindowsFormsApp1\\Program.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAywA8AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T13:16:18.744Z"
+              "WhenOpened": "2025-05-16T11:14:13.444Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "zyovw.cs [\u8BBE\u8BA1]",
+              "DocumentMoniker": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\1zy\\zyovw.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form1Tea\\1zy\\zyovw.cs",
+              "ToolTip": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\1zy\\zyovw.cs [\u8BBE\u8BA1]",
+              "RelativeToolTip": "WindowsFormsApp1\\Form1Tea\\1zy\\zyovw.cs [\u8BBE\u8BA1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T07:46:00.43Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "testovw.cs [\u8BBE\u8BA1]",
+              "DocumentMoniker": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\4test\\testovw.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form1Tea\\4test\\testovw.cs",
+              "ToolTip": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\4test\\testovw.cs [\u8BBE\u8BA1]",
+              "RelativeToolTip": "WindowsFormsApp1\\Form1Tea\\4test\\testovw.cs [\u8BBE\u8BA1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T11:02:38.759Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "testinputSec.cs [\u8BBE\u8BA1]",
+              "DocumentMoniker": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\4test\\testinputSec.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form1Tea\\4test\\testinputSec.cs",
+              "ToolTip": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\4test\\testinputSec.cs [\u8BBE\u8BA1]",
+              "RelativeToolTip": "WindowsFormsApp1\\Form1Tea\\4test\\testinputSec.cs [\u8BBE\u8BA1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T11:02:10.394Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Form1.cs [\u8BBE\u8BA1]",
               "DocumentMoniker": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp1\\Form1.cs",
@@ -226,7 +222,237 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "examrecycle.cs [\u8BBE\u8BA1]",
+              "DocumentMoniker": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\5exam\\examrecycle.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form1Tea\\5exam\\examrecycle.cs",
+              "ToolTip": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\5exam\\examrecycle.cs [\u8BBE\u8BA1]",
+              "RelativeToolTip": "WindowsFormsApp1\\Form1Tea\\5exam\\examrecycle.cs [\u8BBE\u8BA1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T11:14:20.231Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "testinput.cs [\u8BBE\u8BA1]",
+              "DocumentMoniker": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\4test\\testinput.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form1Tea\\4test\\testinput.cs",
+              "ToolTip": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\4test\\testinput.cs [\u8BBE\u8BA1]",
+              "RelativeToolTip": "WindowsFormsApp1\\Form1Tea\\4test\\testinput.cs [\u8BBE\u8BA1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T11:01:44.994Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "zyinput.cs [\u8BBE\u8BA1]",
+              "DocumentMoniker": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\1zy\\zyinput.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form1Tea\\1zy\\zyinput.cs",
+              "ToolTip": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\1zy\\zyinput.cs [\u8BBE\u8BA1]",
+              "RelativeToolTip": "WindowsFormsApp1\\Form1Tea\\1zy\\zyinput.cs [\u8BBE\u8BA1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T08:07:43.668Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "zyovw.cs",
+              "DocumentMoniker": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\1zy\\zyovw.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form1Tea\\1zy\\zyovw.cs",
+              "ToolTip": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\1zy\\zyovw.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\Form1Tea\\1zy\\zyovw.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAEBCwDoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T08:03:38.831Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "testinput.cs",
+              "DocumentMoniker": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\4test\\testinput.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form1Tea\\4test\\testinput.cs",
+              "ToolTip": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\4test\\testinput.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\Form1Tea\\4test\\testinput.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABkAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T11:03:15.442Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "glrecycle.cs [\u8BBE\u8BA1]",
+              "DocumentMoniker": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\2zygl\\glrecycle.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form1Tea\\2zygl\\glrecycle.cs",
+              "ToolTip": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\2zygl\\glrecycle.cs [\u8BBE\u8BA1]",
+              "RelativeToolTip": "WindowsFormsApp1\\Form1Tea\\2zygl\\glrecycle.cs [\u8BBE\u8BA1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T10:48:10.988Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "zyedit.cs [\u8BBE\u8BA1]",
+              "DocumentMoniker": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\1zy\\zyedit.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form1Tea\\1zy\\zyedit.cs",
+              "ToolTip": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\1zy\\zyedit.cs [\u8BBE\u8BA1]",
+              "RelativeToolTip": "WindowsFormsApp1\\Form1Tea\\1zy\\zyedit.cs [\u8BBE\u8BA1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T10:37:25.661Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form1.cs",
+              "ToolTip": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\Form1.cs",
+              "ViewState": "AgIAAI4AAAAAAAAAAIA2wJYAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T10:59:19.527Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "glinput.cs",
+              "DocumentMoniker": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\2zygl\\glinput.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form1Tea\\2zygl\\glinput.cs",
+              "ToolTip": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\2zygl\\glinput.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\Form1Tea\\2zygl\\glinput.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAUwCEAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T08:15:34.44Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "glinput.cs [\u8BBE\u8BA1]",
+              "DocumentMoniker": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\2zygl\\glinput.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form1Tea\\2zygl\\glinput.cs",
+              "ToolTip": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\2zygl\\glinput.cs [\u8BBE\u8BA1]",
+              "RelativeToolTip": "WindowsFormsApp1\\Form1Tea\\2zygl\\glinput.cs [\u8BBE\u8BA1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T07:44:45.44Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "glinputSec.cs [\u8BBE\u8BA1]",
+              "DocumentMoniker": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\2zygl\\glinputSec.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form1Tea\\2zygl\\glinputSec.cs",
+              "ToolTip": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\2zygl\\glinputSec.cs [\u8BBE\u8BA1]",
+              "RelativeToolTip": "WindowsFormsApp1\\Form1Tea\\2zygl\\glinputSec.cs [\u8BBE\u8BA1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T10:32:24.642Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "glovw.cs [\u8BBE\u8BA1]",
+              "DocumentMoniker": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\2zygl\\glovw.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form1Tea\\2zygl\\glovw.cs",
+              "ToolTip": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\2zygl\\glovw.cs [\u8BBE\u8BA1]",
+              "RelativeToolTip": "WindowsFormsApp1\\Form1Tea\\2zygl\\glovw.cs [\u8BBE\u8BA1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T07:44:51.172Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "glovw.cs",
+              "DocumentMoniker": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\2zygl\\glovw.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form1Tea\\2zygl\\glovw.cs",
+              "ToolTip": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\2zygl\\glovw.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\Form1Tea\\2zygl\\glovw.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAzwA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T08:13:32.204Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "home.cs",
+              "DocumentMoniker": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\home.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form1Tea\\home.cs",
+              "ToolTip": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\home.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\Form1Tea\\home.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAxwBoAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T07:54:55.198Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "zyrecycle.cs",
+              "DocumentMoniker": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\1zy\\zyrecycle.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form1Tea\\1zy\\zyrecycle.cs",
+              "ToolTip": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\1zy\\zyrecycle.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\Form1Tea\\1zy\\zyrecycle.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T06:17:40.056Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "zyrecycle.Designer.cs",
+              "DocumentMoniker": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\1zy\\zyrecycle.Designer.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form1Tea\\1zy\\zyrecycle.Designer.cs",
+              "ToolTip": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\1zy\\zyrecycle.Designer.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\Form1Tea\\1zy\\zyrecycle.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T06:18:00.335Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "zyrecycle.cs [Design]",
+              "DocumentMoniker": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\1zy\\zyrecycle.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form1Tea\\1zy\\zyrecycle.cs",
+              "ToolTip": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\1zy\\zyrecycle.cs [Design]",
+              "RelativeToolTip": "WindowsFormsApp1\\Form1Tea\\1zy\\zyrecycle.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T07:35:00.034Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "home.Designer.cs",
+              "DocumentMoniker": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\6home\\home.Designer.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form1Tea\\6home\\home.Designer.cs",
+              "ToolTip": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\6home\\home.Designer.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\Form1Tea\\6home\\home.Designer.cs",
+              "ViewState": "AgIAAIIAAAAAAAAAAIA0wAMBAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T07:58:53.034Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "home.cs [\u8BBE\u8BA1]",
+              "DocumentMoniker": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\6home\\home.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form1Tea\\6home\\home.cs",
+              "ToolTip": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\6home\\home.cs [\u8BBE\u8BA1]",
+              "RelativeToolTip": "WindowsFormsApp1\\Form1Tea\\6home\\home.cs [\u8BBE\u8BA1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T07:46:43.098Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Program.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp1\\Program.cs",
+              "ToolTip": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Program.cs",
+              "RelativeToolTip": "WindowsFormsApp1\\Program.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAywA8AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T13:16:18.744Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
               "Title": "home.cs",
               "DocumentMoniker": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\6home\\home.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp1\\Form1Tea\\6home\\home.cs",
@@ -234,37 +460,11 @@
               "RelativeToolTip": "WindowsFormsApp1\\Form1Tea\\6home\\home.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAawBUAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-14T06:42:49.362Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-14T06:42:49.362Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "zyovw.cs [\u8BBE\u8BA1]",
-              "DocumentMoniker": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\1zy\\zyovw.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form1Tea\\1zy\\zyovw.cs",
-              "ToolTip": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\1zy\\zyovw.cs [\u8BBE\u8BA1]",
-              "RelativeToolTip": "WindowsFormsApp1\\Form1Tea\\1zy\\zyovw.cs [\u8BBE\u8BA1]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T07:46:00.43Z",
-              "EditorCaption": " [\u8BBE\u8BA1]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form1.cs",
-              "ToolTip": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1.cs",
-              "RelativeToolTip": "WindowsFormsApp1\\Form1.cs",
-              "ViewState": "AgIAAPkAAAAAAAAAAAAowAMBAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T07:47:50.038Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 26,
               "Title": "packages.config",
               "DocumentMoniker": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\packages.config",
               "RelativeDocumentMoniker": "WindowsFormsApp1\\packages.config",
@@ -276,18 +476,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "glinput.cs [\u8BBE\u8BA1]",
-              "DocumentMoniker": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\2zygl\\glinput.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp1\\Form1Tea\\2zygl\\glinput.cs",
-              "ToolTip": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\2zygl\\glinput.cs [\u8BBE\u8BA1]",
-              "RelativeToolTip": "WindowsFormsApp1\\Form1Tea\\2zygl\\glinput.cs [\u8BBE\u8BA1]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T07:44:45.44Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 27,
               "Title": "CustomSearchBar.cs",
               "DocumentMoniker": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\CustomSearchBar.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp1\\CustomSearchBar.cs",
@@ -299,7 +488,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 28,
               "Title": "zyinput.cs",
               "DocumentMoniker": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\1zy\\zyinput.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp1\\Form1Tea\\1zy\\zyinput.cs",
@@ -311,7 +500,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 32,
               "Title": "zyovw.Designer.cs",
               "DocumentMoniker": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\zy\\zyovw.Designer.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp1\\Form1Tea\\zy\\zyovw.Designer.cs",
@@ -323,7 +512,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 33,
               "Title": "zyovw.cs [\u8BBE\u8BA1]",
               "DocumentMoniker": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1Tea\\zy\\zyovw.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp1\\Form1Tea\\zy\\zyovw.cs",
@@ -334,7 +523,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 29,
               "Title": "App.config",
               "DocumentMoniker": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\App.config",
               "RelativeDocumentMoniker": "WindowsFormsApp1\\App.config",
@@ -347,7 +536,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 30,
               "Title": "app.manifest",
               "DocumentMoniker": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\app.manifest",
               "RelativeDocumentMoniker": "WindowsFormsApp1\\app.manifest",
@@ -359,7 +548,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 31,
               "Title": "Form1.resx",
               "DocumentMoniker": "E:\\pr\\CSharp\\WindowsFormsApp1\\WindowsFormsApp1\\Form1.resx",
               "RelativeDocumentMoniker": "WindowsFormsApp1\\Form1.resx",
