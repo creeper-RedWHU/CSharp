@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -26,9 +27,12 @@ namespace WindowsFormsApp1
         private const int HTBOTTOMRIGHT = 0x11;
         private const int RESIZE_BORDER = 5; // 调整大小的边框宽度
 
-        public Form_student()
+        private int _studentId;
+
+        public Form_student(int studentId)
         {
             InitializeComponent();
+            _studentId = studentId;
             //设置无边框的
             this.FormBorderStyle = FormBorderStyle.None;
             // 添加事件处理程序
@@ -39,6 +43,12 @@ namespace WindowsFormsApp1
             btnMaximize.Click += BtnMaximize_Click;
             btnMaximize.MouseEnter += BtnMaximize_MouseEnter;
             btnMaximize.MouseLeave += BtnMaximize_MouseLeave;
+
+            // 加载课程
+            LoadCoursesForStudent(_studentId);
+
+            // 绑定下拉框事件
+            comboBoxCourse.SelectedIndexChanged += comboBoxCourse_SelectedIndexChanged;
         }
         #region 窗口移动
         private Point mPoint;
@@ -97,7 +107,7 @@ namespace WindowsFormsApp1
 
         private void Form_student_Load(object sender, EventArgs e)
         {
-
+            LoadCoursesForStudent(_studentId);
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -121,8 +131,18 @@ namespace WindowsFormsApp1
 
         private void button5_Click(object sender, EventArgs e)
         {
-            panel3.Controls.Clear(); // 清空原有内容
-            online_work workControl = new online_work();
+            panel3.Controls.Clear();
+            int courseId = 0;
+            if (comboBoxCourse.SelectedValue != null)
+            {
+                courseId = Convert.ToInt32(comboBoxCourse.SelectedValue);
+            }
+            else
+            {
+                MessageBox.Show("请先选择课程！");
+                return;
+            }
+            online_work workControl = new online_work(courseId, _studentId); // 传递 studentId
             workControl.Dock = DockStyle.Fill;
             panel3.Controls.Add(workControl);
         }
@@ -130,7 +150,20 @@ namespace WindowsFormsApp1
         private void button4_Click(object sender, EventArgs e)
         {
             panel3.Controls.Clear(); // 清空原有内容
-            Course courseControl = new Course();
+
+            // 假设你有一个当前选中的课程ID，比如通过 comboBoxCourse.SelectedValue 获取
+            int courseId = 0;
+            if (comboBoxCourse.SelectedValue != null)
+            {
+                courseId = Convert.ToInt32(comboBoxCourse.SelectedValue);
+            }
+            else
+            {
+                MessageBox.Show("请先选择课程！");
+                return;
+            }
+
+            Course courseControl = new Course(courseId);
             courseControl.Dock = DockStyle.Fill;
             panel3.Controls.Add(courseControl);
         }
@@ -154,8 +187,19 @@ namespace WindowsFormsApp1
 
         private void button8_Click(object sender, EventArgs e)
         {
-            panel3.Controls.Clear(); // 清空原有内容
-            exam examControl = new exam();
+            panel3.Controls.Clear();
+            int courseId = 0;
+            if (comboBoxCourse.SelectedValue != null)
+            {
+                courseId = Convert.ToInt32(comboBoxCourse.SelectedValue);
+            }
+            else
+            {
+                MessageBox.Show("请先选择课程！");
+                return;
+            }
+            exam examControl = new exam(courseId, _studentId);
+            
             examControl.Dock = DockStyle.Fill;
             panel3.Controls.Add(examControl);
         }
@@ -163,15 +207,25 @@ namespace WindowsFormsApp1
         private void button9_Click(object sender, EventArgs e)
         {
             panel3.Controls.Clear(); // 清空原有内容
-            Question QuesitonControl = new Question();
-            QuesitonControl.Dock = DockStyle.Fill;
-            panel3.Controls.Add(QuesitonControl);
+            int courseId = 0;
+            if (comboBoxCourse.SelectedValue != null)
+            {
+                courseId = Convert.ToInt32(comboBoxCourse.SelectedValue);
+            }
+            else
+            {
+                MessageBox.Show("请先选择课程！");
+                return;
+            }
+            Question questionControl = new Question(courseId, _studentId); // 传递参数
+            questionControl.Dock = DockStyle.Fill;
+            panel3.Controls.Add(questionControl);
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             panel3.Controls.Clear(); // 清空原有内容
-            UserInfo InfoControl = new UserInfo();
+            UserInfo InfoControl = new UserInfo(_studentId);
             InfoControl.Dock = DockStyle.Fill;
             panel3.Controls.Add(InfoControl);
         }
@@ -240,6 +294,49 @@ namespace WindowsFormsApp1
             ((Button)sender).ForeColor = Color.Black;
         }
 
+        private void LoadCoursesForStudent(int studentId)
+        {
+            string dbPath = "StudentSystem.db";
+            string connStr = $"Data Source={dbPath};Version=3;";
+            using (SQLiteConnection conn = new SQLiteConnection(connStr))
+            {
+                conn.Open();
+                // 查询当前学生选修的所有课程，显示课程名称
+                string sql = @"SELECT c.CourseID, c.CourseName
+                       FROM Course c
+                       JOIN CourseStudent cs ON c.CourseID = cs.CourseID
+                       WHERE cs.StudentID = @studentId";
+                using (SQLiteCommand cmd = new SQLiteCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@studentId", studentId);
+                    using (SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd))
+                    {
+                        DataTable dt = new DataTable();
+                        adapter.Fill(dt);
+                        comboBoxCourse.DataSource = dt;
+                        comboBoxCourse.DisplayMember = "CourseName"; // 显示课程名称
+                        comboBoxCourse.ValueMember = "CourseID";     // 选中项的值为课程ID
+                    }
+                }
+            }
+        }
 
+        private void comboBoxCourse_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxCourse.SelectedValue != null)
+            {
+                int courseId = Convert.ToInt32(comboBoxCourse.SelectedValue);
+                // 传递 courseId 给 Course 控件
+                panel3.Controls.Clear();
+                Course courseControl = new Course(courseId);
+                courseControl.Dock = DockStyle.Fill;
+                panel3.Controls.Add(courseControl);
+            }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

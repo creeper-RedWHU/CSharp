@@ -1,4 +1,6 @@
-﻿namespace WindowsFormsApp1
+﻿using System.Windows.Forms;
+
+namespace WindowsFormsApp1
 {
     partial class due_work
     {
@@ -28,32 +30,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.dgvDueWork = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDueWork)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // dgvDueWork
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(96, 123);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(152, 18);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "正在发布中的作业";
+            this.dgvDueWork.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDueWork.Location = new System.Drawing.Point(47, 52);
+            this.dgvDueWork.Name = "dgvDueWork";
+            this.dgvDueWork.RowHeadersWidth = 62;
+            this.dgvDueWork.RowTemplate.Height = 30;
+            this.dgvDueWork.Size = new System.Drawing.Size(752, 558);
+            this.dgvDueWork.TabIndex = 0;
+            this.dgvDueWork.ReadOnly = true;
+            this.dgvDueWork.AllowUserToAddRows = false;
+            this.dgvDueWork.AllowUserToDeleteRows = false;
+            this.dgvDueWork.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             // 
             // due_work
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dgvDueWork);
             this.Name = "due_work";
             this.Size = new System.Drawing.Size(843, 650);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDueWork)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dgvDueWork;
     }
 }

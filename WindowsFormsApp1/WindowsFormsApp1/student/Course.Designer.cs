@@ -1,4 +1,6 @@
-﻿namespace WindowsFormsApp1
+﻿using System.Windows.Forms;
+
+namespace WindowsFormsApp1
 {
     partial class Course
     {
@@ -31,7 +33,6 @@
             this.TitlePanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvcourses = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TitlePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvcourses)).BeginInit();
             this.SuspendLayout();
@@ -62,8 +63,6 @@
             this.dgvcourses.AllowUserToDeleteRows = false;
             this.dgvcourses.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvcourses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvcourses.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1});
             this.dgvcourses.Location = new System.Drawing.Point(0, 102);
             this.dgvcourses.MultiSelect = false;
             this.dgvcourses.Name = "dgvcourses";
@@ -73,13 +72,10 @@
             this.dgvcourses.Size = new System.Drawing.Size(1060, 639);
             this.dgvcourses.TabIndex = 1;
             this.dgvcourses.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvcourses_CellContentClick);
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "(无）";
-            this.Column1.HeaderText = "Column1";
-            this.Column1.MinimumWidth = 8;
-            this.Column1.Name = "Column1";
+            this.dgvcourses.ReadOnly = true;
+            this.dgvcourses.AllowUserToAddRows = false;
+            this.dgvcourses.AllowUserToDeleteRows = false;
+            this.dgvcourses.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             // 
             // Course
             // 
@@ -101,6 +97,5 @@
         private System.Windows.Forms.Panel TitlePanel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvcourses;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
     }
 }

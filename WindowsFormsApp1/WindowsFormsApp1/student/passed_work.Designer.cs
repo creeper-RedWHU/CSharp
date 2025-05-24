@@ -1,4 +1,6 @@
-﻿namespace WindowsFormsApp1
+﻿using System.Windows.Forms;
+
+namespace WindowsFormsApp1
 {
     partial class passed_work
     {
@@ -28,32 +30,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.dgvPassedWork = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPassedWork)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // dgvPassedWork
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(124, 175);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 18);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "已过期的作业";
+            this.dgvPassedWork.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPassedWork.Location = new System.Drawing.Point(20, 18);
+            this.dgvPassedWork.Name = "dgvPassedWork";
+            this.dgvPassedWork.RowHeadersWidth = 62;
+            this.dgvPassedWork.RowTemplate.Height = 30;
+            this.dgvPassedWork.Size = new System.Drawing.Size(819, 616);
+            this.dgvPassedWork.TabIndex = 0;
+            this.dgvPassedWork.ReadOnly = true;
+            this.dgvPassedWork.AllowUserToAddRows = false;
+            this.dgvPassedWork.AllowUserToDeleteRows = false;
+            this.dgvPassedWork.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             // 
             // passed_work
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dgvPassedWork);
             this.Name = "passed_work";
             this.Size = new System.Drawing.Size(859, 652);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPassedWork)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dgvPassedWork;
     }
 }
