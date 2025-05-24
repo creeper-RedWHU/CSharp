@@ -29,16 +29,19 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.customSearchBar2 = new WindowsFormsApp1.CustomSearchBar();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label7 = new System.Windows.Forms.Label();
             this.Num = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,6 +56,9 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.radioButton1);
+            this.panel1.Controls.Add(this.radioButton3);
+            this.panel1.Controls.Add(this.radioButton2);
             this.panel1.Controls.Add(this.customSearchBar2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -60,6 +66,50 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(871, 100);
             this.panel1.TabIndex = 0;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(209, 36);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(58, 19);
+            this.radioButton1.TabIndex = 3;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "全部";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(456, 36);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(118, 19);
+            this.radioButton3.TabIndex = 5;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "仅查看作业题";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(312, 36);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(118, 19);
+            this.radioButton2.TabIndex = 4;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "仅查看考试题";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged_1);
+            // 
+            // customSearchBar2
+            // 
+            this.customSearchBar2.Location = new System.Drawing.Point(653, 36);
+            this.customSearchBar2.Name = "customSearchBar2";
+            this.customSearchBar2.Size = new System.Drawing.Size(147, 25);
+            this.customSearchBar2.TabIndex = 3;
+            this.customSearchBar2.WaterText = " 题目标题的索引词  ";
             // 
             // label1
             // 
@@ -70,14 +120,6 @@
             this.label1.Size = new System.Drawing.Size(131, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "回收站";
-            // 
-            // customSearchBar2
-            // 
-            this.customSearchBar2.Location = new System.Drawing.Point(653, 36);
-            this.customSearchBar2.Name = "customSearchBar2";
-            this.customSearchBar2.Size = new System.Drawing.Size(147, 25);
-            this.customSearchBar2.TabIndex = 3;
-            this.customSearchBar2.WaterText = " 题目标题的索引词  ";
             // 
             // panel2
             // 
@@ -92,6 +134,15 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(871, 44);
             this.panel2.TabIndex = 1;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(726, 15);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(37, 15);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "操作";
             // 
             // label6
             // 
@@ -168,19 +219,11 @@
             this.dataGridView1.ShowRowErrors = false;
             this.dataGridView1.Size = new System.Drawing.Size(871, 606);
             this.dataGridView1.TabIndex = 2;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(726, 15);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(37, 15);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "操作";
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Num
             // 
-            this.Num.DataPropertyName = "Num";
+            this.Num.DataPropertyName = "PID";
             this.Num.HeaderText = "Num";
             this.Num.MinimumWidth = 6;
             this.Num.Name = "Num";
@@ -189,7 +232,7 @@
             // 
             // Title
             // 
-            this.Title.DataPropertyName = "Title";
+            this.Title.DataPropertyName = "ProName";
             this.Title.HeaderText = "Title";
             this.Title.MinimumWidth = 6;
             this.Title.Name = "Title";
@@ -198,7 +241,7 @@
             // 
             // Type
             // 
-            this.Type.DataPropertyName = "Type";
+            this.Type.DataPropertyName = "IsTest";
             this.Type.HeaderText = "Type";
             this.Type.MinimumWidth = 6;
             this.Type.Name = "Type";
@@ -207,7 +250,7 @@
             // 
             // Point
             // 
-            this.Point.DataPropertyName = "Point";
+            this.Point.DataPropertyName = "ProCategory";
             this.Point.HeaderText = "Point";
             this.Point.MinimumWidth = 6;
             this.Point.Name = "Point";
@@ -216,7 +259,7 @@
             // 
             // Information
             // 
-            this.Information.DataPropertyName = "TimeStamp";
+            this.Information.DataPropertyName = "InputInformation";
             this.Information.HeaderText = "Information";
             this.Information.MinimumWidth = 6;
             this.Information.Name = "Information";
@@ -276,6 +319,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Num;
         private System.Windows.Forms.DataGridViewTextBoxColumn Title;
         private System.Windows.Forms.DataGridViewTextBoxColumn Type;

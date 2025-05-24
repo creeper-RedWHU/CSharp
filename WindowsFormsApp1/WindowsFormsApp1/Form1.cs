@@ -170,7 +170,9 @@ namespace WindowsFormsApp1
         private void button23_Click(object sender, EventArgs e)
         {
             panel3.Controls.Clear();
+            zyrecycle.UpdateData();
             zyrecycle.Show();
+            
             panel3.Controls.Add(zyrecycle);
         }
 

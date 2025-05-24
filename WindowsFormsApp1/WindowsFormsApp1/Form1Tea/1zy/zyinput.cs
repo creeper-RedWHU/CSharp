@@ -24,11 +24,11 @@ namespace WindowsFormsApp1.Form1Tea.zy
                     INSERT INTO Problem (
                         PID, ProName, ProText, ProCategory, 
                         Ans, Analysis, InputInformation, 
-                        ChangeInformation, IsTest 
+                        ChangeInformation, IsTest ,isValid
                     ) VALUES (
                         @PID, @ProName, @ProText, @ProCategory, 
                         @Ans, @Analysis, @InputInformation, 
-                        @ChangeInformation, @IsTest 
+                        @ChangeInformation, @IsTest ,@isValid
                     )";
 
             SqliteProblemConnectionManager.SafeExecute(conn =>
@@ -46,6 +46,7 @@ namespace WindowsFormsApp1.Form1Tea.zy
                 cmd.Parameters.AddWithValue("@InputInformation", pro.InputInformation.Trim() ?? (object)DBNull.Value);
                 cmd.Parameters.AddWithValue("@ChangeInformation", pro.ChangeInformation.Trim() ?? (object)DBNull.Value);
                 cmd.Parameters.AddWithValue("@IsTest", pro.IsTest.Trim());
+                cmd.Parameters.AddWithValue("@isValid", 1);
 
                 // 执行并验证影响行数 
                 if (cmd.ExecuteNonQuery() != 1)
