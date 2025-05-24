@@ -148,6 +148,7 @@ namespace WindowsFormsApp1
 
         private void button7_Click(object sender, EventArgs e)
         {
+            ovw.UpdateData();
             ovw.Show();
             panel3.Controls.Clear();
             panel3.Controls.Add(ovw);
@@ -239,9 +240,17 @@ namespace WindowsFormsApp1
             panel3.Controls.Add(examrecycle);
         }
 
+        public void zyedit_GoToViewPage()
+        {
+            panel3.Controls.Clear();
+            ovw.Show();
+            panel3.Controls.Add(ovw);
+        }
+
         public void ovw_GoToEditPage(string t)
         {
             zyedit = new zyedit(t);
+            zyedit.GoToViewPage += zyedit_GoToViewPage;
             panel3.Controls.Clear();
             zyedit.Show();
             panel3.Controls.Add(zyedit);

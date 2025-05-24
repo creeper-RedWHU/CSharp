@@ -17,6 +17,6 @@ namespace WindowsFormsApp1.Form1Tea
         public string Analysis { get; set; }
         public string InputInformation {  get; set; }
         public string ChangeInformation { get; set; }
-        public int IsTest {  get; set; }
+        public string IsTest {  get; set; }
     }
 }

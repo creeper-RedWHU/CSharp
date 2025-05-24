@@ -15,7 +15,7 @@
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-        <LangVersion>10.0</LangVersion>
+    <LangVersion>10.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -235,6 +235,8 @@
     <Compile Include="Form1Tea\6home\home.Designer.cs">
       <DependentUpon>home.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form1Tea\HT.cs" />
+    <Compile Include="Form1Tea\Problem.cs" />
     <Compile Include="Form_login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -247,6 +249,7 @@
     <Compile Include="Form_student.Designer.cs">
       <DependentUpon>Form_student.cs</DependentUpon>
     </Compile>
+    <Compile Include="getID.cs" />
     <Compile Include="GM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -255,6 +258,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqliteProblemConnectionManager.cs" />
     <Compile Include="student\Course.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -402,9 +406,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="DataBase.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

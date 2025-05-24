@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SQLite;
 using System.Windows.Forms;
 using WindowsFormsApp1.Form1Tea._1zy;
 
@@ -14,15 +15,17 @@ namespace WindowsFormsApp1.Form1Tea.zy
 {
     public partial class zyovw : UserControl
     {
-        List<tmmodel>tmmodels = new List<tmmodel>();
         public zyovw()
         {
             InitializeComponent();
+            
 
-            var jsonStr = System.IO.File.ReadAllText("tst.json");
-            tmmodels=Newtonsoft.Json.JsonConvert.DeserializeObject<List<tmmodel>>(jsonStr);
-            this.dataGridView1.AutoGenerateColumns=false;
-            this.dataGridView1.DataSource = tmmodels;
+        }
+
+        public void UpdateData()
+        {
+            this.dataGridView1.AutoGenerateColumns = false;
+            getID.BindToTable(this.dataGridView1, "Problem");
         }
 
         private void customSearchBar2_TextChanged(object sender, EventArgs e)
@@ -32,7 +35,7 @@ namespace WindowsFormsApp1.Form1Tea.zy
         #region 跳转界面
         //父窗体panel控件跳转到编辑界面
         public event Action<string> GoToEditPage;
-
+        
         #endregion
 
 
@@ -40,8 +43,8 @@ namespace WindowsFormsApp1.Form1Tea.zy
         {
             if (dataGridView1.Columns[e.ColumnIndex].Name == "Edit")
             {
-                MessageBox.Show("行: " + e.RowIndex.ToString() + ", 列: " + e.ColumnIndex.ToString() + "; 被点击了");
                 string x = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                MessageBox.Show("您将要编辑第" + x + "题");
                 GoToEditPage?.Invoke(x);
 
             }
@@ -51,11 +54,6 @@ namespace WindowsFormsApp1.Form1Tea.zy
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            
-
-        }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {

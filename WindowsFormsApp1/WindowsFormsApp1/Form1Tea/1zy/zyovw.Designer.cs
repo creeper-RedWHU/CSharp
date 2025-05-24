@@ -31,6 +31,9 @@ namespace WindowsFormsApp1.Form1Tea.zy
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.customSearchBar2 = new WindowsFormsApp1.CustomSearchBar();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -48,9 +51,6 @@ namespace WindowsFormsApp1.Form1Tea.zy
             this.TimeStamp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -68,6 +68,45 @@ namespace WindowsFormsApp1.Form1Tea.zy
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(871, 100);
             this.panel1.TabIndex = 0;
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.radioButton3.Location = new System.Drawing.Point(475, 56);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(133, 19);
+            this.radioButton3.TabIndex = 5;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "仅查看练习题目";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.radioButton2.Location = new System.Drawing.Point(308, 56);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(133, 19);
+            this.radioButton2.TabIndex = 4;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "仅查看考试题目";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.radioButton1.Checked = true;
+            this.radioButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.radioButton1.Location = new System.Drawing.Point(211, 56);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(58, 19);
+            this.radioButton1.TabIndex = 3;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "全部";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // customSearchBar2
             // 
@@ -189,7 +228,7 @@ namespace WindowsFormsApp1.Form1Tea.zy
             // 
             // Num
             // 
-            this.Num.DataPropertyName = "Num";
+            this.Num.DataPropertyName = "PID";
             this.Num.HeaderText = "Num";
             this.Num.MinimumWidth = 6;
             this.Num.Name = "Num";
@@ -198,7 +237,7 @@ namespace WindowsFormsApp1.Form1Tea.zy
             // 
             // Title
             // 
-            this.Title.DataPropertyName = "Title";
+            this.Title.DataPropertyName = "ProName";
             this.Title.HeaderText = "Title";
             this.Title.MinimumWidth = 6;
             this.Title.Name = "Title";
@@ -207,7 +246,7 @@ namespace WindowsFormsApp1.Form1Tea.zy
             // 
             // Type
             // 
-            this.Type.DataPropertyName = "Type";
+            this.Type.DataPropertyName = "IsTest";
             this.Type.HeaderText = "Type";
             this.Type.MinimumWidth = 6;
             this.Type.Name = "Type";
@@ -216,7 +255,7 @@ namespace WindowsFormsApp1.Form1Tea.zy
             // 
             // Point
             // 
-            this.Point.DataPropertyName = "Point";
+            this.Point.DataPropertyName = "ProCategory";
             this.Point.HeaderText = "Point";
             this.Point.MinimumWidth = 6;
             this.Point.Name = "Point";
@@ -225,7 +264,7 @@ namespace WindowsFormsApp1.Form1Tea.zy
             // 
             // TimeStamp
             // 
-            this.TimeStamp.DataPropertyName = "TimeStamp";
+            this.TimeStamp.DataPropertyName = "InputInformation";
             this.TimeStamp.HeaderText = "TimeStamp";
             this.TimeStamp.MinimumWidth = 6;
             this.TimeStamp.Name = "TimeStamp";
@@ -253,45 +292,6 @@ namespace WindowsFormsApp1.Form1Tea.zy
             this.Delete.Text = "删除";
             this.Delete.UseColumnTextForButtonValue = true;
             this.Delete.Width = 125;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.radioButton1.Checked = true;
-            this.radioButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.radioButton1.Location = new System.Drawing.Point(211, 56);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(58, 19);
-            this.radioButton1.TabIndex = 3;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "全部";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.radioButton2.Location = new System.Drawing.Point(308, 56);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(133, 19);
-            this.radioButton2.TabIndex = 4;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "仅查看考试题目";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.radioButton3.Location = new System.Drawing.Point(475, 56);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(133, 19);
-            this.radioButton3.TabIndex = 5;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "仅查看练习题目";
-            this.radioButton3.UseVisualStyleBackColor = true;
             // 
             // zyovw
             // 
@@ -325,6 +325,9 @@ namespace WindowsFormsApp1.Form1Tea.zy
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private Label label7;
+        private RadioButton radioButton3;
+        private RadioButton radioButton2;
+        private RadioButton radioButton1;
         private DataGridViewTextBoxColumn Num;
         private DataGridViewTextBoxColumn Title;
         private DataGridViewTextBoxColumn Type;
@@ -332,8 +335,5 @@ namespace WindowsFormsApp1.Form1Tea.zy
         private DataGridViewTextBoxColumn TimeStamp;
         private DataGridViewButtonColumn Edit;
         private DataGridViewButtonColumn Delete;
-        private RadioButton radioButton3;
-        private RadioButton radioButton2;
-        private RadioButton radioButton1;
     }
 }
