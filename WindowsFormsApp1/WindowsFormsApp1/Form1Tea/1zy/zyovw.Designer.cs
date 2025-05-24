@@ -34,7 +34,6 @@ namespace WindowsFormsApp1.Form1Tea.zy
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.customSearchBar2 = new WindowsFormsApp1.CustomSearchBar();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
@@ -51,6 +50,7 @@ namespace WindowsFormsApp1.Form1Tea.zy
             this.TimeStamp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.customSearchBar2 = new WindowsFormsApp1.CustomSearchBar();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -80,6 +80,7 @@ namespace WindowsFormsApp1.Form1Tea.zy
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "仅查看练习题目";
             this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
             // radioButton2
             // 
@@ -92,6 +93,7 @@ namespace WindowsFormsApp1.Form1Tea.zy
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "仅查看考试题目";
             this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // radioButton1
             // 
@@ -107,15 +109,6 @@ namespace WindowsFormsApp1.Form1Tea.zy
             this.radioButton1.Text = "全部";
             this.radioButton1.UseVisualStyleBackColor = true;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
-            // 
-            // customSearchBar2
-            // 
-            this.customSearchBar2.Location = new System.Drawing.Point(653, 36);
-            this.customSearchBar2.Name = "customSearchBar2";
-            this.customSearchBar2.Size = new System.Drawing.Size(147, 25);
-            this.customSearchBar2.TabIndex = 2;
-            this.customSearchBar2.WaterText = " 题目标题的索引词  ";
-            this.customSearchBar2.TextChanged += new System.EventHandler(this.customSearchBar2_TextChanged);
             // 
             // label1
             // 
@@ -292,6 +285,15 @@ namespace WindowsFormsApp1.Form1Tea.zy
             this.Delete.Text = "删除";
             this.Delete.UseColumnTextForButtonValue = true;
             this.Delete.Width = 125;
+            // 
+            // customSearchBar2
+            // 
+            this.customSearchBar2.Location = new System.Drawing.Point(653, 36);
+            this.customSearchBar2.Name = "customSearchBar2";
+            this.customSearchBar2.Size = new System.Drawing.Size(147, 25);
+            this.customSearchBar2.TabIndex = 2;
+            this.customSearchBar2.WaterText = " 题目标题的索引词  ";
+            this.customSearchBar2.TextChanged += new System.EventHandler(this.customSearchBar2_TextChanged);
             // 
             // zyovw
             // 

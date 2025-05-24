@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,7 +42,6 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label3);
@@ -53,15 +51,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(871, 44);
             this.panel2.TabIndex = 7;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(313, 15);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 15);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "起止时间";
             // 
             // label7
             // 
@@ -88,7 +77,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 15);
             this.label3.TabIndex = 1;
-            this.label3.Text = "考试名称";
+            this.label3.Text = "试卷名称";
             // 
             // label2
             // 
@@ -125,7 +114,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(207, 37);
             this.label1.TabIndex = 0;
-            this.label1.Text = "考试回收站";
+            this.label1.Text = "试卷回收站";
             // 
             // testrecycle
             // 
@@ -146,7 +135,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;

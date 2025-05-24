@@ -53,12 +53,16 @@ namespace WindowsFormsApp1
 
             transaction.Commit();
         }
-        public static void BindToTable(DataGridView dgv, string tableName)
+        public static void BindToTable(DataGridView dgv, string tableName,string judge,int typer)
         {
             try
             {
                 using var conn = new SQLiteConnection(ConnectionString);
-                var adapter = new SQLiteDataAdapter($"SELECT * FROM {tableName}", conn);
+                SQLiteDataAdapter adapter;
+                if(typer == 2)
+                    adapter = new SQLiteDataAdapter($"SELECT * FROM {tableName} WHERE isValid="+judge, conn);
+                else if(typer == 1) { adapter = new SQLiteDataAdapter($"SELECT * FROM {tableName} WHERE isValid=" + judge +" AND IsTest ='考试题'", conn); }
+                else { adapter = new SQLiteDataAdapter($"SELECT * FROM {tableName} WHERE isValid=" + judge + " AND IsTest ='作业题'", conn); }
                 var dataTable = new System.Data.DataTable();
                 adapter.Fill(dataTable);
                 dgv.DataSource = dataTable;

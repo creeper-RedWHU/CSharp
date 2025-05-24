@@ -104,7 +104,7 @@ namespace WindowsFormsApp1
         private void clearButton_Click(object sender, EventArgs e)
         {
             this.Text = string.Empty;
-            ClearSearchingTextHandler();
+            //ClearSearchingTextHandler();
         }
 
         public void StartLoadSmartTip()

@@ -217,6 +217,12 @@
     <Compile Include="Form1Tea\5exam\examipt.Designer.cs">
       <DependentUpon>examipt.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form1Tea\5exam\examiptSec.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form1Tea\5exam\examiptSec.Designer.cs">
+      <DependentUpon>examiptSec.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1Tea\5exam\examovw.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -342,6 +348,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1Tea\5exam\examipt.resx">
       <DependentUpon>examipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1Tea\5exam\examiptSec.resx">
+      <DependentUpon>examiptSec.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1Tea\5exam\examovw.resx">
       <DependentUpon>examovw.cs</DependentUpon>

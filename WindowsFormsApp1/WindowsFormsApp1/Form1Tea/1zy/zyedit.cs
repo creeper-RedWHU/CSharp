@@ -8,6 +8,7 @@ using System.Text;
 using System.Data.SQLite;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Security.Cryptography;
 
 namespace WindowsFormsApp1.Form1Tea._1zy
 {
@@ -67,7 +68,6 @@ namespace WindowsFormsApp1.Form1Tea._1zy
                     IsTest = reader["IsTest"] is DBNull ? "N" : (string)reader["IsTest"]
                 };
             });
-            delPro(PID);
             return result;
         }
         private string receivedIDGlobal;
@@ -96,11 +96,11 @@ namespace WindowsFormsApp1.Form1Tea._1zy
                     INSERT INTO Problem (
                         PID, ProName, ProText, ProCategory, 
                         Ans, Analysis, InputInformation, 
-                        ChangeInformation, IsTest 
+                        ChangeInformation, IsTest ,isValid
                     ) VALUES (
                         @PID, @ProName, @ProText, @ProCategory, 
                         @Ans, @Analysis, @InputInformation, 
-                        @ChangeInformation, @IsTest 
+                        @ChangeInformation, @IsTest ,@isValid
                     )";
 
             SqliteProblemConnectionManager.SafeExecute(conn =>
@@ -118,12 +118,14 @@ namespace WindowsFormsApp1.Form1Tea._1zy
                 cmd.Parameters.AddWithValue("@InputInformation", pro.InputInformation.Trim() ?? (object)DBNull.Value);
                 cmd.Parameters.AddWithValue("@ChangeInformation", pro.ChangeInformation.Trim() ?? (object)DBNull.Value);
                 cmd.Parameters.AddWithValue("@IsTest", pro.IsTest.Trim());
-
+                cmd.Parameters.AddWithValue("@isValid", 1);
+                delPro(int.Parse(receivedIDGlobal));
                 // 执行并验证影响行数 
                 if (cmd.ExecuteNonQuery() != 1)
                 {
                     throw new ApplicationException("插入操作未影响任何行");
                 }
+                
             });
         }
 
@@ -146,6 +148,7 @@ namespace WindowsFormsApp1.Form1Tea._1zy
             { MessageBox.Show("缺少重要元素！"); return; }
             MessageBox.Show("提交成功！");
             addPro(pro);
+            GoToViewPage();
         }
     }
 }
