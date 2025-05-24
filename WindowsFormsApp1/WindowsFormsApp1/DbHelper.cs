@@ -37,22 +37,24 @@ namespace WindowsFormsApp1
                     {
                         string filename = "DataBase.txt";
                         string[] line = File.ReadAllLines(filename);
-                        for (int i = 0; i < line.Length; i++) {
+                        for (int i = 0; i < line.Length; i++)
                         {
-                            command.CommandText = line[i];
-                            command.ExecuteNonQuery();
+                            {
+                                command.CommandText = line[i];
+                                command.ExecuteNonQuery();
+                            }
+
                         }
-                        
+
+                        // 如果是新数据库，插入默认用户
+                        if (isNewDb)
+                        {
+                            InsertDefaultUsers(connection);
+                        }
                     }
 
-                    // 如果是新数据库，插入默认用户
-                    if (isNewDb)
-                    {
-                        InsertDefaultUsers(connection);
-                    }
+                    return true;
                 }
-
-                return true;
             }
             catch (Exception ex)
             {
