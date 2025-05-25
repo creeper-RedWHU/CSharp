@@ -277,6 +277,18 @@
     <Compile Include="student\exam.Designer.cs">
       <DependentUpon>exam.cs</DependentUpon>
     </Compile>
+    <Compile Include="student\FormProblems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="student\FormProblems.Designer.cs">
+      <DependentUpon>FormProblems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="student\InputBoxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="student\InputBoxForm.Designer.cs">
+      <DependentUpon>InputBoxForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="student\online_work.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -378,6 +390,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="student\exam.resx">
       <DependentUpon>exam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="student\FormProblems.resx">
+      <DependentUpon>FormProblems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="student\InputBoxForm.resx">
+      <DependentUpon>InputBoxForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="student\online_work.resx">
       <DependentUpon>online_work.cs</DependentUpon>

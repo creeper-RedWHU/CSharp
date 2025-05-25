@@ -28,25 +28,81 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.listBoxQuestions = new System.Windows.Forms.ListBox();
+            this.labelQuestionContent = new System.Windows.Forms.Label();
+            this.listBoxAnswers = new System.Windows.Forms.ListBox();
+            this.textBoxReply = new System.Windows.Forms.TextBox();
+            this.btnReply = new System.Windows.Forms.Button();
+            this.btnAsk = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // listBoxQuestions
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(171, 115);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(512, 18);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "这里是Q&A，这里预计搞成一个问，底下可以有多个回复的那种。";
+            this.listBoxQuestions.FormattingEnabled = true;
+            this.listBoxQuestions.ItemHeight = 18;
+            this.listBoxQuestions.Location = new System.Drawing.Point(38, 143);
+            this.listBoxQuestions.Name = "listBoxQuestions";
+            this.listBoxQuestions.Size = new System.Drawing.Size(352, 472);
+            this.listBoxQuestions.TabIndex = 0;
+            this.listBoxQuestions.SelectedIndexChanged += new System.EventHandler(this.listBoxQuestions_SelectedIndexChanged);
+            // 
+            // labelQuestionContent
+            // 
+            this.labelQuestionContent.AutoSize = true;
+            this.labelQuestionContent.Location = new System.Drawing.Point(434, 53);
+            this.labelQuestionContent.Name = "labelQuestionContent";
+            this.labelQuestionContent.Size = new System.Drawing.Size(62, 18);
+            this.labelQuestionContent.TabIndex = 1;
+            this.labelQuestionContent.Text = "label1";
+            // 
+            // listBoxAnswers
+            // 
+            this.listBoxAnswers.FormattingEnabled = true;
+            this.listBoxAnswers.ItemHeight = 18;
+            this.listBoxAnswers.Location = new System.Drawing.Point(437, 142);
+            this.listBoxAnswers.Name = "listBoxAnswers";
+            this.listBoxAnswers.Size = new System.Drawing.Size(408, 472);
+            this.listBoxAnswers.TabIndex = 2;
+            // 
+            // textBoxReply
+            // 
+            this.textBoxReply.Location = new System.Drawing.Point(76, 681);
+            this.textBoxReply.Name = "textBoxReply";
+            this.textBoxReply.Size = new System.Drawing.Size(606, 28);
+            this.textBoxReply.TabIndex = 3;
+            // 
+            // btnReply
+            // 
+            this.btnReply.Location = new System.Drawing.Point(746, 681);
+            this.btnReply.Name = "btnReply";
+            this.btnReply.Size = new System.Drawing.Size(99, 30);
+            this.btnReply.TabIndex = 4;
+            this.btnReply.Text = "回复";
+            this.btnReply.UseVisualStyleBackColor = true;
+            this.btnReply.Click += new System.EventHandler(this.btnReply_Click);
+            // 
+            // btnAsk
+            // 
+            this.btnAsk.Location = new System.Drawing.Point(38, 53);
+            this.btnAsk.Name = "btnAsk";
+            this.btnAsk.Size = new System.Drawing.Size(103, 40);
+            this.btnAsk.TabIndex = 5;
+            this.btnAsk.Text = "我要提问";
+            this.btnAsk.UseVisualStyleBackColor = true;
+            this.btnAsk.Click += new System.EventHandler(this.btnAsk_Click);
             // 
             // Question
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnAsk);
+            this.Controls.Add(this.btnReply);
+            this.Controls.Add(this.textBoxReply);
+            this.Controls.Add(this.listBoxAnswers);
+            this.Controls.Add(this.labelQuestionContent);
+            this.Controls.Add(this.listBoxQuestions);
             this.Name = "Question";
-            this.Size = new System.Drawing.Size(738, 653);
+            this.Size = new System.Drawing.Size(922, 766);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -54,6 +110,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ListBox listBoxQuestions;
+        private System.Windows.Forms.Label labelQuestionContent;
+        private System.Windows.Forms.ListBox listBoxAnswers;
+        private System.Windows.Forms.TextBox textBoxReply;
+        private System.Windows.Forms.Button btnReply;
+        private System.Windows.Forms.Button btnAsk;
     }
 }

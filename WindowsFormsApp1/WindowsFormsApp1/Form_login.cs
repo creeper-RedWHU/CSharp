@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
@@ -86,8 +87,10 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show($"欢迎 {role} {username} 登录系统！", "登录成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                int studentId = GetUserIdByUsername(username);
+
                 // 创建学生表单实例
-                Form_student studentForm = new Form_student();
+                Form_student studentForm = new Form_student(studentId);
 
                 // 隐藏登录表单
                 this.Hide();
@@ -104,6 +107,26 @@ namespace WindowsFormsApp1
             }
         }
 
+        // 新增：根据用户名查找ID
+        private int GetUserIdByUsername(string username)
+        {
+            string dbPath = "StudentSystem.db";
+            string connStr = $"Data Source={dbPath};Version=3;";
+            using (SQLiteConnection conn = new SQLiteConnection(connStr))
+            {
+                conn.Open();
+                string sql = "SELECT ID FROM Users WHERE Username = @username";
+                using (SQLiteCommand cmd = new SQLiteCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@username", username);
+                    object result = cmd.ExecuteScalar();
+                    if (result != null)
+                        return Convert.ToInt32(result);
+                    else
+                        throw new Exception("未找到用户ID");
+                }
+            }
+        }
         private void label2_Click(object sender, EventArgs e)
         {
 

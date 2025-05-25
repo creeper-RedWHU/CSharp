@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            //用于传递登录信息的
+            this.Load += new System.EventHandler(this.Form_student_Load);
+
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnMaximize = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -45,16 +47,19 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
+            this.comboBoxCourse = new System.Windows.Forms.ComboBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.comboBoxCourse);
             this.panel1.Controls.Add(this.btnMinimize);
             this.panel1.Controls.Add(this.btnMaximize);
             this.panel1.Controls.Add(this.btnExit);
-            this.panel1.Controls.Add(this.button10);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
@@ -96,16 +101,6 @@
             this.btnExit.Text = "×";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(279, 4);
-            this.button10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(127, 55);
-            this.button10.TabIndex = 12;
-            this.button10.Text = "当前课程名称";
-            this.button10.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
@@ -232,6 +227,25 @@
             this.button7.Text = "button7";
             this.button7.UseVisualStyleBackColor = true;
             // 
+            // comboBoxCourse
+            // 
+            this.comboBoxCourse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCourse.FormattingEnabled = true;
+            this.comboBoxCourse.Location = new System.Drawing.Point(280, 33);
+            this.comboBoxCourse.Name = "comboBoxCourse";
+            this.comboBoxCourse.Size = new System.Drawing.Size(100, 26);
+            this.comboBoxCourse.TabIndex = 15;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(280, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(100, 31);
+            this.button3.TabIndex = 16;
+            this.button3.Text = "选择课程";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // Form_student
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -265,11 +279,12 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnMaximize;
         private System.Windows.Forms.Button btnMinimize;
+        private System.Windows.Forms.ComboBox comboBoxCourse;
+        private System.Windows.Forms.Button button3;
     }
 }

@@ -155,4 +155,9 @@ E:\pr\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.online
 E:\pr\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.passed_work.resources
 E:\pr\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Question.resources
 E:\pr\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.UserInfo.resources
+<<<<<<< HEAD
 E:\pr\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1Tea._5exam.examiptSec.resources
+=======
+C:\Users\Administrator\Desktop\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormProblems.resources
+C:\Users\Administrator\Desktop\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.student.InputBoxForm.resources
+>>>>>>> 84faaaefe6e3d7a090184c40780601be28766a51
