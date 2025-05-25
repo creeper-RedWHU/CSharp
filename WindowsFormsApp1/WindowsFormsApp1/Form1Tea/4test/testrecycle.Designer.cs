@@ -114,7 +114,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(207, 37);
             this.label1.TabIndex = 0;
-            this.label1.Text = "试卷回收站";
+            this.label1.Text = "考试回收站";
             // 
             // testrecycle
             // 

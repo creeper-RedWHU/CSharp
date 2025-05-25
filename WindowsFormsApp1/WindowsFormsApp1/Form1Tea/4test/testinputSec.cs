@@ -16,5 +16,10 @@ namespace WindowsFormsApp1.Form1Tea._4test
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

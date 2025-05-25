@@ -54,7 +54,6 @@ E:\pr\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1T
 E:\pr\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1Tea._4test.testrecycle.resources
 E:\pr\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1Tea._5exam.examipt.resources
 E:\pr\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1Tea._5exam.examovw.resources
-E:\pr\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1Tea._5exam.examrecycle.resources
 E:\pr\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1Tea._1zy.zyedit.resources
 E:\pr\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1Tea.home.resources
 E:\pr\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.GM.resources
@@ -156,3 +155,4 @@ E:\pr\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.online
 E:\pr\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.passed_work.resources
 E:\pr\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Question.resources
 E:\pr\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.UserInfo.resources
+E:\pr\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1Tea._5exam.examiptSec.resources

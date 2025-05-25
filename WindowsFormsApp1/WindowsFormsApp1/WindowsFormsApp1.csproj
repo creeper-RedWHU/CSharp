@@ -229,12 +229,6 @@
     <Compile Include="Form1Tea\5exam\examovw.Designer.cs">
       <DependentUpon>examovw.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1Tea\5exam\examrecycle.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Form1Tea\5exam\examrecycle.Designer.cs">
-      <DependentUpon>examrecycle.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form1Tea\6home\home.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -354,9 +348,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1Tea\5exam\examovw.resx">
       <DependentUpon>examovw.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1Tea\5exam\examrecycle.resx">
-      <DependentUpon>examrecycle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1Tea\6home\home.resx">
       <DependentUpon>home.cs</DependentUpon>

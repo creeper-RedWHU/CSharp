@@ -36,12 +36,16 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.customSearchBar2 = new WindowsFormsApp1.CustomSearchBar();
             this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label3);
@@ -64,7 +68,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(438, 15);
+            this.label6.Location = new System.Drawing.Point(530, 15);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(105, 15);
             this.label6.TabIndex = 4;
@@ -114,7 +118,25 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(169, 37);
             this.label1.TabIndex = 0;
-            this.label1.Text = "所有试卷";
+            this.label1.Text = "所有考试";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(284, 15);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(67, 15);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "起始时间";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(437, 15);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(37, 15);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "状态";
             // 
             // testovw
             // 
@@ -142,5 +164,7 @@
         private System.Windows.Forms.Panel panel1;
         private CustomSearchBar customSearchBar2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
     }
 }

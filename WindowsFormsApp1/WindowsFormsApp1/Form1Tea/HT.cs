@@ -16,7 +16,7 @@ namespace WindowsFormsApp1.Form1Tea
         public string EndTime { get; set; }
         public string InputInformation {  get; set; }
         public string ChangeInformation { get; set; }
-        public int IsText {  get; set; }
-
+        public int IsTest {  get; set; }
+        public int isValid {  get; set; }
     }
 }

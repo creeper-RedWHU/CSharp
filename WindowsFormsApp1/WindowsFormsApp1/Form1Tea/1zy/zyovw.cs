@@ -96,7 +96,7 @@ namespace WindowsFormsApp1.Form1Tea.zy
                 result = new Problem
                 {
                     // 直接处理空值 
-                    PID = reader.GetInt32(0),
+                    PID = PID,
                     ProName = reader["ProName"] is DBNull ? "" : (string)reader["ProName"],
                     ProText = reader["ProText"] is DBNull ? "" : (string)reader["ProText"],
                     ProCategory = reader["ProCategory"] is DBNull ? "" : (string)reader["ProCategory"],

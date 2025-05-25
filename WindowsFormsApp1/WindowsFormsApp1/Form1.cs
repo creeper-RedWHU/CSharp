@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -36,7 +37,6 @@ namespace WindowsFormsApp1
 
         public examipt examipt;
         public examovw examovw;
-        public examrecycle examrecycle;
 
         #endregion
         #region 公共变量
@@ -68,7 +68,6 @@ namespace WindowsFormsApp1
 
             examipt = new examipt();
             examovw = new examovw();
-            examrecycle = new examrecycle();
 
             TeacherName = "";
             #endregion
@@ -139,8 +138,9 @@ namespace WindowsFormsApp1
             panel3.Controls.Add(testinputSec);
         }
 
-        private void NextPage(object sender, EventArgs e)
+        private void NextPage(object sender,ArrayList arraylist)
         {
+            glinputSec.arrayList = arraylist;
             glinputSec.Show();
             panel3.Controls.Clear();
             panel3.Controls.Add(glinputSec);
@@ -186,6 +186,7 @@ namespace WindowsFormsApp1
         private void button11_Click(object sender, EventArgs e)
         {
             panel3.Controls.Clear();
+            glinput.UpdateData(); 
             glinput.Show();
             panel3.Controls.Add(glinput);
         }
@@ -235,12 +236,7 @@ namespace WindowsFormsApp1
             panel3.Controls.Add(examipt);
         }
 
-        private void button22_Click(object sender, EventArgs e)
-        {
-            panel3.Controls.Clear();
-            examrecycle.Show();
-            panel3.Controls.Add(examrecycle);
-        }
+        
 
         public void zyedit_GoToViewPage()
         {

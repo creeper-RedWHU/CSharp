@@ -45,7 +45,6 @@ namespace WindowsFormsApp1
             {
                 case SQLiteErrorCode.Constraint:
                     MessageBox.Show("请勿重复点击！");
-                    getID.DecProID();
                     break;
                 case SQLiteErrorCode.TooBig:
                     throw new ArgumentException($"字段长度超限: {ex.Message}", ex);

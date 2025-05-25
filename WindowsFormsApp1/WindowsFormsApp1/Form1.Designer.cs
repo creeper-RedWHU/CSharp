@@ -185,23 +185,23 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label7.Location = new System.Drawing.Point(13, 553);
+            this.label7.Location = new System.Drawing.Point(13, 501);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(80, 18);
+            this.label7.Size = new System.Drawing.Size(116, 18);
             this.label7.TabIndex = 27;
-            this.label7.Text = "考试管理";
+            this.label7.Text = "数据活动管理";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label6.Location = new System.Drawing.Point(13, 389);
+            this.label6.Location = new System.Drawing.Point(13, 341);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(80, 18);
             this.label6.TabIndex = 26;
-            this.label6.Text = "试卷管理";
+            this.label6.Text = "考试编辑";
             // 
             // label4
             // 
@@ -212,7 +212,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 18);
             this.label4.TabIndex = 24;
-            this.label4.Text = "作业管理";
+            this.label4.Text = "作业编辑";
             // 
             // label3
             // 
@@ -228,7 +228,7 @@
             // button25
             // 
             this.button25.Font = new System.Drawing.Font("宋体", 7F);
-            this.button25.Location = new System.Drawing.Point(43, 497);
+            this.button25.Location = new System.Drawing.Point(43, 446);
             this.button25.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button25.Name = "button25";
             this.button25.Size = new System.Drawing.Size(77, 28);
@@ -252,43 +252,42 @@
             // button22
             // 
             this.button22.Font = new System.Drawing.Font("宋体", 7F);
-            this.button22.Location = new System.Drawing.Point(43, 663);
+            this.button22.Location = new System.Drawing.Point(43, 621);
             this.button22.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button22.Name = "button22";
             this.button22.Size = new System.Drawing.Size(77, 28);
             this.button22.TabIndex = 13;
             this.button22.Text = "回收站";
             this.button22.UseVisualStyleBackColor = true;
-            this.button22.Click += new System.EventHandler(this.button22_Click);
             // 
             // button21
             // 
             this.button21.Font = new System.Drawing.Font("宋体", 7F);
-            this.button21.Location = new System.Drawing.Point(43, 629);
+            this.button21.Location = new System.Drawing.Point(43, 579);
             this.button21.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(77, 28);
             this.button21.TabIndex = 20;
-            this.button21.Text = "组织考试";
+            this.button21.Text = "批阅考试";
             this.button21.UseVisualStyleBackColor = true;
             this.button21.Click += new System.EventHandler(this.button21_Click);
             // 
             // button20
             // 
             this.button20.Font = new System.Drawing.Font("宋体", 7F);
-            this.button20.Location = new System.Drawing.Point(43, 595);
+            this.button20.Location = new System.Drawing.Point(43, 536);
             this.button20.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(77, 28);
             this.button20.TabIndex = 19;
-            this.button20.Text = "考试概览";
+            this.button20.Text = "批阅作业";
             this.button20.UseVisualStyleBackColor = true;
             this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
             // button18
             // 
             this.button18.Font = new System.Drawing.Font("宋体", 7F);
-            this.button18.Location = new System.Drawing.Point(43, 463);
+            this.button18.Location = new System.Drawing.Point(43, 414);
             this.button18.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(77, 28);
@@ -300,7 +299,7 @@
             // button17
             // 
             this.button17.Font = new System.Drawing.Font("宋体", 7F);
-            this.button17.Location = new System.Drawing.Point(43, 429);
+            this.button17.Location = new System.Drawing.Point(43, 382);
             this.button17.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(77, 28);
