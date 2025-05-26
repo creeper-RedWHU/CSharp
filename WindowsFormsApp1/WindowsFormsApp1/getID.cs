@@ -72,6 +72,27 @@ namespace WindowsFormsApp1
                 MessageBox.Show("绑定失败，请检查表是否存在");
             }
         }
+
+        public static void HMKBindToTable(DataGridView dgv, string tableName, string judge, int typer)
+        {
+            try
+            {
+                using var conn = new SQLiteConnection(ConnectionString);
+                SQLiteDataAdapter adapter;
+                if (typer == 2)
+                    adapter = new SQLiteDataAdapter($"SELECT * FROM {tableName} WHERE isValid=" + judge, conn);
+                else if (typer == 1) { adapter = new SQLiteDataAdapter($"SELECT * FROM {tableName} WHERE isValid=" + judge + " AND IsTest =1", conn); }
+                else { adapter = new SQLiteDataAdapter($"SELECT * FROM {tableName} WHERE isValid=" + judge + " AND IsTest = 0", conn); }
+                var dataTable = new System.Data.DataTable();
+                adapter.Fill(dataTable);
+                dgv.DataSource = dataTable;
+            }
+            catch
+            {
+                MessageBox.Show("绑定失败，请检查表是否存在");
+            }
+        }
+
         public static int GetNextProID() => AtomicIncrement("ProID");
         public static int GetNextHTID() => AtomicIncrement("HTID");
         public static void DecProID() => AtomicDecrement("ProID");

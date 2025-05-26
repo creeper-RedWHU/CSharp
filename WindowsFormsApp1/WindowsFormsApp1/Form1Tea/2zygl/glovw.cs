@@ -21,10 +21,10 @@ namespace WindowsFormsApp1.Form1Tea._2zygl
             InitializeComponent();
             
         }
-        public void UpdateData(int x=2)
+        public void UpdateData(int x=0)
         {
             this.dataGridView1.AutoGenerateColumns = false;
-            getID.BindToTable(this.dataGridView1, "HMK", "1", x);
+            getID.HMKBindToTable(this.dataGridView1, "HMK", "1", x);
         }
 
         private ArrayList FindPro(int HID)

@@ -61,6 +61,7 @@ namespace WindowsFormsApp1
             glrecycle = new glrecycle();
 
             testovw = new testovw();
+            testovw.GoToEditPager += testovw_GoToEdit;
             testinput = new testinput();
             testinput.NextPageTest += NextPageTest;
             testrecycle= new testrecycle();
@@ -132,8 +133,9 @@ namespace WindowsFormsApp1
 
         }
 
-        public void NextPageTest(object sender, EventArgs e)
+        public void NextPageTest(object sender,ArrayList arrayList)
         {
+            testinputSec.arrayList = arrayList;
             testinputSec.Show();
             panel3.Controls.Clear();
             panel3.Controls.Add(testinputSec);
@@ -152,6 +154,20 @@ namespace WindowsFormsApp1
             panel3.Controls.Clear();
             panel3.Controls.Add(glinput);
         }
+        private void testovw_GoToEdit(ArrayList arrayList)
+        {
+            testinput.UpdateData();
+            testinputSec.change = true;
+            testinputSec.HIDOlder = int.Parse((string)arrayList[arrayList.Count - 1]);
+            testinputSec.UpdateData();
+            arrayList.RemoveAt(arrayList.Count - 1);
+            testinput.load(arrayList);
+
+            testinput.Show();
+            panel3.Controls.Clear();
+            panel3.Controls.Add(testinput);
+        }
+
 
         private void NextPage(object sender,ArrayList arraylist)
         {
@@ -220,13 +236,14 @@ namespace WindowsFormsApp1
         private void button17_Click(object sender, EventArgs e)
         {
             panel3.Controls.Clear();
-            testovw.Show();
+            testovw.UpdateData(); testovw.Show();
             panel3.Controls.Add(testovw);
         }
 
         private void button18_Click(object sender, EventArgs e)
         {
             panel3.Controls.Clear();
+            testinput.UpdateData(); 
             testinput.Show();
             panel3.Controls.Add(testinput);
         }
@@ -234,6 +251,7 @@ namespace WindowsFormsApp1
         private void button25_Click(object sender, EventArgs e)
         {
             panel3.Controls.Clear();
+            testrecycle.UpdateData();
             testrecycle.Show();
             panel3.Controls.Add(testrecycle);
         }

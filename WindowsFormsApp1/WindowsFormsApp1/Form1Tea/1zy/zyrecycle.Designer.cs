@@ -199,7 +199,6 @@
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.ColumnHeadersVisible = false;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Num,
             this.Title,
@@ -224,7 +223,7 @@
             // Num
             // 
             this.Num.DataPropertyName = "PID";
-            this.Num.HeaderText = "Num";
+            this.Num.HeaderText = "序号";
             this.Num.MinimumWidth = 6;
             this.Num.Name = "Num";
             this.Num.ReadOnly = true;
