@@ -7,15 +7,16 @@ namespace EduAdminApp.DAL
 {
     public class StudentDAL
     {
-        private static string connStr = "Data Source=database.db";
+        private static string connStr = "Data Source=StudentSystem.db";
 
+        // 获取所有学生
         public static List<Student> GetAll()
         {
             var list = new List<Student>();
             using (var conn = new SQLiteConnection(connStr))
             {
                 conn.Open();
-                string sql = "SELECT * FROM Student";
+                string sql = "SELECT ID, Username, Password, Role, Name, Gender, Major, Email, Phone FROM Users WHERE Role = '学生'";
                 using (var cmd = new SQLiteCommand(sql, conn))
                 {
                     using (var reader = cmd.ExecuteReader())
@@ -25,11 +26,14 @@ namespace EduAdminApp.DAL
                             list.Add(new Student
                             {
                                 Id = reader.GetInt32(0),
-                                Name = reader.GetString(1),
-                                Gender = reader.GetString(2),
-                                Major = reader.GetString(3),
-                                Email = reader.GetString(4),
-                                Phone = reader.GetString(5)
+                                Username = reader.GetString(1),
+                                Password = reader.GetString(2),
+                                Role = reader.GetString(3),
+                                Name = reader.GetString(4),
+                                Gender = reader.GetString(5),
+                                Major = reader.GetString(6),
+                                Email = reader.GetString(7),
+                                Phone = reader.GetString(8)
                             });
                         }
                     }
@@ -38,14 +42,20 @@ namespace EduAdminApp.DAL
             return list;
         }
 
+        // 添加学生
         public void Add(Student s)
         {
             using (var conn = new SQLiteConnection(connStr))
             {
                 conn.Open();
-                string sql = "INSERT INTO Student (Name, Gender, Major, Email, Phone) VALUES (@Name, @Gender, @Major, @Email, @Phone)";
+                string sql = @"INSERT INTO Users 
+                    (Username, Password, Role, Name, Gender, Major, Email, Phone) 
+                    VALUES (@Username, @Password, @Role, @Name, @Gender, @Major, @Email, @Phone)";
                 using (var cmd = new SQLiteCommand(sql, conn))
                 {
+                    cmd.Parameters.AddWithValue("@Username", s.Username);
+                    cmd.Parameters.AddWithValue("@Password", s.Password);
+                    cmd.Parameters.AddWithValue("@Role", s.Role); // 应该为 "学生"
                     cmd.Parameters.AddWithValue("@Name", s.Name);
                     cmd.Parameters.AddWithValue("@Gender", s.Gender);
                     cmd.Parameters.AddWithValue("@Major", s.Major);
@@ -56,14 +66,27 @@ namespace EduAdminApp.DAL
             }
         }
 
+        // 修改学生信息
         public void Update(Student s)
         {
             using (var conn = new SQLiteConnection(connStr))
             {
                 conn.Open();
-                string sql = "UPDATE Student SET Name=@Name, Gender=@Gender, Major=@Major, Email=@Email, Phone=@Phone WHERE Id=@Id";
+                string sql = @"UPDATE Users SET 
+                    Username = @Username,
+                    Password = @Password,
+                    Role = @Role,
+                    Name = @Name,
+                    Gender = @Gender,
+                    Major = @Major,
+                    Email = @Email,
+                    Phone = @Phone
+                    WHERE ID = @Id AND Role = '学生'";
                 using (var cmd = new SQLiteCommand(sql, conn))
                 {
+                    cmd.Parameters.AddWithValue("@Username", s.Username);
+                    cmd.Parameters.AddWithValue("@Password", s.Password);
+                    cmd.Parameters.AddWithValue("@Role", s.Role);  // 一般为 "学生"
                     cmd.Parameters.AddWithValue("@Name", s.Name);
                     cmd.Parameters.AddWithValue("@Gender", s.Gender);
                     cmd.Parameters.AddWithValue("@Major", s.Major);
@@ -75,12 +98,13 @@ namespace EduAdminApp.DAL
             }
         }
 
+        // 删除学生
         public void Delete(int id)
         {
             using (var conn = new SQLiteConnection(connStr))
             {
                 conn.Open();
-                string sql = "DELETE FROM Student WHERE Id=@Id";
+                string sql = "DELETE FROM Users WHERE ID = @Id AND Role = '学生'";
                 using (var cmd = new SQLiteCommand(sql, conn))
                 {
                     cmd.Parameters.AddWithValue("@Id", id);

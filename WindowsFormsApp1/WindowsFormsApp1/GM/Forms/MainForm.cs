@@ -189,7 +189,7 @@ namespace EduAdminApp.Forms
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
-            //EduAdminApp.Utils.DatabaseInitializer.Initialize();
+           // EduAdminApp.Utils.DatabaseInitializer.Initialize();
             dataGridViewMain.CellFormatting += dataGridViewMain_CellFormatting;
         }
 

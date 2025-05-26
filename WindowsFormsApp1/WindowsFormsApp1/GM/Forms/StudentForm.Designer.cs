@@ -1,195 +1,103 @@
-﻿namespace EduAdminApp
+﻿using MaterialSkin.Controls;
+using MaterialSkin;
+using System;
+using System.Windows.Forms;
+
+namespace EduAdminApp
 {
-    partial class StudentForm
+    partial class StudentForm : MaterialForm
     {
-        private System.ComponentModel.IContainer components = null;
-
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
-
-        #region Windows Form Designer generated code
+        private MaterialTextBox2 txtUsername;
+        private MaterialTextBox2 txtPassword;
+        private MaterialTextBox2 txtName;
+        private MaterialComboBox cboGender;
+        private MaterialTextBox2 txtMajor;
+        private MaterialTextBox2 txtEmail;
+        private MaterialTextBox2 txtPhone;
+        private MaterialButton btnOK;
+        private MaterialButton btnCancel;
 
         private void InitializeComponent()
         {
-            this.lblName = new System.Windows.Forms.Label();
-            this.lblGender = new System.Windows.Forms.Label();
-            this.lblMajor = new System.Windows.Forms.Label();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.lblPhone = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.cboGender = new System.Windows.Forms.ComboBox();
-            this.txtMajor = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtPhone = new System.Windows.Forms.TextBox();
-            this.btnOK = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.SuspendLayout();
-            // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(100, 84);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(86, 31);
-            this.lblName.TabIndex = 0;
-            this.lblName.Text = "姓名：";
-            // 
-            // lblGender
-            // 
-            this.lblGender.AutoSize = true;
-            this.lblGender.Location = new System.Drawing.Point(100, 148);
-            this.lblGender.Name = "lblGender";
-            this.lblGender.Size = new System.Drawing.Size(86, 31);
-            this.lblGender.TabIndex = 2;
-            this.lblGender.Text = "性别：";
-            // 
-            // lblMajor
-            // 
-            this.lblMajor.AutoSize = true;
-            this.lblMajor.Location = new System.Drawing.Point(100, 211);
-            this.lblMajor.Name = "lblMajor";
-            this.lblMajor.Size = new System.Drawing.Size(86, 31);
-            this.lblMajor.TabIndex = 4;
-            this.lblMajor.Text = "专业：";
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(100, 274);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(86, 31);
-            this.lblEmail.TabIndex = 6;
-            this.lblEmail.Text = "邮箱：";
-            // 
-            // lblPhone
-            // 
-            this.lblPhone.AutoSize = true;
-            this.lblPhone.Location = new System.Drawing.Point(100, 341);
-            this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(86, 31);
-            this.lblPhone.TabIndex = 8;
-            this.lblPhone.Text = "电话：";
-            // 
+            this.txtUsername = new MaterialTextBox2();
+            this.txtPassword = new MaterialTextBox2();
+            this.txtName = new MaterialTextBox2();
+            this.cboGender = new MaterialComboBox();
+            this.txtMajor = new MaterialTextBox2();
+            this.txtEmail = new MaterialTextBox2();
+            this.txtPhone = new MaterialTextBox2();
+            this.btnOK = new MaterialButton();
+            this.btnCancel = new MaterialButton();
+
+      
+
+            // Form 基础设置
+            this.Text = "学生信息";
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.ClientSize = new System.Drawing.Size(600, 650);
+
+            // txtUsername
+            this.txtUsername.Hint = "账号";
+            this.txtUsername.Location = new System.Drawing.Point(50, 80);
+            this.txtUsername.Size = new System.Drawing.Size(500, 48);
+
+            // txtPassword
+            this.txtPassword.Hint = "密码";
+            this.txtPassword.UseSystemPasswordChar = true;  // 改为这个属性
+            this.txtPassword.Location = new System.Drawing.Point(50, 140);
+            this.txtPassword.Size = new System.Drawing.Size(500, 48);
+
             // txtName
-            // 
-            this.txtName.Location = new System.Drawing.Point(170, 81);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(301, 39);
-            this.txtName.TabIndex = 1;
-            // 
+            this.txtName.Hint = "姓名";
+            this.txtName.Location = new System.Drawing.Point(50, 200);
+            this.txtName.Size = new System.Drawing.Size(500, 48);
+
             // cboGender
-            // 
-            this.cboGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboGender.FormattingEnabled = true;
-            this.cboGender.Items.AddRange(new object[] {
-            "男",
-            "女"});
-            this.cboGender.Location = new System.Drawing.Point(170, 145);
-            this.cboGender.Name = "cboGender";
-            this.cboGender.Size = new System.Drawing.Size(301, 39);
-            this.cboGender.TabIndex = 3;
-            // 
+            this.cboGender.Hint = "性别";
+            this.cboGender.Items.AddRange(new object[] { "男", "女" });
+            this.cboGender.Location = new System.Drawing.Point(50, 260);
+            this.cboGender.Size = new System.Drawing.Size(500, 48);
+
             // txtMajor
-            // 
-            this.txtMajor.Location = new System.Drawing.Point(170, 208);
-            this.txtMajor.Name = "txtMajor";
-            this.txtMajor.Size = new System.Drawing.Size(301, 39);
-            this.txtMajor.TabIndex = 5;
-            // 
+            this.txtMajor.Hint = "专业";
+            this.txtMajor.Location = new System.Drawing.Point(50, 320);
+            this.txtMajor.Size = new System.Drawing.Size(500, 48);
+
             // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(170, 271);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(301, 39);
-            this.txtEmail.TabIndex = 7;
-            // 
+            this.txtEmail.Hint = "邮箱";
+            this.txtEmail.Location = new System.Drawing.Point(50, 380);
+            this.txtEmail.Size = new System.Drawing.Size(500, 48);
+
             // txtPhone
-            // 
-            this.txtPhone.Location = new System.Drawing.Point(170, 338);
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(301, 39);
-            this.txtPhone.TabIndex = 9;
-            // 
+            this.txtPhone.Hint = "电话";
+            this.txtPhone.Location = new System.Drawing.Point(50, 440);
+            this.txtPhone.Size = new System.Drawing.Size(500, 48);
+
             // btnOK
-            // 
-            this.btnOK.Location = new System.Drawing.Point(101, 432);
-            this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(85, 55);
-            this.btnOK.TabIndex = 10;
             this.btnOK.Text = "确认";
-            this.btnOK.UseVisualStyleBackColor = true;
-            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
-            // 
+            this.btnOK.Type = MaterialButton.MaterialButtonType.Contained;
+            this.btnOK.Location = new System.Drawing.Point(100, 520);
+            this.btnOK.Size = new System.Drawing.Size(120, 40);
+            this.btnOK.Click += new EventHandler(this.btnOK_Click);
+
             // btnCancel
-            // 
-            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(391, 432);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(80, 55);
-            this.btnCancel.TabIndex = 11;
             this.btnCancel.Text = "取消";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 31);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "学生信息";
-            // 
-            // StudentForm
-            // 
-            this.AcceptButton = this.btnOK;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 31F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(622, 559);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblName);
+            this.btnCancel.Type = MaterialButton.MaterialButtonType.Text;
+            this.btnCancel.Location = new System.Drawing.Point(350, 520);
+            this.btnCancel.Size = new System.Drawing.Size(120, 40);
+            this.btnCancel.Click += new EventHandler(this.bnt_close);
+
+
+            // 添加控件到窗体
+            this.Controls.Add(this.txtUsername);
+            this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtName);
-            this.Controls.Add(this.lblGender);
             this.Controls.Add(this.cboGender);
-            this.Controls.Add(this.lblMajor);
             this.Controls.Add(this.txtMajor);
-            this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.lblPhone);
             this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.btnCancel);
-            this.Font = new System.Drawing.Font("微软雅黑", 9F);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "StudentForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "学生信息";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
         }
-
-        #endregion
-
-        private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.Label lblGender;
-        private System.Windows.Forms.Label lblMajor;
-        private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.Label lblPhone;
-        private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.ComboBox cboGender;
-        private System.Windows.Forms.TextBox txtMajor;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtPhone;
-        private System.Windows.Forms.Button btnOK;
-        private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Label label1;
     }
 }

@@ -242,3 +242,6 @@ Z:\Desktop\eqfqe\CSharp\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Numer
 Z:\Desktop\eqfqe\CSharp\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 Z:\Desktop\eqfqe\CSharp\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\System.Threading.Tasks.Extensions.xml
 Z:\Desktop\eqfqe\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsF.A1EEDF9B.Up2Date
+Z:\Desktop\eqfqe\CSharp\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\MaterialSkin.dll
+Z:\Desktop\eqfqe\CSharp\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\SunnyUI.Common.dll
+Z:\Desktop\eqfqe\CSharp\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\SunnyUI.dll
