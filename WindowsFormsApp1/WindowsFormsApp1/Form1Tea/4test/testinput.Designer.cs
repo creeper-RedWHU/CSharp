@@ -149,7 +149,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(169, 37);
             this.label1.TabIndex = 0;
-            this.label1.Text = "布置试卷";
+            this.label1.Text = "布置考试";
             // 
             // testinput
             // 

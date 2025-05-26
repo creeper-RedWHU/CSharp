@@ -57,6 +57,7 @@ namespace WindowsFormsApp1
             glinput.NextPage += NextPage;
             glinputSec = new glinputSec();
             glovw = new glovw();
+            glovw.GoToEditPager += glovw_GoToEdit;
             glrecycle = new glrecycle();
 
             testovw = new testovw();
@@ -138,6 +139,20 @@ namespace WindowsFormsApp1
             panel3.Controls.Add(testinputSec);
         }
 
+        private void glovw_GoToEdit(ArrayList arrayList)
+        {
+            glinput.UpdateData();
+            glinputSec.change = true;
+            glinputSec.HIDOlder = int.Parse((string)arrayList[arrayList.Count - 1]);
+            glinputSec.UpdateData();
+            arrayList.RemoveAt(arrayList.Count - 1);
+            glinput.load(arrayList);
+            
+            glinput.Show();
+            panel3.Controls.Clear();
+            panel3.Controls.Add(glinput);
+        }
+
         private void NextPage(object sender,ArrayList arraylist)
         {
             glinputSec.arrayList = arraylist;
@@ -179,6 +194,7 @@ namespace WindowsFormsApp1
         private void button10_Click(object sender, EventArgs e)
         {
             panel3.Controls.Clear();
+            glovw.UpdateData(); 
             glovw.Show();
             panel3.Controls.Add(glovw);
         }
@@ -194,7 +210,7 @@ namespace WindowsFormsApp1
         private void button12_Click(object sender, EventArgs e)
         {
             panel3.Controls.Clear();
-            glrecycle.Show();
+            glrecycle.UpdateData(); glrecycle.Show();
             panel3.Controls.Add(glrecycle);
         }
 
@@ -237,6 +253,8 @@ namespace WindowsFormsApp1
         }
 
         
+        
+
 
         public void zyedit_GoToViewPage()
         {

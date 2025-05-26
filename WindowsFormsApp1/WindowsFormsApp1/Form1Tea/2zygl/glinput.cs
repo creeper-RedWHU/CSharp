@@ -27,6 +27,30 @@ namespace WindowsFormsApp1.Form1Tea._2zygl
             this.dataGridView1.AutoGenerateColumns=false;
             getID.BindToTable(this.dataGridView1, "Problem", "1", 0);
         }
+
+        private bool findW(ArrayList arrayList, int x)
+        {
+            for (int i = 0; i < arrayList.Count; i++)
+            {
+                if (x ==(int)arrayList[i])
+                    return true;
+            }
+            return false;
+        }
+
+        public void load(ArrayList arrayList)
+        {
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (row.IsNewRow) continue;
+                var cellValue = row.Cells["Choose"].Value;
+                int id = Convert.ToInt32(row.Cells[0].Value);
+                // 复选框状态判断
+
+                if (findW(arrayList, id)) { row.Cells["Choose"].Value = true; }
+            }
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             /*

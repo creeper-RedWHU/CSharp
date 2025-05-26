@@ -161,3 +161,5 @@ E:\pr\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1T
 C:\Users\Administrator\Desktop\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormProblems.resources
 C:\Users\Administrator\Desktop\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.student.InputBoxForm.resources
 >>>>>>> 84faaaefe6e3d7a090184c40780601be28766a51
+E:\pr\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormProblems.resources
+E:\pr\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.student.InputBoxForm.resources

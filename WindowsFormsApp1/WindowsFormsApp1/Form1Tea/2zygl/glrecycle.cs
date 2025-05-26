@@ -16,5 +16,14 @@ namespace WindowsFormsApp1.Form1Tea._2zygl
         {
             InitializeComponent();
         }
+        public void UpdateData(int x = 2)
+        {
+            this.dataGridView1.AutoGenerateColumns = false;
+            getID.BindToTable(this.dataGridView1, "HMK", "0", x);
+        }
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

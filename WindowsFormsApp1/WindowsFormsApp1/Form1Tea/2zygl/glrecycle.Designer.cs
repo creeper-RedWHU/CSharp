@@ -37,8 +37,16 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.customSearchBar2 = new WindowsFormsApp1.CustomSearchBar();
             this.label1 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.HID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StartTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EndTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.InputInformation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Del = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -127,10 +135,97 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "作业回收站";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.HID,
+            this.HName,
+            this.StartTime,
+            this.EndTime,
+            this.InputInformation,
+            this.Del});
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.GridColor = System.Drawing.Color.White;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 144);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dataGridView1.RowTemplate.Height = 27;
+            this.dataGridView1.Size = new System.Drawing.Size(871, 606);
+            this.dataGridView1.TabIndex = 6;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // HID
+            // 
+            this.HID.DataPropertyName = "HID";
+            this.HID.HeaderText = "作业编号";
+            this.HID.MinimumWidth = 6;
+            this.HID.Name = "HID";
+            this.HID.ReadOnly = true;
+            this.HID.Width = 125;
+            // 
+            // HName
+            // 
+            this.HName.DataPropertyName = "HName";
+            this.HName.HeaderText = "作业标题";
+            this.HName.MinimumWidth = 6;
+            this.HName.Name = "HName";
+            this.HName.ReadOnly = true;
+            this.HName.Width = 125;
+            // 
+            // StartTime
+            // 
+            this.StartTime.DataPropertyName = "StartTime";
+            this.StartTime.HeaderText = "起始时间";
+            this.StartTime.MinimumWidth = 6;
+            this.StartTime.Name = "StartTime";
+            this.StartTime.ReadOnly = true;
+            this.StartTime.Width = 125;
+            // 
+            // EndTime
+            // 
+            this.EndTime.DataPropertyName = "EndTime";
+            this.EndTime.HeaderText = "结束时间";
+            this.EndTime.MinimumWidth = 6;
+            this.EndTime.Name = "EndTime";
+            this.EndTime.ReadOnly = true;
+            this.EndTime.Width = 125;
+            // 
+            // InputInformation
+            // 
+            this.InputInformation.DataPropertyName = "InputInformation";
+            this.InputInformation.HeaderText = "输入信息";
+            this.InputInformation.MinimumWidth = 6;
+            this.InputInformation.Name = "InputInformation";
+            this.InputInformation.ReadOnly = true;
+            this.InputInformation.Width = 125;
+            // 
+            // Del
+            // 
+            this.Del.HeaderText = "操作";
+            this.Del.MinimumWidth = 6;
+            this.Del.Name = "Del";
+            this.Del.ReadOnly = true;
+            this.Del.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Del.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Del.Text = "删除";
+            this.Del.UseColumnTextForButtonValue = true;
+            this.Del.Width = 125;
+            // 
             // glrecycle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "glrecycle";
@@ -139,6 +234,7 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -154,5 +250,12 @@
         private System.Windows.Forms.Panel panel1;
         private CustomSearchBar customSearchBar2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StartTime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EndTime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn InputInformation;
+        private System.Windows.Forms.DataGridViewButtonColumn Del;
     }
 }
