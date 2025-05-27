@@ -222,23 +222,17 @@
     <Compile Include="Form1Tea\4test\testrecycle.Designer.cs">
       <DependentUpon>testrecycle.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1Tea\5exam\examipt.cs">
+    <Compile Include="Form1Tea\5exam\examPG.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Form1Tea\5exam\examipt.Designer.cs">
-      <DependentUpon>examipt.cs</DependentUpon>
+    <Compile Include="Form1Tea\5exam\examPG.Designer.cs">
+      <DependentUpon>examPG.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1Tea\5exam\examiptSec.cs">
+    <Compile Include="Form1Tea\5exam\zyPG.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Form1Tea\5exam\examiptSec.Designer.cs">
-      <DependentUpon>examiptSec.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form1Tea\5exam\examovw.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Form1Tea\5exam\examovw.Designer.cs">
-      <DependentUpon>examovw.cs</DependentUpon>
+    <Compile Include="Form1Tea\5exam\zyPG.Designer.cs">
+      <DependentUpon>zyPG.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1Tea\6home\Create.cs">
       <SubType>UserControl</SubType>
@@ -261,6 +255,7 @@
     <Compile Include="Form1Tea\Classes.cs" />
     <Compile Include="Form1Tea\HT.cs" />
     <Compile Include="Form1Tea\Problem.cs" />
+    <Compile Include="FormStyle.cs" />
     <Compile Include="Form_login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -399,14 +394,11 @@
     <EmbeddedResource Include="Form1Tea\4test\testrecycle.resx">
       <DependentUpon>testrecycle.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1Tea\5exam\examipt.resx">
-      <DependentUpon>examipt.cs</DependentUpon>
+    <EmbeddedResource Include="Form1Tea\5exam\examPG.resx">
+      <DependentUpon>examPG.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1Tea\5exam\examiptSec.resx">
-      <DependentUpon>examiptSec.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1Tea\5exam\examovw.resx">
-      <DependentUpon>examovw.cs</DependentUpon>
+    <EmbeddedResource Include="Form1Tea\5exam\zyPG.resx">
+      <DependentUpon>zyPG.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1Tea\6home\Create.resx">
       <DependentUpon>Create.cs</DependentUpon>

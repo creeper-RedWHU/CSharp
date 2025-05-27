@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1.Form1Tea._5exam
 {
-    public partial class examovw : UserControl
+    public partial class examPG : UserControl
     {
-        public examovw()
+        public examPG()
         {
             InitializeComponent();
         }
