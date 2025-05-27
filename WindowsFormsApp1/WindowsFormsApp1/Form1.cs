@@ -15,10 +15,12 @@ using WindowsFormsApp1.Form1Tea._4test;
 using WindowsFormsApp1.Form1Tea._5exam;
 using WindowsFormsApp1.Form1Tea._6home;
 using WindowsFormsApp1.Form1Tea.zy;
+using static MaterialSkin.Controls.MaterialForm;
 namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
+        private readonly FormStyle _styleHandler;//用于更改窗口样式
         #region 教师区域
         public zyovw ovw;//创建用户控件一变量
         public zyinput zyinput;
@@ -36,8 +38,8 @@ namespace WindowsFormsApp1
         public testinputSec testinputSec;
         public testrecycle testrecycle;
 
-        public examipt examipt;
-        public examovw examovw;
+        public examPG examipt;
+        public zyPG examovw;
 
         public Create create;
         public CreateNext createnext;
@@ -73,8 +75,8 @@ namespace WindowsFormsApp1
             testinputSec = new testinputSec();
 
 
-            examipt = new examipt();
-            examovw = new examovw();
+            examipt = new examPG();
+            examovw = new zyPG();
             /*
              常数
              */
@@ -95,11 +97,11 @@ namespace WindowsFormsApp1
             create.GoToNextHome += Create_GoToNext;
             createnext.goToHome += button5_Click;
             createnext.TeacherID = TeacherID;
-            
+
 
             #endregion
 
-
+            _styleHandler = new FormStyle(this);
             /*直接展示首页部分*/
             Home.teacherId = TeacherID;
             Home.UpdataData(TeacherName);
@@ -107,6 +109,14 @@ namespace WindowsFormsApp1
             panel2.Hide();
             Home.Show();
             panel3.Controls.Add(Home);
+            Button[] sidebarButtons = { button7, button8, button10, button11, button12, button17, button18, button20, button21,  button23, button25 };
+
+            foreach (var btn in sidebarButtons)
+            {
+                btn.BackColor = Color.White;
+                btn.ForeColor = Color.Black;
+                btn.Font = new Font("微软雅黑", 10F, FontStyle.Regular);
+            }
 
         }
 
@@ -170,6 +180,14 @@ namespace WindowsFormsApp1
 
         private void home_GoToShow(object sender, EventArgs e)
         {
+            Button[] sidebarButtons = { button7, button8, button10, button11, button12, button17, button18, button20, button21,  button23, button25 };
+
+            foreach (var btn in sidebarButtons)
+            {
+                btn.BackColor = Color.White;
+                btn.ForeColor = Color.Black;
+                btn.Font = new Font("微软雅黑", 10F, FontStyle.Regular);
+            }
             panel2.Show(); 
             panel3.Controls.Clear();
         }
@@ -238,6 +256,7 @@ namespace WindowsFormsApp1
 
         private void button7_Click(object sender, EventArgs e)
         {
+            SetSidebarButtonSelected(button7);
             ovw.UpdateData();
             ovw.Show();
             panel3.Controls.Clear();
@@ -245,6 +264,20 @@ namespace WindowsFormsApp1
 
         }
 
+        private void SetSidebarButtonSelected(Button selectedButton)
+        {
+            // 所有侧边栏按钮
+            Button[] sidebarButtons = { button7, button8, button10, button11, button12, button17, button18, button20, button21, button23, button25 };
+            foreach (var btn in sidebarButtons)
+            {
+                btn.BackColor = Color.White;
+                btn.ForeColor = Color.Black;
+                btn.Font = new Font("微软雅黑", 10F, FontStyle.Regular);
+            }
+            selectedButton.BackColor = Color.FromArgb(40, 167, 69); // 绿色
+            selectedButton.ForeColor = Color.White;
+            selectedButton.Font = new Font("微软雅黑", 10F, FontStyle.Bold);
+        }
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
@@ -252,6 +285,7 @@ namespace WindowsFormsApp1
 
         private void button8_Click(object sender, EventArgs e)
         {
+            SetSidebarButtonSelected(button8);
             panel3.Controls.Clear();
             zyinput.Show();
             panel3.Controls.Add(zyinput);
@@ -259,6 +293,7 @@ namespace WindowsFormsApp1
 
         private void button23_Click(object sender, EventArgs e)
         {
+            SetSidebarButtonSelected(button23);
             panel3.Controls.Clear();
             zyrecycle.UpdateData();
             zyrecycle.Show();
@@ -268,6 +303,7 @@ namespace WindowsFormsApp1
 
         private void button10_Click(object sender, EventArgs e)
         {
+            SetSidebarButtonSelected(button10);
             panel3.Controls.Clear();
             glovw.UpdateData(); 
             glovw.Show();
@@ -276,6 +312,7 @@ namespace WindowsFormsApp1
 
         private void button11_Click(object sender, EventArgs e)
         {
+            SetSidebarButtonSelected(button11);
             panel3.Controls.Clear();
             glinput.UpdateData(); 
             glinput.Show();
@@ -284,6 +321,7 @@ namespace WindowsFormsApp1
 
         private void button12_Click(object sender, EventArgs e)
         {
+            SetSidebarButtonSelected(button12);
             panel3.Controls.Clear();
             glrecycle.UpdateData(); glrecycle.Show();
             panel3.Controls.Add(glrecycle);
@@ -294,6 +332,7 @@ namespace WindowsFormsApp1
 
         private void button17_Click(object sender, EventArgs e)
         {
+            SetSidebarButtonSelected(button17);
             panel3.Controls.Clear();
             testovw.UpdateData(); testovw.Show();
             panel3.Controls.Add(testovw);
@@ -301,6 +340,7 @@ namespace WindowsFormsApp1
 
         private void button18_Click(object sender, EventArgs e)
         {
+            SetSidebarButtonSelected(button18);
             panel3.Controls.Clear();
             testinput.UpdateData(); 
             testinput.Show();
@@ -309,6 +349,7 @@ namespace WindowsFormsApp1
 
         private void button25_Click(object sender, EventArgs e)
         {
+            SetSidebarButtonSelected(button25);
             panel3.Controls.Clear();
             testrecycle.UpdateData();
             testrecycle.Show();
@@ -317,6 +358,8 @@ namespace WindowsFormsApp1
 
         private void button20_Click(object sender, EventArgs e)
         {
+            examovw.UpdateData();
+            SetSidebarButtonSelected(button20);
             panel3.Controls.Clear();
             examovw.Show();
             panel3.Controls.Add(examovw);
@@ -324,6 +367,7 @@ namespace WindowsFormsApp1
 
         private void button21_Click(object sender, EventArgs e)
         {
+            SetSidebarButtonSelected(button21);
             panel3.Controls.Clear();
             examipt.Show();
             panel3.Controls.Add(examipt);
@@ -364,5 +408,7 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        
     }
 }
