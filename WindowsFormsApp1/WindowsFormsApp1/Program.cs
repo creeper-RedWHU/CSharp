@@ -17,7 +17,11 @@ namespace WindowsFormsApp1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< HEAD
             Application.Run(new Form1());
+=======
+            Application.Run(new Form_login());
+>>>>>>> 009bb108fb91a696b088aa21a4c96790ff957b2b
             //Application.Run(new Form_login());
             //初始化数据库
             //if (DbHelper.InitializeDatabase())

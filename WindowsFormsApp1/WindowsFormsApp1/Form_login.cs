@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,10 +12,12 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using MaterialSkin;
+using MaterialSkin.Controls;
+using EduAdminApp.Forms;
 namespace WindowsFormsApp1
 {
-    public partial class Form_login : Form
+    public partial class Form_login : MaterialForm
     {
 
         public Form_login()
@@ -22,7 +26,15 @@ namespace WindowsFormsApp1
 
             // 创建圆角窗体
             this.FormBorderStyle = FormBorderStyle.None;
-           
+            var materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT; 
+            materialSkinManager.ColorScheme = new ColorScheme(
+                Primary.Blue600, Primary.Blue700,
+                Primary.Blue200, Accent.LightBlue200,
+                TextShade.WHITE
+            );
+
         }
 
         // 重写窗体大小改变事件，保持圆角效果
@@ -30,6 +42,7 @@ namespace WindowsFormsApp1
         {
             base.OnResize(e);
         }
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -44,12 +57,17 @@ namespace WindowsFormsApp1
 
             // 默认选择第一个选项
             cboRole.SelectedIndex = 0;
+
+            cboRole.UseTallSize = true;
+            txtPassword.UseTallSize = true;
+            txtUsername.UseTallSize = true;
+            cboRole.Font = new Font("微软雅黑", 10F);
+            label1.Font = new System.Drawing.Font("宋体", 10F);
+            label2.Font = new System.Drawing.Font("宋体", 10F);
+            btnLogin.Font = new System.Drawing.Font("微软雅黑", 10F);
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
         #region 窗口移动
         private Point mPoint;
         private void Title_MouseDown(object sender, MouseEventArgs e)
@@ -58,9 +76,9 @@ namespace WindowsFormsApp1
         }
         private void Title_MouseMove(object sender, MouseEventArgs e)
         {
-            if(e.Button == MouseButtons.Left)
+            if (e.Button == MouseButtons.Left)
             {
-                this.Location=new Point(this.Location.X + e.X -mPoint.X,this.Location.Y+e.Y-mPoint.Y);
+                this.Location = new Point(this.Location.X + e.X - mPoint.X, this.Location.Y + e.Y - mPoint.Y);
             }
         }
 
@@ -87,25 +105,35 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show($"欢迎 {role} {username} 登录系统！", "登录成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                int studentId = GetUserIdByUsername(username);
+                int userId = GetUserIdByUsername(username);
 
-                // 创建学生表单实例
-                Form_student studentForm = new Form_student(studentId);
+                Form nextForm = null;
+                if (role == "学生")
+                {
+                    nextForm = new Form_student(userId);
+                }
+                else if (role == "老师")
+                {
+                    //nextForm = new Form1(userId); // 你需要有Form_teacher窗体，并支持传入userId
+                }
+                else if (role == "管理员")
+                {
+                    nextForm = new MainForm(); // 你需要有Form_admin窗体，并支持传入userId
+                }
 
-                // 隐藏登录表单
-                this.Hide();
-
-                // 显示学生表单
-                studentForm.Show();
-
-                // 设置关闭学生窗口时，关闭整个应用程序
-                studentForm.FormClosed += (s, args) => this.Close();
+                if (nextForm != null)
+                {
+                    this.Hide();
+                    nextForm.Show();
+                    nextForm.FormClosed += (s, args) => this.Close();
+                }
             }
             else
             {
                 MessageBox.Show("账号、密码或角色选择错误，请重试！", "登录失败", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         // 新增：根据用户名查找ID
         private int GetUserIdByUsername(string username)
@@ -127,14 +155,11 @@ namespace WindowsFormsApp1
                 }
             }
         }
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+
+
     }
 }
