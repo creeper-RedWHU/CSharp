@@ -8,10 +8,12 @@ using System.Windows.Forms;
 using EduAdminApp.DAL;
 using EduAdminApp.Models;
 using EduAdminApp.Forms;
+using MaterialSkin;
+using MaterialSkin.Controls;
 
 namespace EduAdminApp.Forms
 {
-    public partial class MainForm : Form
+    public partial class MainForm : MaterialForm
     {
         private enum ViewMode { Student, Teacher }
         private ViewMode currentMode = ViewMode.Student;
@@ -193,10 +195,7 @@ namespace EduAdminApp.Forms
             dataGridViewMain.CellFormatting += dataGridViewMain_CellFormatting;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+     
 
         private Point mPoint;
         private void MainForm_MouseDown(object sender, MouseEventArgs e)
@@ -212,19 +211,7 @@ namespace EduAdminApp.Forms
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            if (this.WindowState == FormWindowState.Normal)
-            {
-                this.WindowState = FormWindowState.Maximized;
-                button2.Text = "🗗";
-            }
-            else
-            {
-                this.WindowState = FormWindowState.Normal;
-                button2.Text = "🗖";
-            }
-        }
+  
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
@@ -302,8 +289,6 @@ namespace EduAdminApp.Forms
             }
         }
 
-
-
-       
+     
     }
 }

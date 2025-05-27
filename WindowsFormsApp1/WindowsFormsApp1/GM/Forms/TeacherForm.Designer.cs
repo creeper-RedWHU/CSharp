@@ -49,7 +49,7 @@
             this.txtUsername.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtUsername.Hint = "账号";
             this.txtUsername.LeadingIcon = null;
-            this.txtUsername.Location = new System.Drawing.Point(56, 162);
+            this.txtUsername.Location = new System.Drawing.Point(82, 117);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsername.MaxLength = 50;
             this.txtUsername.MouseState = MaterialSkin.MouseState.OUT;
@@ -68,7 +68,7 @@
             this.txtPassword.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtPassword.Hint = "密码";
             this.txtPassword.LeadingIcon = null;
-            this.txtPassword.Location = new System.Drawing.Point(56, 237);
+            this.txtPassword.Location = new System.Drawing.Point(82, 207);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.MaxLength = 50;
             this.txtPassword.MouseState = MaterialSkin.MouseState.OUT;
@@ -88,7 +88,7 @@
             this.txtName.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtName.Hint = "姓名";
             this.txtName.LeadingIcon = null;
-            this.txtName.Location = new System.Drawing.Point(56, 312);
+            this.txtName.Location = new System.Drawing.Point(82, 297);
             this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.MaxLength = 50;
             this.txtName.MouseState = MaterialSkin.MouseState.OUT;
@@ -116,7 +116,7 @@
             this.cboGender.Items.AddRange(new object[] {
             "男",
             "女"});
-            this.cboGender.Location = new System.Drawing.Point(56, 387);
+            this.cboGender.Location = new System.Drawing.Point(82, 387);
             this.cboGender.Margin = new System.Windows.Forms.Padding(4);
             this.cboGender.MaxDropDownItems = 4;
             this.cboGender.MouseState = MaterialSkin.MouseState.OUT;
@@ -133,7 +133,7 @@
             this.txtMajor.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtMajor.Hint = "学院";
             this.txtMajor.LeadingIcon = null;
-            this.txtMajor.Location = new System.Drawing.Point(56, 477);
+            this.txtMajor.Location = new System.Drawing.Point(82, 477);
             this.txtMajor.Margin = new System.Windows.Forms.Padding(4);
             this.txtMajor.MaxLength = 50;
             this.txtMajor.MouseState = MaterialSkin.MouseState.OUT;
@@ -152,7 +152,7 @@
             this.txtEmail.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtEmail.Hint = "邮箱";
             this.txtEmail.LeadingIcon = null;
-            this.txtEmail.Location = new System.Drawing.Point(56, 552);
+            this.txtEmail.Location = new System.Drawing.Point(82, 567);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.MaxLength = 50;
             this.txtEmail.MouseState = MaterialSkin.MouseState.OUT;
@@ -171,7 +171,7 @@
             this.txtPhone.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtPhone.Hint = "电话";
             this.txtPhone.LeadingIcon = null;
-            this.txtPhone.Location = new System.Drawing.Point(56, 627);
+            this.txtPhone.Location = new System.Drawing.Point(82, 647);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(4);
             this.txtPhone.MaxLength = 50;
             this.txtPhone.MouseState = MaterialSkin.MouseState.OUT;
@@ -188,9 +188,10 @@
             this.btnOK.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnOK.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btnOK.Depth = 0;
+            this.btnOK.Font = new System.Drawing.Font("宋体", 10F);
             this.btnOK.HighEmphasis = true;
             this.btnOK.Icon = null;
-            this.btnOK.Location = new System.Drawing.Point(146, 702);
+            this.btnOK.Location = new System.Drawing.Point(134, 758);
             this.btnOK.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.btnOK.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnOK.Name = "btnOK";
@@ -211,7 +212,7 @@
             this.btnCancel.Depth = 0;
             this.btnCancel.HighEmphasis = true;
             this.btnCancel.Icon = null;
-            this.btnCancel.Location = new System.Drawing.Point(386, 702);
+            this.btnCancel.Location = new System.Drawing.Point(453, 758);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.btnCancel.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnCancel.Name = "btnCancel";
@@ -228,7 +229,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(714, 931);
+            this.ClientSize = new System.Drawing.Size(766, 887);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.txtPhone);
