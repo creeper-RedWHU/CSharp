@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System.Drawing;
+using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
@@ -36,17 +37,27 @@ namespace WindowsFormsApp1
             // 
             // dgvPassedWork
             // 
+            this.dgvPassedWork.AllowUserToAddRows = false;
+            this.dgvPassedWork.AllowUserToDeleteRows = false;
             this.dgvPassedWork.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPassedWork.Location = new System.Drawing.Point(20, 18);
             this.dgvPassedWork.Name = "dgvPassedWork";
+            this.dgvPassedWork.ReadOnly = true;
             this.dgvPassedWork.RowHeadersWidth = 62;
             this.dgvPassedWork.RowTemplate.Height = 30;
+            this.dgvPassedWork.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPassedWork.Size = new System.Drawing.Size(819, 616);
             this.dgvPassedWork.TabIndex = 0;
-            this.dgvPassedWork.ReadOnly = true;
-            this.dgvPassedWork.AllowUserToAddRows = false;
-            this.dgvPassedWork.AllowUserToDeleteRows = false;
-            this.dgvPassedWork.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            this.dgvPassedWork.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDueWork_CellDoubleClick);
+            this.dgvPassedWork.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill; // 或者 AllCells
+            this.dgvPassedWork.RowTemplate.Height = 32;
+            this.dgvPassedWork.Font = new Font("微软雅黑", 12F);
+            this.dgvPassedWork.ColumnHeadersDefaultCellStyle.Font = new Font("微软雅黑", 12F, FontStyle.Bold);
+            this.dgvPassedWork.EnableHeadersVisualStyles = false;
+            this.dgvPassedWork.ColumnHeadersDefaultCellStyle.BackColor = Color.DodgerBlue;
+            this.dgvPassedWork.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            this.dgvPassedWork.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            this.dgvPassedWork.AlternatingRowsDefaultCellStyle.BackColor = Color.AliceBlue;
             // 
             // passed_work
             // 

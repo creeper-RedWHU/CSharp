@@ -2,127 +2,167 @@
 {
     partial class Form_login
     {
-        /// <summary>
-        /// 必需的设计器变量。
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// 清理所有正在使用的资源。
-        /// </summary>
-        /// <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
-            {
                 components.Dispose();
-            }
             base.Dispose(disposing);
         }
 
-        #region Windows 窗体设计器生成的代码
+        #region Windows Form Designer generated code
 
-        /// <summary>
-        /// 设计器支持所需的方法 - 不要修改
-        /// 使用代码编辑器修改此方法的内容。
-        /// </summary>
         private void InitializeComponent()
         {
+            this.txtUsername = new MaterialSkin.Controls.MaterialTextBox2();
+            this.txtPassword = new MaterialSkin.Controls.MaterialTextBox2();
+            this.cboRole = new MaterialSkin.Controls.MaterialComboBox();
+            this.btnLogin = new MaterialSkin.Controls.MaterialButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtUsername = new System.Windows.Forms.TextBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.cboRole = new System.Windows.Forms.ComboBox();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.AnimateReadOnly = false;
+            this.txtUsername.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.txtUsername.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtUsername.Depth = 0;
+            this.txtUsername.Font = new System.Drawing.Font("微软雅黑", 10F);
+            this.txtUsername.HideSelection = true;
+            this.txtUsername.LeadingIcon = null;
+            this.txtUsername.Location = new System.Drawing.Point(293, 157);
+            this.txtUsername.MaxLength = 32767;
+            this.txtUsername.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.PasswordChar = '\0';
+            this.txtUsername.PrefixSuffixText = null;
+            this.txtUsername.ReadOnly = false;
+            this.txtUsername.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtUsername.SelectedText = "";
+            this.txtUsername.SelectionLength = 0;
+            this.txtUsername.SelectionStart = 0;
+            this.txtUsername.ShortcutsEnabled = true;
+            this.txtUsername.Size = new System.Drawing.Size(372, 48);
+            this.txtUsername.TabIndex = 2;
+            this.txtUsername.TabStop = false;
+            this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtUsername.TrailingIcon = null;
+            this.txtUsername.UseSystemPasswordChar = false;
+            this.txtUsername.UseTallSize = true;
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.AnimateReadOnly = false;
+            this.txtPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.txtPassword.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtPassword.Depth = 0;
+            this.txtPassword.Font = new System.Drawing.Font("微软雅黑", 10F);
+            this.txtPassword.HideSelection = true;
+            this.txtPassword.LeadingIcon = null;
+            this.txtPassword.Location = new System.Drawing.Point(293, 319);
+            this.txtPassword.MaxLength = 32767;
+            this.txtPassword.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '●';
+            this.txtPassword.PrefixSuffixText = null;
+            this.txtPassword.ReadOnly = false;
+            this.txtPassword.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtPassword.SelectedText = "";
+            this.txtPassword.SelectionLength = 0;
+            this.txtPassword.SelectionStart = 0;
+            this.txtPassword.ShortcutsEnabled = true;
+            this.txtPassword.Size = new System.Drawing.Size(372, 48);
+            this.txtPassword.TabIndex = 3;
+            this.txtPassword.TabStop = false;
+            this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtPassword.TrailingIcon = null;
+            this.txtPassword.UseSystemPasswordChar = true;
+            this.txtPassword.UseTallSize = true;
+            // 
+            // cboRole
+            // 
+            this.cboRole.AutoResize = false;
+            this.cboRole.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cboRole.Depth = 0;
+            this.cboRole.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.cboRole.DropDownHeight = 174;
+            this.cboRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboRole.DropDownWidth = 121;
+            this.cboRole.Font = new System.Drawing.Font("微软雅黑", 10F);
+            this.cboRole.ForeColor = System.Drawing.Color.Black;
+            this.cboRole.FormattingEnabled = true;
+            this.cboRole.IntegralHeight = false;
+            this.cboRole.ItemHeight = 43;
+            this.cboRole.Location = new System.Drawing.Point(220, 461);
+            this.cboRole.MaxDropDownItems = 4;
+            this.cboRole.MouseState = MaterialSkin.MouseState.OUT;
+            this.cboRole.Name = "cboRole";
+            this.cboRole.Size = new System.Drawing.Size(160, 49);
+            this.cboRole.StartIndex = 0;
+            this.cboRole.TabIndex = 4;
+            this.cboRole.UseTallSize = true;
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.AutoSize = false;
+            this.btnLogin.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnLogin.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnLogin.Depth = 0;
+            this.btnLogin.Font = new System.Drawing.Font("微软雅黑", 9F);
+            this.btnLogin.HighEmphasis = true;
+            this.btnLogin.Icon = null;
+            this.btnLogin.Location = new System.Drawing.Point(567, 462);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnLogin.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnLogin.Size = new System.Drawing.Size(100, 48);
+            this.btnLogin.TabIndex = 6;
+            this.btnLogin.Text = "登录";
+            this.btnLogin.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnLogin.UseAccentColor = false;
+            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("微软雅黑", 9F);
-            this.label1.Location = new System.Drawing.Point(97, 92);
+            this.label1.Font = new System.Drawing.Font("宋体", 10F);
+            this.label1.Location = new System.Drawing.Point(176, 166);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 24);
-            this.label1.TabIndex = 0;
+            this.label1.Size = new System.Drawing.Size(66, 27);
+            this.label1.TabIndex = 8;
             this.label1.Text = "账号";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("微软雅黑", 9F);
-            this.label2.Location = new System.Drawing.Point(97, 214);
+            this.label2.Font = new System.Drawing.Font("宋体", 10F);
+            this.label2.Location = new System.Drawing.Point(176, 330);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 24);
-            this.label2.TabIndex = 1;
+            this.label2.Size = new System.Drawing.Size(66, 27);
+            this.label2.TabIndex = 7;
             this.label2.Text = "密码";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // txtUsername
-            // 
-            this.txtUsername.Location = new System.Drawing.Point(256, 92);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(280, 28);
-            this.txtUsername.TabIndex = 2;
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Location = new System.Drawing.Point(256, 214);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(280, 28);
-            this.txtPassword.TabIndex = 3;
-            // 
-            // cboRole
-            // 
-            this.cboRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboRole.FormattingEnabled = true;
-            this.cboRole.Location = new System.Drawing.Point(256, 328);
-            this.cboRole.Name = "cboRole";
-            this.cboRole.Size = new System.Drawing.Size(121, 26);
-            this.cboRole.TabIndex = 4;
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.Font = new System.Drawing.Font("微软雅黑", 9F);
-            this.btnLogin.Location = new System.Drawing.Point(461, 321);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(75, 36);
-            this.btnLogin.TabIndex = 6;
-            this.btnLogin.Text = "登录";
-            this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // btnExit
-            // 
-            this.btnExit.Location = new System.Drawing.Point(724, -1);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(42, 36);
-            this.btnExit.TabIndex = 7;
-            this.btnExit.Text = "×";
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // Form_login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(765, 463);
-            this.Controls.Add(this.btnExit);
+            this.ClientSize = new System.Drawing.Size(931, 615);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.cboRole);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Form_login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "登录系统";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Title_MouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Title_MouseMove);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,11 +172,9 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtUsername;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.ComboBox cboRole;
-        private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.Button btnExit;
+        private MaterialSkin.Controls.MaterialTextBox2 txtUsername;
+        private MaterialSkin.Controls.MaterialTextBox2 txtPassword;
+        private MaterialSkin.Controls.MaterialComboBox cboRole;
+        private MaterialSkin.Controls.MaterialButton btnLogin;
     }
 }
-
