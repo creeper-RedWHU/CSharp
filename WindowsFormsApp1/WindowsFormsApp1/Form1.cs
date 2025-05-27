@@ -13,6 +13,7 @@ using WindowsFormsApp1.Form1Tea._1zy;
 using WindowsFormsApp1.Form1Tea._2zygl;
 using WindowsFormsApp1.Form1Tea._4test;
 using WindowsFormsApp1.Form1Tea._5exam;
+using WindowsFormsApp1.Form1Tea._6home;
 using WindowsFormsApp1.Form1Tea.zy;
 namespace WindowsFormsApp1
 {
@@ -38,9 +39,13 @@ namespace WindowsFormsApp1
         public examipt examipt;
         public examovw examovw;
 
-        #endregion
-        #region 公共变量
+        public Create create;
+        public CreateNext createnext;
+        public home_s Home;
+
+
         public string TeacherName;
+        public int TeacherID;
         #endregion
 
 
@@ -70,9 +75,39 @@ namespace WindowsFormsApp1
 
             examipt = new examipt();
             examovw = new examovw();
+            /*
+             常数
+             */
+            TeacherID = 2;
+            TeacherName = "mm";
+            /*
+             修改为：
+             */
+            //TeacherID=Params.TeacherID;
+            //TeacherName=Params.TeacherName;
 
-            TeacherName = "";
+
+            Home=new home_s();
+            create=new Create();
+            createnext=new CreateNext();
+            Home.GoToCreate += home_GoToNext;
+            Home.GoToShow += home_GoToShow;
+            create.GoToNextHome += Create_GoToNext;
+            createnext.goToHome += button5_Click;
+            createnext.TeacherID = TeacherID;
+            
+
             #endregion
+
+
+            /*直接展示首页部分*/
+            Home.teacherId = TeacherID;
+            Home.UpdataData(TeacherName);
+            panel3.Controls.Clear();
+            panel2.Hide();
+            Home.Show();
+            panel3.Controls.Add(Home);
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -133,6 +168,21 @@ namespace WindowsFormsApp1
 
         }
 
+        private void home_GoToShow(object sender, EventArgs e)
+        {
+            panel2.Show(); 
+            panel3.Controls.Clear();
+        }
+
+        private void Create_GoToNext(object sender,Classes classes)
+        {
+            createnext.UpdateData();
+            createnext.classes = classes;
+            createnext.Show();
+            panel3.Controls.Clear();
+            panel3.Controls.Add(createnext);
+        }
+
         public void NextPageTest(object sender,ArrayList arrayList)
         {
             testinputSec.arrayList = arrayList;
@@ -154,6 +204,15 @@ namespace WindowsFormsApp1
             panel3.Controls.Clear();
             panel3.Controls.Add(glinput);
         }
+
+        private void home_GoToNext(object sender, EventArgs e)
+        {
+            
+            panel3.Controls.Clear();
+            create.Show();
+            panel3.Controls.Add(create);
+        }
+
         private void testovw_GoToEdit(ArrayList arrayList)
         {
             testinput.UpdateData();
@@ -292,12 +351,13 @@ namespace WindowsFormsApp1
 
         private void button5_Click(object sender, EventArgs e)
         {
-            home home = new home(TeacherName);
+            Home.UpdataData(TeacherName);
+            Home.teacherName =TeacherName;
+            Home.teacherId=TeacherID;
             panel3.Controls.Clear();
             panel2.Hide();
-            home.Show();
-            panel3.Controls.Add(home);
-            
+            Home.Show();
+            panel3.Controls.Add(Home);
         }
 
         private void button2_Click_1(object sender, EventArgs e)

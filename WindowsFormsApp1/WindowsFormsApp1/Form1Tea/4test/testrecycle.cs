@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,7 +21,12 @@ namespace WindowsFormsApp1.Form1Tea._4test
         public void UpdateData(int x = 1)
         {
             this.dataGridView1.AutoGenerateColumns = false;
-            getID.HMKBindToTable(this.dataGridView1, "HMK", "0", x);
+            ArrayList list = getID.getList();
+            dataGridView1.DataSource=null;
+            if (list.Count != 0)
+            {
+                getID.HMKBindToTable(dataGridView1, "HMK", "1", x, list);
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -272,7 +272,40 @@ namespace WindowsFormsApp1.Form1Tea._2zygl
             hT.ChangeInformation=hT.InputInformation;
             adder(hT);
             //添加映射表
-            
+
+            const string sqlS = @"
+                INSERT INTO CourseHMK (
+                    CourseID,HID
+                ) VALUES (
+                    @CourseID,@HID
+                )";
+            SqliteProblemConnectionManager.SafeExecute(conn =>
+            {
+                using var transaction = conn.BeginTransaction();
+                try
+                {
+                    using var cmd = new SQLiteCommand(sqlS, conn, transaction);
+
+                    // 绑定固定参数（显式类型）
+                    cmd.Parameters.Add("@CourseID", DbType.Int32).Value = Params.CourseID;
+                    cmd.Parameters.Add("@HID", DbType.String).Value = hT.HID;
+
+                    // 动态参数预定义 
+                    if (cmd.ExecuteNonQuery() != 1)
+                    {
+                        getID.DecHTID();
+                        throw new ApplicationException("数据插入失败");
+                    }
+                    transaction.Commit();
+                }
+                catch
+                {
+                    transaction.Rollback();
+                    throw;
+                }
+            });
+
+
             MessageBox.Show("您成功添加一项作业！");
             textBox1.Text= textBox2.Text=string.Empty;
             dateTimePicker1.Value = dateTimePicker2.Value=DateTime.Now;

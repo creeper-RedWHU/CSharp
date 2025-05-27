@@ -240,12 +240,25 @@
     <Compile Include="Form1Tea\5exam\examovw.Designer.cs">
       <DependentUpon>examovw.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form1Tea\6home\Create.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form1Tea\6home\Create.Designer.cs">
+      <DependentUpon>Create.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1Tea\6home\CreateNext.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form1Tea\6home\CreateNext.Designer.cs">
+      <DependentUpon>CreateNext.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1Tea\6home\home.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Form1Tea\6home\home.Designer.cs">
       <DependentUpon>home.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form1Tea\Classes.cs" />
     <Compile Include="Form1Tea\HT.cs" />
     <Compile Include="Form1Tea\Problem.cs" />
     <Compile Include="Form_login.cs">
@@ -289,6 +302,7 @@
     </Compile>
     <Compile Include="GM\Models\Student.cs" />
     <Compile Include="GM\Models\Teacher.cs" />
+    <Compile Include="Params.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqliteProblemConnectionManager.cs" />
@@ -393,6 +407,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1Tea\5exam\examovw.resx">
       <DependentUpon>examovw.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1Tea\6home\Create.resx">
+      <DependentUpon>Create.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1Tea\6home\CreateNext.resx">
+      <DependentUpon>CreateNext.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1Tea\6home\home.resx">
       <DependentUpon>home.cs</DependentUpon>

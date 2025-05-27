@@ -10,16 +10,43 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1.Form1Tea
 {
-    public partial class home : UserControl
+    public partial class home_s : UserControl
     {
-        public home()
+        public string teacherName;
+        public int teacherId;
+        public home_s()
         {
             InitializeComponent();
         }
-        public home(string TeaName)
+
+        
+
+        public void UpdataData(string TeaName)
         {
-            InitializeComponent();
-            label1.Text = TeaName + "老师，您好！";
+            teacherName = TeaName;
+            label1.Text = teacherName + "老师，您好！";
+            dataGridView1.AutoGenerateColumns=false;
+            getID.CourseToTeacherBindToTable(dataGridView1, "Course", teacherId);
+        }
+
+        public event EventHandler GoToCreate;
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            GoToCreate?.Invoke(this,EventArgs.Empty);
+        }
+
+        public event EventHandler GoToShow;
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+            if (dataGridView1.Columns[e.ColumnIndex].Name == "Choice")
+            {
+                string x = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                Params.CourseID = int.Parse(x);
+                GoToShow?.Invoke(this,EventArgs.Empty);
+            }
         }
     }
 }

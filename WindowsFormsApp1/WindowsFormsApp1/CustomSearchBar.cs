@@ -118,6 +118,5 @@ namespace WindowsFormsApp1
         }
 
         public delegate void ClearSearchingText();
-        public event ClearSearchingText ClearSearchingTextHandler;
     }
 }

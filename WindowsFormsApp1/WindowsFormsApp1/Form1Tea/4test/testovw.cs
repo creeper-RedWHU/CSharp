@@ -21,7 +21,12 @@ namespace WindowsFormsApp1.Form1Tea._4test
         public void UpdateData(int x = 1)
         {
             this.dataGridView1.AutoGenerateColumns = false;
-            getID.HMKBindToTable(this.dataGridView1, "HMK", "1", x);
+            ArrayList list = getID.getList();
+            dataGridView1.DataSource = null;
+            if (list.Count != 0)
+            {
+                getID.HMKBindToTable(dataGridView1, "HMK", "1", x, list);
+            }
         }
         private ArrayList FindPro(int HID)
         {
