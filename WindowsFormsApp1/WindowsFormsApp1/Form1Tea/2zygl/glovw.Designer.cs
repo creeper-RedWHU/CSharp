@@ -1,4 +1,6 @@
-﻿namespace WindowsFormsApp1.Form1Tea._2zygl
+﻿
+
+namespace WindowsFormsApp1.Form1Tea._2zygl
 {
     partial class glovw
     {
@@ -28,9 +30,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.customSearchBar2 = new WindowsFormsApp1.CustomSearchBar();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelEmoji = new System.Windows.Forms.Label();
+            this.labelTitle = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.HID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,31 +50,36 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.customSearchBar2);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.labelEmoji);
+            this.panel1.Controls.Add(this.labelTitle);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Font = new System.Drawing.Font("Segoe UI Emoji", 20F, System.Drawing.FontStyle.Bold);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(871, 100);
+            this.panel1.Size = new System.Drawing.Size(871, 99);
             this.panel1.TabIndex = 2;
             // 
-            // customSearchBar2
+            // labelEmoji
             // 
-            this.customSearchBar2.Location = new System.Drawing.Point(653, 36);
-            this.customSearchBar2.Name = "customSearchBar2";
-            this.customSearchBar2.Size = new System.Drawing.Size(147, 25);
-            this.customSearchBar2.TabIndex = 2;
-            this.customSearchBar2.WaterText = "   标题的索引词  ";
+            this.labelEmoji.AutoSize = true;
+            this.labelEmoji.Font = new System.Drawing.Font("Segoe UI Emoji", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelEmoji.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(201)))), ((int)(((byte)(151)))));
+            this.labelEmoji.Location = new System.Drawing.Point(7, 24);
+            this.labelEmoji.Name = "labelEmoji";
+            this.labelEmoji.Size = new System.Drawing.Size(50, 34);
+            this.labelEmoji.TabIndex = 0;
+            this.labelEmoji.Text = "📚";
             // 
-            // label1
+            // labelTitle
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("宋体", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(20, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(169, 37);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "所有作业";
+            this.labelTitle.AutoSize = true;
+            this.labelTitle.Font = new System.Drawing.Font("Segoe UI Emoji", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(201)))), ((int)(((byte)(151)))));
+            this.labelTitle.Location = new System.Drawing.Point(63, 24);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(155, 34);
+            this.labelTitle.TabIndex = 1;
+            this.labelTitle.Text = "全部作业";
             // 
             // dataGridView1
             // 
@@ -79,8 +89,18 @@
             this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(201)))), ((int)(((byte)(151)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(201)))), ((int)(((byte)(176)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.ColumnHeadersHeight = 40;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.HID,
             this.HName,
@@ -89,21 +109,36 @@
             this.InputInformation,
             this.Edit,
             this.Del});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Emoji", 11F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(245)))), ((int)(((byte)(233)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(201)))), ((int)(((byte)(151)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 100);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 99);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 27;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Emoji", 11F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(245)))), ((int)(((byte)(233)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(201)))), ((int)(((byte)(151)))));
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView1.RowTemplate.Height = 36;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.ShowCellErrors = false;
-            this.dataGridView1.Size = new System.Drawing.Size(871, 650);
+            this.dataGridView1.Size = new System.Drawing.Size(871, 651);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // HID
             // 
             this.HID.DataPropertyName = "HID";
-            this.HID.HeaderText = "作业编号";
+            this.HID.HeaderText = "🆔 编号";
             this.HID.MinimumWidth = 6;
             this.HID.Name = "HID";
             this.HID.ReadOnly = true;
@@ -112,48 +147,48 @@
             // HName
             // 
             this.HName.DataPropertyName = "HName";
-            this.HName.HeaderText = "作业标题";
+            this.HName.HeaderText = "🏷️ 作业标题";
             this.HName.MinimumWidth = 6;
             this.HName.Name = "HName";
             this.HName.ReadOnly = true;
-            this.HName.Width = 125;
+            this.HName.Width = 180;
             // 
             // StartTime
             // 
             this.StartTime.DataPropertyName = "StartTime";
-            this.StartTime.HeaderText = "起始时间";
+            this.StartTime.HeaderText = "⏰ 起始时间";
             this.StartTime.MinimumWidth = 6;
             this.StartTime.Name = "StartTime";
             this.StartTime.ReadOnly = true;
-            this.StartTime.Width = 125;
+            this.StartTime.Width = 140;
             // 
             // EndTime
             // 
             this.EndTime.DataPropertyName = "EndTime";
-            this.EndTime.HeaderText = "结束时间";
+            this.EndTime.HeaderText = "⏳ 结束时间";
             this.EndTime.MinimumWidth = 6;
             this.EndTime.Name = "EndTime";
             this.EndTime.ReadOnly = true;
-            this.EndTime.Width = 125;
+            this.EndTime.Width = 140;
             // 
             // InputInformation
             // 
             this.InputInformation.DataPropertyName = "InputInformation";
-            this.InputInformation.HeaderText = "输入信息";
+            this.InputInformation.HeaderText = "📝 输入信息";
             this.InputInformation.MinimumWidth = 6;
             this.InputInformation.Name = "InputInformation";
             this.InputInformation.ReadOnly = true;
-            this.InputInformation.Width = 125;
+            this.InputInformation.Width = 160;
             // 
             // Edit
             // 
-            this.Edit.HeaderText = "操作";
+            this.Edit.HeaderText = "✏️ 操作";
             this.Edit.MinimumWidth = 6;
             this.Edit.Name = "Edit";
             this.Edit.ReadOnly = true;
-            this.Edit.Text = "编辑";
+            this.Edit.Text = "🛠️ 编辑";
             this.Edit.UseColumnTextForButtonValue = true;
-            this.Edit.Width = 125;
+            this.Edit.Width = 110;
             // 
             // Del
             // 
@@ -162,9 +197,9 @@
             this.Del.Name = "Del";
             this.Del.ReadOnly = true;
             this.Del.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Del.Text = "删除";
+            this.Del.Text = "🗑️ 删除";
             this.Del.UseColumnTextForButtonValue = true;
-            this.Del.Width = 125;
+            this.Del.Width = 110;
             // 
             // glovw
             // 
@@ -182,8 +217,9 @@
         }
 
         #endregion
+        private System.Windows.Forms.Label labelEmoji;
+private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Panel panel1;
-        private CustomSearchBar customSearchBar2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn HID;

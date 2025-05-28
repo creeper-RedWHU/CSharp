@@ -484,6 +484,18 @@ namespace WindowsFormsApp1.Form1Tea
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            #region 文本
+            this.label1.Text = "📚 我的课程中心";
+            this.label2.Text = "📝 请选择您的课程";
+            this.button1.Text = "➕ 创建课程";
+            this.Namer.HeaderText = "📖 课程名称";
+            this.Num.HeaderText = "👥 人数";
+            this.StartTime.HeaderText = "⏰ 起始时间";
+            this.EndTime.HeaderText = "⏳ 结束时间";
+            this.Choice.HeaderText = "🔗 操作";
+            this.Choice.Text = "👉 选择";
+            #endregion
+
 
         }
 
