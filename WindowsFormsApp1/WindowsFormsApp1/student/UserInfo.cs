@@ -15,6 +15,9 @@ namespace WindowsFormsApp1
         public UserInfo(int userId)
         {
             InitializeComponent();
+            // 居中显示卡片
+            this.cardPanel.Left = (this.Width - this.cardPanel.Width) / 2;
+            this.cardPanel.Top = (this.Height - this.cardPanel.Height) / 2;
             _userId = userId;
             LoadUserInfo();
         }
@@ -38,7 +41,7 @@ namespace WindowsFormsApp1
                             {
                                 Id = Convert.ToInt32(reader["ID"]),
                                 Username = reader["Username"].ToString(),
-                                Password=reader["Password"].ToString(),
+                                Password = reader["Password"].ToString(),
                                 Role = reader["Role"].ToString(),
                                 Name = reader["Name"].ToString(),
                                 Gender = reader["Gender"].ToString(),
@@ -48,14 +51,14 @@ namespace WindowsFormsApp1
                             };
 
                             // 显示信息
-                            labelId.Text = "ID号：" + currentStudent.Id;
-                            labelUsername.Text = "用户名：" + currentStudent.Username;
-                            labelRole.Text = "角色：" + currentStudent.Role;
-                            labelName.Text = "姓名：" + currentStudent.Name;
-                            labelGender.Text = "性别：" + currentStudent.Gender;
-                            labelMajor.Text = "专业：" + currentStudent.Major;
-                            labelEmail.Text = "邮箱：" + currentStudent.Email;
-                            labelPhone.Text = "电话：" + currentStudent.Phone;
+                            labelId.Text = "🆔 ID号：" + currentStudent.Id;
+                            labelUsername.Text = "👤 用户名：" + currentStudent.Username;
+                            labelRole.Text = "🛡️ 角色：" + currentStudent.Role;
+                            labelName.Text = "📛 姓名：" + currentStudent.Name;
+                            labelGender.Text = "🚻 性别：" + currentStudent.Gender;
+                            labelMajor.Text = "🎓 专业：" + currentStudent.Major;
+                            labelEmail.Text = "📧 邮箱：" + currentStudent.Email;
+                            labelPhone.Text = "📱 电话：" + currentStudent.Phone;
                         }
                         else
                         {

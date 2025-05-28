@@ -168,10 +168,6 @@ Z:\Desktop\eqfqe\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsForms
 Z:\Desktop\eqfqe\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1Tea._4test.testinputSec.resources
 Z:\Desktop\eqfqe\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1Tea._4test.testovw.resources
 Z:\Desktop\eqfqe\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1Tea._4test.testrecycle.resources
-Z:\Desktop\eqfqe\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1Tea._5exam.examipt.resources
-Z:\Desktop\eqfqe\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1Tea._5exam.examiptSec.resources
-Z:\Desktop\eqfqe\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1Tea._5exam.examovw.resources
-Z:\Desktop\eqfqe\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1Tea.home.resources
 Z:\Desktop\eqfqe\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form_login.resources
 Z:\Desktop\eqfqe\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form_student.resources
 Z:\Desktop\eqfqe\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.GM.resources
@@ -240,7 +236,6 @@ Z:\Desktop\eqfqe\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsF.A1E
 Z:\Desktop\eqfqe\CSharp\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\MaterialSkin.dll
 Z:\Desktop\eqfqe\CSharp\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\SunnyUI.Common.dll
 Z:\Desktop\eqfqe\CSharp\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\SunnyUI.dll
-<<<<<<< HEAD
 E:\pr\CSharp\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\MaterialSkin.dll
 E:\pr\CSharp\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\SunnyUI.Common.dll
 E:\pr\CSharp\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\SunnyUI.dll
@@ -252,6 +247,9 @@ E:\pr\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1T
 E:\pr\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1Tea.home_s.resources
 E:\pr\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1Tea._5exam.examPG.resources
 E:\pr\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1Tea._5exam.zyPG.resources
-=======
+Z:\Desktop\eqfqe\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1Tea._5exam.examPG.resources
+Z:\Desktop\eqfqe\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1Tea._5exam.zyPG.resources
+Z:\Desktop\eqfqe\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1Tea._6home.Create.resources
+Z:\Desktop\eqfqe\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1Tea._6home.CreateNext.resources
+Z:\Desktop\eqfqe\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1Tea.home_s.resources
 Z:\Desktop\eqfqe\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\EduAdminApp.Course.resources
->>>>>>> b769513 (Course&database)

@@ -1,4 +1,7 @@
-﻿namespace WindowsFormsApp1
+﻿using System.Drawing;
+using System.Windows.Forms;
+
+namespace WindowsFormsApp1
 {
     partial class online_work
     {
@@ -28,68 +31,137 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
+            this.headerPanel = new System.Windows.Forms.Panel();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.tabContainer = new System.Windows.Forms.Panel();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnPassedWork = new System.Windows.Forms.Button();
+            this.btnDueWork = new System.Windows.Forms.Button();
+            this.contentPanel = new System.Windows.Forms.Panel();
+            this.headerPanel.SuspendLayout();
+            this.tabContainer.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // headerPanel
             // 
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(0, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1047, 63);
-            this.panel1.TabIndex = 0;
+            this.headerPanel.BackColor = System.Drawing.Color.DodgerBlue;
+            this.headerPanel.Controls.Add(this.lblTitle);
+            this.headerPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.headerPanel.Location = new System.Drawing.Point(0, 0);
+            this.headerPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.headerPanel.Name = "headerPanel";
+            this.headerPanel.Size = new System.Drawing.Size(1178, 72);
+            this.headerPanel.TabIndex = 0;
             // 
-            // button1
+            // lblTitle
             // 
-            this.button1.Location = new System.Drawing.Point(32, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 45);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "正在进行的作业";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Bold);
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(22, 18);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(57, 42);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "📝";
             // 
-            // button2
+            // tabContainer
             // 
-            this.button2.Location = new System.Drawing.Point(213, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(150, 45);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "过期作业";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.tabContainer.BackColor = System.Drawing.Color.White;
+            this.tabContainer.Controls.Add(this.btnRefresh);
+            this.tabContainer.Controls.Add(this.btnPassedWork);
+            this.tabContainer.Controls.Add(this.btnDueWork);
+            this.tabContainer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tabContainer.Location = new System.Drawing.Point(0, 72);
+            this.tabContainer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabContainer.Name = "tabContainer";
+            this.tabContainer.Padding = new System.Windows.Forms.Padding(22, 18, 22, 18);
+            this.tabContainer.Size = new System.Drawing.Size(1178, 84);
+            this.tabContainer.TabIndex = 1;
             // 
-            // panel2
+            // btnRefresh
             // 
-            this.panel2.Location = new System.Drawing.Point(3, 57);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1043, 690);
-            this.panel2.TabIndex = 1;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.btnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRefresh.BackColor = System.Drawing.Color.Orange;
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefresh.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Bold);
+            this.btnRefresh.ForeColor = System.Drawing.Color.White;
+            this.btnRefresh.Location = new System.Drawing.Point(1012, 18);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(135, 48);
+            this.btnRefresh.TabIndex = 2;
+            this.btnRefresh.Text = "🔄 刷新";
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // btnPassedWork
+            // 
+            this.btnPassedWork.BackColor = System.Drawing.Color.Gray;
+            this.btnPassedWork.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPassedWork.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Bold);
+            this.btnPassedWork.ForeColor = System.Drawing.Color.White;
+            this.btnPassedWork.Location = new System.Drawing.Point(225, 18);
+            this.btnPassedWork.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnPassedWork.Name = "btnPassedWork";
+            this.btnPassedWork.Size = new System.Drawing.Size(180, 48);
+            this.btnPassedWork.TabIndex = 1;
+            this.btnPassedWork.Text = "📋 过期作业";
+            this.btnPassedWork.UseVisualStyleBackColor = false;
+            this.btnPassedWork.Click += new System.EventHandler(this.btnPassedWork_Click);
+            // 
+            // btnDueWork
+            // 
+            this.btnDueWork.BackColor = System.Drawing.Color.Green;
+            this.btnDueWork.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDueWork.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Bold);
+            this.btnDueWork.ForeColor = System.Drawing.Color.White;
+            this.btnDueWork.Location = new System.Drawing.Point(22, 18);
+            this.btnDueWork.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnDueWork.Name = "btnDueWork";
+            this.btnDueWork.Size = new System.Drawing.Size(180, 48);
+            this.btnDueWork.TabIndex = 0;
+            this.btnDueWork.Text = "⏰ 正在进行";
+            this.btnDueWork.UseVisualStyleBackColor = false;
+            this.btnDueWork.Click += new System.EventHandler(this.btnDueWork_Click);
+            // 
+            // contentPanel
+            // 
+            this.contentPanel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.contentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.contentPanel.Location = new System.Drawing.Point(0, 156);
+            this.contentPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.contentPanel.Name = "contentPanel";
+            this.contentPanel.Padding = new System.Windows.Forms.Padding(11, 12, 11, 12);
+            this.contentPanel.Size = new System.Drawing.Size(1178, 742);
+            this.contentPanel.TabIndex = 2;
             // 
             // online_work
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.contentPanel);
+            this.Controls.Add(this.tabContainer);
+            this.Controls.Add(this.headerPanel);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "online_work";
-            this.Size = new System.Drawing.Size(1047, 748);
-            this.panel1.ResumeLayout(false);
+            this.Size = new System.Drawing.Size(1178, 898);
+            this.Load += new System.EventHandler(this.online_work_Load);
+            this.headerPanel.ResumeLayout(false);
+            this.headerPanel.PerformLayout();
+            this.tabContainer.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel headerPanel;
+        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Panel tabContainer;
+        private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Button btnPassedWork;
+        private System.Windows.Forms.Button btnDueWork;
+        private System.Windows.Forms.Panel contentPanel;
     }
 }

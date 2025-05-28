@@ -1,7 +1,6 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
 
-
 namespace EduAdminApp.Forms
 {
     partial class MainForm
@@ -30,77 +29,301 @@ namespace EduAdminApp.Forms
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private System.Windows.Forms.Panel panelLeft;
-        private System.Windows.Forms.Button btnStudent;
-        private System.Windows.Forms.Button btnTeacher;
-        private System.Windows.Forms.DataGridView dataGridViewMain;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.Button btnDelete;
-
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.panelLeft = new System.Windows.Forms.Panel();
+            this.headerPanel = new System.Windows.Forms.Panel();
+            this.windowControlsPanel = new System.Windows.Forms.Panel();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnMaximize = new System.Windows.Forms.Button();
+            this.btnMinimize = new System.Windows.Forms.Button();
+            this.titlePanel = new System.Windows.Forms.Panel();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.sidebarPanel = new System.Windows.Forms.Panel();
+            this.navigationPanel = new System.Windows.Forms.Panel();
             this.btnTeacher = new System.Windows.Forms.Button();
             this.btnStudent = new System.Windows.Forms.Button();
-            this.dataGridViewMain = new System.Windows.Forms.DataGridView();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
+            this.sidebarHeader = new System.Windows.Forms.Panel();
+            this.lblNavigation = new System.Windows.Forms.Label();
+            this.mainContentPanel = new System.Windows.Forms.Panel();
+            this.actionButtonsPanel = new System.Windows.Forms.Panel();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.uiLabel1 = new Sunny.UI.UILabel();
-            this.panelLeft.SuspendLayout();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.dataGridPanel = new System.Windows.Forms.Panel();
+            this.dataGridViewMain = new System.Windows.Forms.DataGridView();
+            this.contentHeaderPanel = new System.Windows.Forms.Panel();
+            this.uiLabel1 = new System.Windows.Forms.Label();
+            this.headerPanel.SuspendLayout();
+            this.windowControlsPanel.SuspendLayout();
+            this.titlePanel.SuspendLayout();
+            this.sidebarPanel.SuspendLayout();
+            this.navigationPanel.SuspendLayout();
+            this.sidebarHeader.SuspendLayout();
+            this.mainContentPanel.SuspendLayout();
+            this.actionButtonsPanel.SuspendLayout();
+            this.dataGridPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMain)).BeginInit();
+            this.contentHeaderPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panelLeft
+            // headerPanel
             // 
-            this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.panelLeft.Controls.Add(this.btnTeacher);
-            this.panelLeft.Controls.Add(this.btnStudent);
-            this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelLeft.Location = new System.Drawing.Point(3, 64);
-            this.panelLeft.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panelLeft.Name = "panelLeft";
-            this.panelLeft.Size = new System.Drawing.Size(214, 1223);
-            this.panelLeft.TabIndex = 0;
+            this.headerPanel.BackColor = System.Drawing.Color.DodgerBlue;
+            this.headerPanel.Controls.Add(this.windowControlsPanel);
+            this.headerPanel.Controls.Add(this.titlePanel);
+            this.headerPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.headerPanel.Location = new System.Drawing.Point(2, 2);
+            this.headerPanel.Name = "headerPanel";
+            this.headerPanel.Size = new System.Drawing.Size(1646, 60);
+            this.headerPanel.TabIndex = 0;
+            this.headerPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseDown);
+            this.headerPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseMove);
+            // 
+            // windowControlsPanel
+            // 
+            this.windowControlsPanel.Controls.Add(this.btnExit);
+            this.windowControlsPanel.Controls.Add(this.btnMaximize);
+            this.windowControlsPanel.Controls.Add(this.btnMinimize);
+            this.windowControlsPanel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.windowControlsPanel.Location = new System.Drawing.Point(1526, 0);
+            this.windowControlsPanel.Name = "windowControlsPanel";
+            this.windowControlsPanel.Size = new System.Drawing.Size(120, 60);
+            this.windowControlsPanel.TabIndex = 1;
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold);
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Location = new System.Drawing.Point(80, 15);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(35, 30);
+            this.btnExit.TabIndex = 2;
+            this.btnExit.Text = "✕";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
+            // 
+            // btnMaximize
+            // 
+            this.btnMaximize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.btnMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaximize.Font = new System.Drawing.Font("微软雅黑", 10F, System.Drawing.FontStyle.Bold);
+            this.btnMaximize.ForeColor = System.Drawing.Color.White;
+            this.btnMaximize.Location = new System.Drawing.Point(42, 15);
+            this.btnMaximize.Name = "btnMaximize";
+            this.btnMaximize.Size = new System.Drawing.Size(35, 30);
+            this.btnMaximize.TabIndex = 1;
+            this.btnMaximize.Text = "□";
+            this.btnMaximize.UseVisualStyleBackColor = false;
+            this.btnMaximize.Click += new System.EventHandler(this.BtnMaximize_Click);
+            // 
+            // btnMinimize
+            // 
+            this.btnMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimize.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold);
+            this.btnMinimize.ForeColor = System.Drawing.Color.White;
+            this.btnMinimize.Location = new System.Drawing.Point(4, 15);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(35, 30);
+            this.btnMinimize.TabIndex = 0;
+            this.btnMinimize.Text = "—";
+            this.btnMinimize.UseVisualStyleBackColor = false;
+            this.btnMinimize.Click += new System.EventHandler(this.BtnMinimize_Click);
+            // 
+            // titlePanel
+            // 
+            this.titlePanel.Controls.Add(this.lblTitle);
+            this.titlePanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.titlePanel.Location = new System.Drawing.Point(0, 0);
+            this.titlePanel.Name = "titlePanel";
+            this.titlePanel.Size = new System.Drawing.Size(1646, 60);
+            this.titlePanel.TabIndex = 0;
+            this.titlePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseDown);
+            this.titlePanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseMove);
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Bold);
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(20, 8);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(483, 42);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "🎓 教学作业考试一体化管理平台";
+            this.lblTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseDown);
+            this.lblTitle.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseMove);
+            // 
+            // sidebarPanel
+            // 
+            this.sidebarPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.sidebarPanel.Controls.Add(this.navigationPanel);
+            this.sidebarPanel.Controls.Add(this.sidebarHeader);
+            this.sidebarPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.sidebarPanel.Location = new System.Drawing.Point(2, 62);
+            this.sidebarPanel.Name = "sidebarPanel";
+            this.sidebarPanel.Size = new System.Drawing.Size(200, 1226);
+            this.sidebarPanel.TabIndex = 1;
+            // 
+            // navigationPanel
+            // 
+            this.navigationPanel.Controls.Add(this.btnTeacher);
+            this.navigationPanel.Controls.Add(this.btnStudent);
+            this.navigationPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.navigationPanel.Location = new System.Drawing.Point(0, 60);
+            this.navigationPanel.Name = "navigationPanel";
+            this.navigationPanel.Padding = new System.Windows.Forms.Padding(10);
+            this.navigationPanel.Size = new System.Drawing.Size(200, 1166);
+            this.navigationPanel.TabIndex = 1;
             // 
             // btnTeacher
             // 
-            this.btnTeacher.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(151)))), ((int)(((byte)(234)))));
+            this.btnTeacher.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.btnTeacher.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTeacher.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTeacher.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold);
+            this.btnTeacher.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold);
             this.btnTeacher.ForeColor = System.Drawing.Color.White;
-            this.btnTeacher.Location = new System.Drawing.Point(38, 257);
-            this.btnTeacher.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnTeacher.Location = new System.Drawing.Point(10, 85);
+            this.btnTeacher.Margin = new System.Windows.Forms.Padding(0, 0, 0, 15);
             this.btnTeacher.Name = "btnTeacher";
-            this.btnTeacher.Size = new System.Drawing.Size(138, 60);
+            this.btnTeacher.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnTeacher.Size = new System.Drawing.Size(180, 75);
             this.btnTeacher.TabIndex = 1;
-            this.btnTeacher.Text = "教师管理";
+            this.btnTeacher.Text = "👨‍🏫 教师管理";
+            this.btnTeacher.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTeacher.UseVisualStyleBackColor = false;
             this.btnTeacher.Click += new System.EventHandler(this.btnTeacher_Click);
             // 
             // btnStudent
             // 
-            this.btnStudent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(151)))), ((int)(((byte)(234)))));
+            this.btnStudent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.btnStudent.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStudent.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold);
+            this.btnStudent.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold);
             this.btnStudent.ForeColor = System.Drawing.Color.White;
-            this.btnStudent.Location = new System.Drawing.Point(38, 96);
-            this.btnStudent.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnStudent.Location = new System.Drawing.Point(10, 10);
+            this.btnStudent.Margin = new System.Windows.Forms.Padding(0, 0, 0, 15);
             this.btnStudent.Name = "btnStudent";
-            this.btnStudent.Size = new System.Drawing.Size(138, 60);
+            this.btnStudent.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnStudent.Size = new System.Drawing.Size(180, 75);
             this.btnStudent.TabIndex = 0;
-            this.btnStudent.Text = "学生管理";
+            this.btnStudent.Text = "👨‍🎓 学生管理";
+            this.btnStudent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnStudent.UseVisualStyleBackColor = false;
             this.btnStudent.Click += new System.EventHandler(this.btnStudent_Click);
+            // 
+            // sidebarHeader
+            // 
+            this.sidebarHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.sidebarHeader.Controls.Add(this.lblNavigation);
+            this.sidebarHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.sidebarHeader.Location = new System.Drawing.Point(0, 0);
+            this.sidebarHeader.Name = "sidebarHeader";
+            this.sidebarHeader.Size = new System.Drawing.Size(200, 60);
+            this.sidebarHeader.TabIndex = 0;
+            // 
+            // lblNavigation
+            // 
+            this.lblNavigation.AutoSize = true;
+            this.lblNavigation.Font = new System.Drawing.Font("微软雅黑", 13F, System.Drawing.FontStyle.Bold);
+            this.lblNavigation.ForeColor = System.Drawing.Color.White;
+            this.lblNavigation.Location = new System.Drawing.Point(35, 18);
+            this.lblNavigation.Name = "lblNavigation";
+            this.lblNavigation.Size = new System.Drawing.Size(158, 34);
+            this.lblNavigation.TabIndex = 0;
+            this.lblNavigation.Text = "🔧 管理功能";
+            // 
+            // mainContentPanel
+            // 
+            this.mainContentPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(251)))));
+            this.mainContentPanel.Controls.Add(this.actionButtonsPanel);
+            this.mainContentPanel.Controls.Add(this.dataGridPanel);
+            this.mainContentPanel.Controls.Add(this.contentHeaderPanel);
+            this.mainContentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainContentPanel.Location = new System.Drawing.Point(202, 62);
+            this.mainContentPanel.Name = "mainContentPanel";
+            this.mainContentPanel.Padding = new System.Windows.Forms.Padding(20);
+            this.mainContentPanel.Size = new System.Drawing.Size(1446, 1226);
+            this.mainContentPanel.TabIndex = 2;
+            // 
+            // actionButtonsPanel
+            // 
+            this.actionButtonsPanel.Controls.Add(this.btnDelete);
+            this.actionButtonsPanel.Controls.Add(this.btnEdit);
+            this.actionButtonsPanel.Controls.Add(this.btnAdd);
+            this.actionButtonsPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.actionButtonsPanel.Location = new System.Drawing.Point(20, 1146);
+            this.actionButtonsPanel.Name = "actionButtonsPanel";
+            this.actionButtonsPanel.Padding = new System.Windows.Forms.Padding(0, 20, 0, 0);
+            this.actionButtonsPanel.Size = new System.Drawing.Size(1406, 60);
+            this.actionButtonsPanel.TabIndex = 2;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Bold);
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(1256, 20);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(140, 40);
+            this.btnDelete.TabIndex = 2;
+            this.btnDelete.Text = "🗑️ 删除选中";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Bold);
+            this.btnEdit.ForeColor = System.Drawing.Color.White;
+            this.btnEdit.Location = new System.Drawing.Point(633, 20);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(140, 40);
+            this.btnEdit.TabIndex = 1;
+            this.btnEdit.Text = "✏️ 编辑选中";
+            this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Bold);
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Location = new System.Drawing.Point(10, 20);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(140, 40);
+            this.btnAdd.TabIndex = 0;
+            this.btnAdd.Text = "➕ 添加新建";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // dataGridPanel
+            // 
+            this.dataGridPanel.BackColor = System.Drawing.Color.White;
+            this.dataGridPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.dataGridPanel.Controls.Add(this.dataGridViewMain);
+            this.dataGridPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridPanel.Location = new System.Drawing.Point(20, 80);
+            this.dataGridPanel.Name = "dataGridPanel";
+            this.dataGridPanel.Padding = new System.Windows.Forms.Padding(1);
+            this.dataGridPanel.Size = new System.Drawing.Size(1406, 1126);
+            this.dataGridPanel.TabIndex = 1;
             // 
             // dataGridViewMain
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("微软雅黑", 10F);
             this.dataGridViewMain.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewMain.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewMain.BackgroundColor = System.Drawing.Color.White;
@@ -108,119 +331,118 @@ namespace EduAdminApp.Forms
             this.dataGridViewMain.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dataGridViewMain.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("微软雅黑", 9F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewMain.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewMain.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewMain.ColumnHeadersHeight = 45;
+            this.dataGridViewMain.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("微软雅黑", 9F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewMain.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewMain.EnableHeadersVisualStyles = false;
-            this.dataGridViewMain.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.dataGridViewMain.Location = new System.Drawing.Point(302, 160);
-            this.dataGridViewMain.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dataGridViewMain.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.dataGridViewMain.Location = new System.Drawing.Point(1, 1);
             this.dataGridViewMain.MultiSelect = false;
             this.dataGridViewMain.Name = "dataGridViewMain";
             this.dataGridViewMain.RowHeadersVisible = false;
             this.dataGridViewMain.RowHeadersWidth = 82;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
             this.dataGridViewMain.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridViewMain.RowTemplate.Height = 38;
+            this.dataGridViewMain.RowTemplate.Height = 40;
             this.dataGridViewMain.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewMain.Size = new System.Drawing.Size(1279, 969);
-            this.dataGridViewMain.TabIndex = 2;
+            this.dataGridViewMain.Size = new System.Drawing.Size(1402, 1122);
+            this.dataGridViewMain.TabIndex = 0;
             // 
-            // btnAdd
+            // contentHeaderPanel
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold);
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(365, 1191);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(122, 57);
-            this.btnAdd.TabIndex = 3;
-            this.btnAdd.Text = "添加";
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.BackColor = System.Drawing.Color.Orange;
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold);
-            this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(854, 1191);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(122, 57);
-            this.btnEdit.TabIndex = 4;
-            this.btnEdit.Text = "修改";
-            this.btnEdit.UseVisualStyleBackColor = false;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.Firebrick;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold);
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(1354, 1191);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(122, 57);
-            this.btnDelete.TabIndex = 5;
-            this.btnDelete.Text = "删除";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            this.contentHeaderPanel.Controls.Add(this.uiLabel1);
+            this.contentHeaderPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.contentHeaderPanel.Location = new System.Drawing.Point(20, 20);
+            this.contentHeaderPanel.Name = "contentHeaderPanel";
+            this.contentHeaderPanel.Size = new System.Drawing.Size(1406, 60);
+            this.contentHeaderPanel.TabIndex = 0;
             // 
             // uiLabel1
             // 
-            this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 14F);
-            this.uiLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.uiLabel1.Location = new System.Drawing.Point(783, 87);
+            this.uiLabel1.AutoSize = true;
+            this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Bold);
+            this.uiLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.uiLabel1.Location = new System.Drawing.Point(15, 15);
             this.uiLabel1.Name = "uiLabel1";
-            this.uiLabel1.Size = new System.Drawing.Size(287, 53);
-            this.uiLabel1.TabIndex = 6;
-            this.uiLabel1.Text = "人员信息管理";
+            this.uiLabel1.Size = new System.Drawing.Size(259, 42);
+            this.uiLabel1.TabIndex = 0;
+            this.uiLabel1.Text = "📊 人员信息管理";
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(1650, 1290);
-            this.Controls.Add(this.uiLabel1);
-            this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnEdit);
-            this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.dataGridViewMain);
-            this.Controls.Add(this.panelLeft);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Controls.Add(this.mainContentPanel);
+            this.Controls.Add(this.sidebarPanel);
+            this.Controls.Add(this.headerPanel);
+            this.Font = new System.Drawing.Font("微软雅黑", 9F);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.Name = "MainForm";
+            this.Padding = new System.Windows.Forms.Padding(2);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "教学作业考试一体化平台 - 管理员界面";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseMove);
-            this.panelLeft.ResumeLayout(false);
+            this.headerPanel.ResumeLayout(false);
+            this.windowControlsPanel.ResumeLayout(false);
+            this.titlePanel.ResumeLayout(false);
+            this.titlePanel.PerformLayout();
+            this.sidebarPanel.ResumeLayout(false);
+            this.navigationPanel.ResumeLayout(false);
+            this.sidebarHeader.ResumeLayout(false);
+            this.sidebarHeader.PerformLayout();
+            this.mainContentPanel.ResumeLayout(false);
+            this.actionButtonsPanel.ResumeLayout(false);
+            this.dataGridPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMain)).EndInit();
+            this.contentHeaderPanel.ResumeLayout(false);
+            this.contentHeaderPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Sunny.UI.UILabel uiLabel1;
+        private System.Windows.Forms.Panel headerPanel;
+        private System.Windows.Forms.Panel titlePanel;
+        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Panel windowControlsPanel;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnMaximize;
+        private System.Windows.Forms.Button btnMinimize;
+        private System.Windows.Forms.Panel sidebarPanel;
+        private System.Windows.Forms.Panel sidebarHeader;
+        private System.Windows.Forms.Label lblNavigation;
+        private System.Windows.Forms.Panel navigationPanel;
+        private System.Windows.Forms.Button btnTeacher;
+        private System.Windows.Forms.Button btnStudent;
+        private System.Windows.Forms.Panel mainContentPanel;
+        private System.Windows.Forms.Panel contentHeaderPanel;
+        private System.Windows.Forms.Label uiLabel1;
+        private System.Windows.Forms.Panel dataGridPanel;
+        private System.Windows.Forms.DataGridView dataGridViewMain;
+        private System.Windows.Forms.Panel actionButtonsPanel;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnAdd;
     }
 }

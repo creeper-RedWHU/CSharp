@@ -8,18 +8,18 @@ using System.Windows.Forms;
 using EduAdminApp.DAL;
 using EduAdminApp.Models;
 using EduAdminApp.Forms;
-using MaterialSkin;
-using MaterialSkin.Controls;
+// 移除 MaterialSkin 引用
 
 namespace EduAdminApp.Forms
 {
-    public partial class MainForm : MaterialForm
+    public partial class MainForm : Form  // 改为普通 Form
     {
         private enum ViewMode { Student, Teacher }
         private ViewMode currentMode = ViewMode.Student;
 
         private List<Student> students = new List<Student>();
         private List<Teacher> teachers = new List<Teacher>();
+        private Button _activeNavButton;
 
         public MainForm()
         {
@@ -28,35 +28,175 @@ namespace EduAdminApp.Forms
             this.Resize += MainForm_Resize;
 
             dataGridViewMain.DataBindingComplete += DataGridViewMain_DataBindingComplete;
+
+            // 初始化样式
+            InitializeStyles();
         }
 
+        private void InitializeStyles()
+        {
+            // 设置窗体样式
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.BackColor = Color.DodgerBlue;
+            this.Padding = new Padding(2);
+
+            // 设置窗口控制按钮样式
+            SetWindowControlStyle(btnMinimize, Color.FromArgb(52, 152, 219));
+            SetWindowControlStyle(btnMaximize, Color.FromArgb(52, 152, 219));
+            SetWindowControlStyle(btnExit, Color.FromArgb(231, 76, 60));
+
+            // 设置导航按钮样式
+            SetNavigationButtonStyle(btnStudent, Color.FromArgb(52, 152, 219));
+            SetNavigationButtonStyle(btnTeacher, Color.FromArgb(39, 174, 96));
+
+            // 设置操作按钮样式
+            SetActionButtonStyle(btnAdd, Color.FromArgb(39, 174, 96));
+            SetActionButtonStyle(btnEdit, Color.FromArgb(230, 126, 34));
+            SetActionButtonStyle(btnDelete, Color.FromArgb(231, 76, 60));
+
+            // 默认激活学生管理按钮
+            SetActiveNavigationButton(btnStudent);
+        }
+
+        private void SetWindowControlStyle(Button btn, Color baseColor)
+        {
+            btn.FlatStyle = FlatStyle.Flat;
+            btn.FlatAppearance.BorderSize = 0;
+            btn.BackColor = baseColor;
+            btn.Cursor = Cursors.Hand;
+
+            btn.MouseEnter += (s, e) => {
+                btn.BackColor = ControlPaint.Light(baseColor);
+            };
+            btn.MouseLeave += (s, e) => {
+                btn.BackColor = baseColor;
+            };
+        }
+
+        private void SetNavigationButtonStyle(Button btn, Color baseColor)
+        {
+            btn.FlatStyle = FlatStyle.Flat;
+            btn.FlatAppearance.BorderSize = 0;
+            btn.BackColor = baseColor;
+            btn.Cursor = Cursors.Hand;
+
+            btn.MouseEnter += (s, e) => {
+                if (btn != _activeNavButton)
+                {
+                    btn.BackColor = ControlPaint.Light(baseColor);
+                }
+            };
+            btn.MouseLeave += (s, e) => {
+                if (btn != _activeNavButton)
+                {
+                    btn.BackColor = baseColor;
+                }
+            };
+        }
+
+        private void SetActionButtonStyle(Button btn, Color baseColor)
+        {
+            btn.FlatStyle = FlatStyle.Flat;
+            btn.FlatAppearance.BorderSize = 0;
+            btn.BackColor = baseColor;
+            btn.Cursor = Cursors.Hand;
+
+            btn.MouseEnter += (s, e) => {
+                btn.BackColor = ControlPaint.Light(baseColor);
+            };
+            btn.MouseLeave += (s, e) => {
+                btn.BackColor = baseColor;
+            };
+        }
+
+        private void SetActiveNavigationButton(Button activeButton)
+        {
+            // 重置所有按钮为非激活状态
+            if (_activeNavButton != null)
+            {
+                Color originalColor = GetOriginalButtonColor(_activeNavButton);
+                _activeNavButton.BackColor = originalColor;
+            }
+
+            // 设置新的激活按钮
+            _activeNavButton = activeButton;
+            if (activeButton != null)
+            {
+                Color originalColor = GetOriginalButtonColor(activeButton);
+                activeButton.BackColor = ControlPaint.Dark(originalColor);
+            }
+        }
+
+        private Color GetOriginalButtonColor(Button btn)
+        {
+            if (btn == btnStudent) return Color.FromArgb(52, 152, 219);
+            if (btn == btnTeacher) return Color.FromArgb(39, 174, 96);
+            return Color.Gray;
+        }
+
+        // 绘制边框
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            base.OnPaint(e);
+            using (Pen borderPen = new Pen(Color.DodgerBlue, 2))
+            {
+                e.Graphics.DrawRectangle(borderPen, 1, 1, this.Width - 3, this.Height - 3);
+            }
+        }
+
+        #region 窗口控制按钮事件
+        private bool isMaximized = false;
+        private Size normalSize;
+        private Point normalLocation;
+
+        private void BtnMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void BtnMaximize_Click(object sender, EventArgs e)
+        {
+            if (!isMaximized)
+            {
+                normalSize = this.Size;
+                normalLocation = this.Location;
+                Rectangle workingArea = Screen.GetWorkingArea(this);
+                this.Size = new Size(workingArea.Width, workingArea.Height);
+                this.Location = new Point(workingArea.X, workingArea.Y);
+                ((Button)sender).Text = "⧉";
+                isMaximized = true;
+            }
+            else
+            {
+                this.Size = normalSize;
+                this.Location = normalLocation;
+                ((Button)sender).Text = "□";
+                isMaximized = false;
+            }
+        }
+
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+        #endregion
+
+        // 保持所有原有的业务逻辑方法不变
         private Dictionary<Control, Rectangle> originalControls = new Dictionary<Control, Rectangle>();
         private Size originalFormSize;
 
         private void DataGridViewMain_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
-            dataGridViewMain.ClearSelection();          // 取消所有选中行
-            dataGridViewMain.CurrentCell = null;        // 避免第一行高亮
+            dataGridViewMain.ClearSelection();
+            dataGridViewMain.CurrentCell = null;
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
             originalFormSize = this.Size;
             StoreOriginalControlSizes(this);
-
-            //EduAdminApp.Utils.DatabaseInitializer.Initialize();
         }
 
-        private void AddChildControls(Control parent)
-        {
-            foreach (Control child in parent.Controls)
-            {
-                originalControls[child] = child.Bounds;
-                AddChildControls(child);
-            }
-        }
-
-        // 初始化时：记录每个控件原始字体大小
         Dictionary<Control, float> originalFontSizes = new Dictionary<Control, float>();
 
         private void StoreOriginalControlSizes(Control parent)
@@ -67,7 +207,7 @@ namespace EduAdminApp.Forms
                 originalFontSizes[ctrl] = ctrl.Font.Size;
 
                 if (ctrl.HasChildren)
-                    StoreOriginalControlSizes(ctrl); // 递归
+                    StoreOriginalControlSizes(ctrl);
             }
         }
 
@@ -81,7 +221,6 @@ namespace EduAdminApp.Forms
                 Control ctrl = item.Key;
                 Rectangle orig = item.Value;
 
-                // 设置控件位置和大小
                 ctrl.Bounds = new Rectangle(
                     (int)(orig.X * xRatio),
                     (int)(orig.Y * yRatio),
@@ -89,13 +228,11 @@ namespace EduAdminApp.Forms
                     (int)(orig.Height * yRatio)
                 );
 
-                // 恢复原始字体大小后进行缩放
                 if (originalFontSizes.TryGetValue(ctrl, out float originalSize))
                 {
                     float fontScale = Math.Min(xRatio, yRatio);
                     float newFontSize = Math.Max(1f, originalSize * fontScale);
 
-                    // 特别处理 DataGridView，避免字体过大
                     if (ctrl is DataGridView dgv)
                     {
                         dgv.ColumnHeadersDefaultCellStyle.Font = new Font(dgv.Font.FontFamily, newFontSize, dgv.Font.Style);
@@ -111,6 +248,7 @@ namespace EduAdminApp.Forms
 
         private void btnTeacher_Click(object sender, EventArgs e)
         {
+            SetActiveNavigationButton(btnTeacher);
             currentMode = ViewMode.Teacher;
             teachers = TeacherDAL.GetAll();
             dataGridViewMain.DataSource = teachers;
@@ -118,6 +256,7 @@ namespace EduAdminApp.Forms
 
         private void btnStudent_Click(object sender, EventArgs e)
         {
+            SetActiveNavigationButton(btnStudent);
             currentMode = ViewMode.Student;
             students = StudentDAL.GetAll();
             dataGridViewMain.DataSource = students;
@@ -131,8 +270,8 @@ namespace EduAdminApp.Forms
                 if (form.ShowDialog() == DialogResult.OK)
                 {
                     StudentDAL dal = new StudentDAL();
-                    dal.Add(form.Student); // 保存到数据库
-                    students = StudentDAL.GetAll();  // 重新加载数据
+                    dal.Add(form.Student);
+                    students = StudentDAL.GetAll();
                     RefreshStudentGrid(students);
                 }
             }
@@ -142,8 +281,8 @@ namespace EduAdminApp.Forms
                 if (form.ShowDialog() == DialogResult.OK)
                 {
                     TeacherDAL dal = new TeacherDAL();
-                    dal.Add(form.Teacher); // 保存到数据库
-                    teachers = TeacherDAL.GetAll();  // 重新加载数据
+                    dal.Add(form.Teacher);
+                    teachers = TeacherDAL.GetAll();
                     RefreshTeacherGrid(teachers);
                 }
             }
@@ -159,24 +298,22 @@ namespace EduAdminApp.Forms
 
         private void AdjustGridViewLayout()
         {
-            // 让每一列都填满 DataGridView 宽度
             foreach (DataGridViewColumn column in dataGridViewMain.Columns)
             {
                 column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                column.FillWeight = 100; // 默认权重
+                column.FillWeight = 100;
             }
 
-            
-            dataGridViewMain.Columns["Email"].FillWeight = 250;
-            dataGridViewMain.Columns["Phone"].FillWeight = 250;
-
+            if (dataGridViewMain.Columns.Contains("Email"))
+                dataGridViewMain.Columns["Email"].FillWeight = 250;
+            if (dataGridViewMain.Columns.Contains("Phone"))
+                dataGridViewMain.Columns["Phone"].FillWeight = 250;
         }
 
         private void RefreshStudentGrid(List<Student> students)
         {
             dataGridViewMain.DataSource = null;
             dataGridViewMain.DataSource = students;
-
             AdjustGridViewLayout();
         }
 
@@ -184,18 +321,14 @@ namespace EduAdminApp.Forms
         {
             dataGridViewMain.DataSource = null;
             dataGridViewMain.DataSource = teachers;
-
             AdjustGridViewLayout();
         }
 
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
-           // EduAdminApp.Utils.DatabaseInitializer.Initialize();
             dataGridViewMain.CellFormatting += dataGridViewMain_CellFormatting;
         }
-
-     
 
         private Point mPoint;
         private void MainForm_MouseDown(object sender, MouseEventArgs e)
@@ -210,8 +343,6 @@ namespace EduAdminApp.Forms
                 this.Location = new Point(this.Location.X + e.X - mPoint.X, this.Location.Y + e.Y - mPoint.Y);
             }
         }
-
-  
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
@@ -231,7 +362,7 @@ namespace EduAdminApp.Forms
                 if (selectedStudent != null)
                 {
                     StudentDAL dal = new StudentDAL();
-                    dal.Delete(selectedStudent.Id); // 你需要确保 Student 有 Id 属性，并且 Delete 方法支持 Id 删除
+                    dal.Delete(selectedStudent.Id);
                     students = StudentDAL.GetAll();
                     RefreshStudentGrid(students);
                 }
@@ -242,7 +373,7 @@ namespace EduAdminApp.Forms
                 if (selectedTeacher != null)
                 {
                     TeacherDAL dal = new TeacherDAL();
-                    dal.Delete(selectedTeacher.Id); // 同样需要 Teacher 有 Id，Delete 支持 Id 删除
+                    dal.Delete(selectedTeacher.Id);
                     teachers = TeacherDAL.GetAll();
                     RefreshTeacherGrid(teachers);
                 }
@@ -262,12 +393,12 @@ namespace EduAdminApp.Forms
                 Student selectedStudent = dataGridViewMain.CurrentRow.DataBoundItem as Student;
                 if (selectedStudent != null)
                 {
-                    StudentForm form = new StudentForm(selectedStudent); // 使用带参数构造函数加载数据
+                    StudentForm form = new StudentForm(selectedStudent);
                     if (form.ShowDialog() == DialogResult.OK)
                     {
                         StudentDAL dal = new StudentDAL();
-                        dal.Update(form.Student); // 你需要有 Update 方法
-                        students = StudentDAL.GetAll(); // 重新加载数据
+                        dal.Update(form.Student);
+                        students = StudentDAL.GetAll();
                         RefreshStudentGrid(students);
                     }
                 }
@@ -277,18 +408,16 @@ namespace EduAdminApp.Forms
                 Teacher selectedTeacher = dataGridViewMain.CurrentRow.DataBoundItem as Teacher;
                 if (selectedTeacher != null)
                 {
-                    TeacherForm form = new TeacherForm(selectedTeacher); // 使用带参数构造函数加载数据
+                    TeacherForm form = new TeacherForm(selectedTeacher);
                     if (form.ShowDialog() == DialogResult.OK)
                     {
                         TeacherDAL dal = new TeacherDAL();
-                        dal.Update(form.Teacher); // 你需要有 Update 方法
-                        teachers = TeacherDAL.GetAll(); // 重新加载数据
+                        dal.Update(form.Teacher);
+                        teachers = TeacherDAL.GetAll();
                         RefreshTeacherGrid(teachers);
                     }
                 }
             }
         }
-
-     
     }
 }
