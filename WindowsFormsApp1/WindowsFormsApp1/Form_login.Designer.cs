@@ -50,7 +50,6 @@
             this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtUsername.TrailingIcon = null;
             this.txtUsername.UseSystemPasswordChar = false;
-            this.txtUsername.UseTallSize = true;
             // 
             // txtPassword
             // 
@@ -79,7 +78,6 @@
             this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtPassword.TrailingIcon = null;
             this.txtPassword.UseSystemPasswordChar = true;
-            this.txtPassword.UseTallSize = true;
             // 
             // cboRole
             // 
@@ -102,7 +100,6 @@
             this.cboRole.Size = new System.Drawing.Size(160, 49);
             this.cboRole.StartIndex = 0;
             this.cboRole.TabIndex = 4;
-            this.cboRole.UseTallSize = true;
             // 
             // btnLogin
             // 
@@ -150,7 +147,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(931, 615);
+            this.ClientSize = new System.Drawing.Size(939, 656);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.cboRole);
             this.Controls.Add(this.txtPassword);
