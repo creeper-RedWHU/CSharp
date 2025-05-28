@@ -45,6 +45,7 @@ namespace WindowsFormsApp1.Form1Tea
             {
                 string x = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
                 Params.CourseID = int.Parse(x);
+                Params.GetStudentIDsByCourse();
                 GoToShow?.Invoke(this,EventArgs.Empty);
             }
         }

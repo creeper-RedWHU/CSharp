@@ -82,6 +82,7 @@ namespace WindowsFormsApp1.Form1Tea._2zygl
                 textBox2.Text=result.HText;
                 changeFromString(result.StartTime, dateTimePicker1);
                 changeFromString(result.EndTime, dateTimePicker2);
+                RefreshGridFromArrayList();
             }
             else
             {
@@ -107,8 +108,33 @@ namespace WindowsFormsApp1.Form1Tea._2zygl
             return t1 >= t2;
         }
 
-        
 
+        public void RefreshGridFromArrayList()
+        {
+            dataGridView1.Rows.Clear();
+            if(arrayList == null) { return; }
+            foreach (var x in arrayList)
+            {
+                int pid = Convert.ToInt32(x);
+                string proName = "";
+                // 查询ProName
+                const string sql = @"SELECT ProName FROM Problem WHERE PID = @PID LIMIT 1";
+                SqliteProblemConnectionManager.SafeExecute(conn =>
+                {
+                    using var cmd = new SQLiteCommand(sql, conn);
+                    cmd.Parameters.AddWithValue("@PID", pid);
+                    using var reader = cmd.ExecuteReader();
+                    if (reader.Read())
+                        proName = reader["ProName"] is DBNull ? "" : (string)reader["ProName"];
+                });
+
+                int idx = dataGridView1.Rows.Add();
+                var row = dataGridView1.Rows[idx];
+                row.Cells["ID"].Value = pid;
+                row.Cells["Title"].Value = proName;
+                row.Cells["Score"].Value = 10;
+            }
+        }
 
         private void adder(HT hT)
         {
@@ -213,11 +239,53 @@ namespace WindowsFormsApp1.Form1Tea._2zygl
             }
 
 
+            //const string sqlS = @"
+            //    INSERT INTO ProH (
+            //        HID, IsTest, PID, ClassID
+            //    ) VALUES (
+            //        @HID, @IsTest, @PID, @ClassID
+            //    )";
+            //SqliteProblemConnectionManager.SafeExecute(conn =>
+            //{
+            //    using var transaction = conn.BeginTransaction();
+            //    try
+            //    {
+            //        using var cmd = new SQLiteCommand(sqlS, conn, transaction);
+
+            //        // 绑定固定参数（显式类型）
+            //        cmd.Parameters.Add("@HID", DbType.Int32).Value = hT.HID;
+            //        cmd.Parameters.Add("@ClassID", DbType.String).Value = classID;
+            //        cmd.Parameters.Add("@IsTest", DbType.Int32).Value = hT.IsTest;
+            //        cmd.Parameters.Add("@isValid", DbType.Int32).Value = 1;
+
+            //        // 动态参数预定义 
+            //        var pidParam = cmd.CreateParameter();
+            //        pidParam.ParameterName = "@PID";
+            //        pidParam.DbType = DbType.Int32;
+            //        cmd.Parameters.Add(pidParam);
+
+            //        foreach (var item in arrayList)
+            //        {
+            //            pidParam.Value = item;
+            //            if (cmd.ExecuteNonQuery() != 1)
+            //            {
+            //                getID.DecHTID();
+            //                throw new ApplicationException("数据插入失败");
+            //            }
+            //        }
+            //        transaction.Commit();
+            //    }
+            //    catch
+            //    {
+            //        transaction.Rollback();
+            //        throw;
+            //    }
+            //});
             const string sqlS = @"
                 INSERT INTO ProH (
-                    HID, IsTest, PID, ClassID
+                    HID, IsTest, PID, ClassID, Score
                 ) VALUES (
-                    @HID, @IsTest, @PID, @ClassID
+                    @HID, @IsTest, @PID, @ClassID, @Score
                 )";
             SqliteProblemConnectionManager.SafeExecute(conn =>
             {
@@ -226,21 +294,26 @@ namespace WindowsFormsApp1.Form1Tea._2zygl
                 {
                     using var cmd = new SQLiteCommand(sqlS, conn, transaction);
 
-                    // 绑定固定参数（显式类型）
                     cmd.Parameters.Add("@HID", DbType.Int32).Value = hT.HID;
                     cmd.Parameters.Add("@ClassID", DbType.String).Value = classID;
                     cmd.Parameters.Add("@IsTest", DbType.Int32).Value = hT.IsTest;
                     cmd.Parameters.Add("@isValid", DbType.Int32).Value = 1;
 
-                    // 动态参数预定义 
                     var pidParam = cmd.CreateParameter();
                     pidParam.ParameterName = "@PID";
                     pidParam.DbType = DbType.Int32;
                     cmd.Parameters.Add(pidParam);
 
-                    foreach (var item in arrayList)
+                    var scoreParam = cmd.CreateParameter();
+                    scoreParam.ParameterName = "@Score";
+                    scoreParam.DbType = DbType.Int32;
+                    cmd.Parameters.Add(scoreParam);
+
+                    foreach (DataGridViewRow row in dataGridView1.Rows)
                     {
-                        pidParam.Value = item;
+                        if (row.IsNewRow) continue;
+                        pidParam.Value = row.Cells["ID"].Value ?? 0;
+                        scoreParam.Value = row.Cells["Score"].Value ?? 10;
                         if (cmd.ExecuteNonQuery() != 1)
                         {
                             getID.DecHTID();
@@ -255,7 +328,6 @@ namespace WindowsFormsApp1.Form1Tea._2zygl
                     throw;
                 }
             });
-            
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -309,6 +381,38 @@ namespace WindowsFormsApp1.Form1Tea._2zygl
             MessageBox.Show("您成功添加一项作业！");
             textBox1.Text= textBox2.Text=string.Empty;
             dateTimePicker1.Value = dateTimePicker2.Value=DateTime.Now;
+            
+        }
+
+        private void DataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            // 只处理Score列
+            if (e.RowIndex >= 0 && dataGridView1.Columns[e.ColumnIndex].Name == "Score")
+            {
+                // 这里可以做额外的校验或保存操作
+                // 例如：
+                int newScore = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["Score"].Value);
+            }
+        }
+
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+            dataGridView1.CellValueChanged -= DataGridView1_CellValueChanged;
+            dataGridView1.CellValueChanged += DataGridView1_CellValueChanged;
+            dataGridView1.CurrentCellDirtyStateChanged -= DataGridView1_CurrentCellDirtyStateChanged;
+            dataGridView1.CurrentCellDirtyStateChanged += DataGridView1_CurrentCellDirtyStateChanged;
+        }
+
+        private void DataGridView1_CurrentCellDirtyStateChanged(object sender, EventArgs e)
+        {
+            if (dataGridView1.IsCurrentCellDirty)
+            {
+                dataGridView1.CommitEdit(DataGridViewDataErrorContexts.Commit);
+            }
+        }
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
             
         }
     }

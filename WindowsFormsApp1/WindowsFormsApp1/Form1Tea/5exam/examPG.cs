@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,5 +17,30 @@ namespace WindowsFormsApp1.Form1Tea._5exam
         {
             InitializeComponent();
         }
+
+        public void UpdateData(int x = 1)
+        {
+            dataGridView1.DataSource = null;
+            dataGridView1.AutoGenerateColumns = false;
+            ArrayList list = getID.getList();
+            if (list.Count != 0)
+            {
+                getID.HMKBindToTable(dataGridView1, "HMK", "1", x, list);
+            }
+        }
+
+        public event Action<int> GoToPGNext;
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.Columns[e.ColumnIndex].Name == "Edit")
+            {
+                string x = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                MessageBox.Show("您将要批阅第" + x + "份试卷");
+                GoToPGNext?.Invoke(int.Parse(x));
+
+            }
+        }
+
+
     }
 }

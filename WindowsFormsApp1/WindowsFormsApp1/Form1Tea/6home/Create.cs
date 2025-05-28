@@ -47,6 +47,8 @@ namespace WindowsFormsApp1.Form1Tea._6home
             classes.ClassSaying=textBox2.Text;
             classes.StartTime=dateTimePicker1.Text;
             classes.EndTime=dateTimePicker2.Text;
+            classes.Classroom=textBox3.Text;
+            classes.Credits=int.Parse(textBox4.Text);
             GoToNextHome?.Invoke(this, classes);
         }
     }

@@ -134,6 +134,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommitMent.cs" />
     <Compile Include="CustomSearchBar.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -225,6 +226,18 @@
     </Compile>
     <Compile Include="Form1Tea\5exam\examPG.Designer.cs">
       <DependentUpon>examPG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1Tea\5exam\PGNext.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form1Tea\5exam\PGNext.Designer.cs">
+      <DependentUpon>PGNext.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1Tea\5exam\PYFinal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form1Tea\5exam\PYFinal.Designer.cs">
+      <DependentUpon>PYFinal.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1Tea\5exam\zyPG.cs">
       <SubType>UserControl</SubType>
@@ -394,6 +407,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1Tea\5exam\examPG.resx">
       <DependentUpon>examPG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1Tea\5exam\PGNext.resx">
+      <DependentUpon>PGNext.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1Tea\5exam\PYFinal.resx">
+      <DependentUpon>PYFinal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1Tea\5exam\zyPG.resx">
       <DependentUpon>zyPG.cs</DependentUpon>

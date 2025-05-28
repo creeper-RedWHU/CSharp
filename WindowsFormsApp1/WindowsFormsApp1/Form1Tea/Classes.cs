@@ -12,6 +12,8 @@ namespace WindowsFormsApp1.Form1Tea
         public string ClassSaying { get; set; }
         public string StartTime { get; set; }
         public string EndTime { get; set; }
+        public string Classroom {  get; set; }
+        public int Credits {  get; set; }
 
     }
 }

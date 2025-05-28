@@ -40,6 +40,8 @@ namespace WindowsFormsApp1
 
         public examPG examipt;
         public zyPG examovw;
+        public PGNext pgnext;
+
 
         public Create create;
         public CreateNext createnext;
@@ -77,6 +79,8 @@ namespace WindowsFormsApp1
 
             examipt = new examPG();
             examovw = new zyPG();
+            examovw.GoToPGNext += GoToPGNext;
+            examipt.GoToPGNext += GoToPGNext;
             /*
              常数
              */
@@ -146,6 +150,23 @@ namespace WindowsFormsApp1
         #endregion
         #region 右上角控件
         
+        private void GoToPGNext(int id)
+        {
+            pgnext=new PGNext(id);
+            pgnext.UpdateData();
+            pgnext.GoToFinal += GoToFinal;
+            panel3.Controls.Clear();
+            pgnext.Show();
+            panel3.Controls.Add(pgnext);
+        }
+
+        private void GoToFinal(int id)
+        {
+            PYFinal pyfinal = new PYFinal(id);
+            panel3.Controls.Clear();
+            panel3.Controls.Add(pyfinal);
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -204,6 +225,7 @@ namespace WindowsFormsApp1
         public void NextPageTest(object sender,ArrayList arrayList)
         {
             testinputSec.arrayList = arrayList;
+            testinputSec.RefreshGridFromArrayList();
             testinputSec.Show();
             panel3.Controls.Clear();
             panel3.Controls.Add(testinputSec);
@@ -249,6 +271,7 @@ namespace WindowsFormsApp1
         private void NextPage(object sender,ArrayList arraylist)
         {
             glinputSec.arrayList = arraylist;
+            glinputSec.RefreshGridFromArrayList();
             glinputSec.Show();
             panel3.Controls.Clear();
             panel3.Controls.Add(glinputSec);
@@ -368,6 +391,7 @@ namespace WindowsFormsApp1
         private void button21_Click(object sender, EventArgs e)
         {
             SetSidebarButtonSelected(button21);
+            examipt.UpdateData();
             panel3.Controls.Clear();
             examipt.Show();
             panel3.Controls.Add(examipt);
