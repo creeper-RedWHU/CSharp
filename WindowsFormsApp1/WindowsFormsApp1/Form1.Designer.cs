@@ -462,6 +462,30 @@
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
+            #region 新text
+            this.button1.Text = "× 关闭 🛑";
+            this.button3.Text = "— 最小化 🗕";
+            this.button2.Text = "🚪 退出";
+            this.button5.Text = "🏠 首页";
+            this.label2.Text = "👩‍🏫 教师页面";
+            this.label1.Text = "📚 教学作业考试一体化在线平台";
+            this.label3.Text = "📖 作业题库";
+            this.label4.Text = "✏️ 作业编辑";
+            this.label6.Text = "📝 考试编辑";
+            this.label7.Text = "📊 数据活动管理";
+            this.button7.Text = "🔍 题目概览";
+            this.button8.Text = "➕ 录入题目";
+            this.button10.Text = "📋 作业概览";
+            this.button11.Text = "🗂️ 作业布置";
+            this.button12.Text = "🗑️ 回收站";
+            this.button17.Text = "📄 试卷概览";
+            this.button18.Text = "🧾 试卷命题";
+            this.button20.Text = "✅ 批阅作业";
+            this.button21.Text = "📝 批阅考试";
+            this.button23.Text = "🗑️ 回收站";
+            this.button25.Text = "🗑️ 回收站";
+            #endregion
+
         }
 
         #endregion

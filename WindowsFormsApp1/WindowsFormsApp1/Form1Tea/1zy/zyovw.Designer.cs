@@ -50,7 +50,6 @@ namespace WindowsFormsApp1.Form1Tea.zy
             this.InputInformation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.customSearchBar2 = new WindowsFormsApp1.CustomSearchBar();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -61,7 +60,6 @@ namespace WindowsFormsApp1.Form1Tea.zy
             this.panel1.Controls.Add(this.radioButton3);
             this.panel1.Controls.Add(this.radioButton2);
             this.panel1.Controls.Add(this.radioButton1);
-            this.panel1.Controls.Add(this.customSearchBar2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -72,26 +70,26 @@ namespace WindowsFormsApp1.Form1Tea.zy
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Font = new System.Drawing.Font("微软雅黑", 10F);
-            this.radioButton3.Location = new System.Drawing.Point(473, 43);
+            this.radioButton3.Font = new System.Drawing.Font("Segoe UI Emoji", 10F);
+            this.radioButton3.Location = new System.Drawing.Point(613, 43);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(150, 27);
+            this.radioButton3.Size = new System.Drawing.Size(185, 26);
             this.radioButton3.TabIndex = 5;
             this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "仅查看练习题目";
+            this.radioButton3.Text = "✏️ 仅查看练习题目";
             this.radioButton3.UseVisualStyleBackColor = true;
             this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("微软雅黑", 10F);
-            this.radioButton2.Location = new System.Drawing.Point(299, 43);
+            this.radioButton2.Font = new System.Drawing.Font("Segoe UI Emoji", 10F);
+            this.radioButton2.Location = new System.Drawing.Point(416, 43);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(150, 27);
+            this.radioButton2.Size = new System.Drawing.Size(185, 26);
             this.radioButton2.TabIndex = 4;
             this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "仅查看考试题目";
+            this.radioButton2.Text = "📝 仅查看考试题目";
             this.radioButton2.UseVisualStyleBackColor = true;
             this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
@@ -99,27 +97,27 @@ namespace WindowsFormsApp1.Form1Tea.zy
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Checked = true;
-            this.radioButton1.Font = new System.Drawing.Font("微软雅黑", 10F, System.Drawing.FontStyle.Bold);
+            this.radioButton1.Font = new System.Drawing.Font("Segoe UI Emoji", 10F, System.Drawing.FontStyle.Bold);
             this.radioButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.radioButton1.Location = new System.Drawing.Point(213, 42);
+            this.radioButton1.Location = new System.Drawing.Point(306, 42);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(65, 28);
+            this.radioButton1.Size = new System.Drawing.Size(99, 26);
             this.radioButton1.TabIndex = 3;
             this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "全部";
+            this.radioButton1.Text = "📋 全部";
             this.radioButton1.UseVisualStyleBackColor = true;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("微软雅黑", 22F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Segoe UI Emoji", 22F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
             this.label1.Location = new System.Drawing.Point(20, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(170, 50);
+            this.label1.Size = new System.Drawing.Size(241, 49);
             this.label1.TabIndex = 0;
-            this.label1.Text = "所有题目";
+            this.label1.Text = "📚 所有题目";
             // 
             // dataGridView1
             // 
@@ -132,7 +130,7 @@ namespace WindowsFormsApp1.Form1Tea.zy
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Emoji", 11F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -149,7 +147,7 @@ namespace WindowsFormsApp1.Form1Tea.zy
             this.Delete});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("微软雅黑", 10F);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Emoji", 10F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(245)))), ((int)(((byte)(233)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
@@ -172,7 +170,7 @@ namespace WindowsFormsApp1.Form1Tea.zy
             // Num
             // 
             this.Num.DataPropertyName = "PID";
-            this.Num.HeaderText = "序号";
+            this.Num.HeaderText = "🔢 序号";
             this.Num.MinimumWidth = 6;
             this.Num.Name = "Num";
             this.Num.ReadOnly = true;
@@ -181,7 +179,7 @@ namespace WindowsFormsApp1.Form1Tea.zy
             // Title
             // 
             this.Title.DataPropertyName = "ProName";
-            this.Title.HeaderText = "标题";
+            this.Title.HeaderText = "🏷️ 标题";
             this.Title.MinimumWidth = 6;
             this.Title.Name = "Title";
             this.Title.ReadOnly = true;
@@ -190,7 +188,7 @@ namespace WindowsFormsApp1.Form1Tea.zy
             // Type
             // 
             this.Type.DataPropertyName = "IsTest";
-            this.Type.HeaderText = "类型";
+            this.Type.HeaderText = "📑 类型";
             this.Type.MinimumWidth = 6;
             this.Type.Name = "Type";
             this.Type.ReadOnly = true;
@@ -199,7 +197,7 @@ namespace WindowsFormsApp1.Form1Tea.zy
             // Point
             // 
             this.Point.DataPropertyName = "ProCategory";
-            this.Point.HeaderText = "考点";
+            this.Point.HeaderText = "📍 考点";
             this.Point.MinimumWidth = 6;
             this.Point.Name = "Point";
             this.Point.ReadOnly = true;
@@ -208,7 +206,7 @@ namespace WindowsFormsApp1.Form1Tea.zy
             // TimeStamp
             // 
             this.TimeStamp.DataPropertyName = "InputInformation";
-            this.TimeStamp.HeaderText = "录入/修改信息";
+            this.TimeStamp.HeaderText = "🕒 录入/修改信息";
             this.TimeStamp.MinimumWidth = 6;
             this.TimeStamp.Name = "TimeStamp";
             this.TimeStamp.ReadOnly = true;
@@ -217,7 +215,7 @@ namespace WindowsFormsApp1.Form1Tea.zy
             // PID
             // 
             this.PID.DataPropertyName = "PID";
-            this.PID.HeaderText = "题目id";
+            this.PID.HeaderText = "🆔 题目id";
             this.PID.MinimumWidth = 6;
             this.PID.Name = "PID";
             this.PID.ReadOnly = true;
@@ -226,16 +224,16 @@ namespace WindowsFormsApp1.Form1Tea.zy
             // ProName
             // 
             this.ProName.DataPropertyName = "ProName";
-            this.ProName.HeaderText = "问题标题";
+            this.ProName.HeaderText = "🏷️ 问题标题";
             this.ProName.MinimumWidth = 6;
             this.ProName.Name = "ProName";
             this.ProName.ReadOnly = true;
-            this.ProName.Width = 125;
+            this.ProName.Width = 150;
             // 
             // ProCategory
             // 
             this.ProCategory.DataPropertyName = "ProCategory";
-            this.ProCategory.HeaderText = "考点";
+            this.ProCategory.HeaderText = "📍 考点";
             this.ProCategory.MinimumWidth = 6;
             this.ProCategory.Name = "ProCategory";
             this.ProCategory.ReadOnly = true;
@@ -244,30 +242,30 @@ namespace WindowsFormsApp1.Form1Tea.zy
             // IsTest
             // 
             this.IsTest.DataPropertyName = "IsTest";
-            this.IsTest.HeaderText = "题目类型";
+            this.IsTest.HeaderText = "📑 题目类型";
             this.IsTest.MinimumWidth = 6;
             this.IsTest.Name = "IsTest";
             this.IsTest.ReadOnly = true;
-            this.IsTest.Width = 125;
+            this.IsTest.Width = 150;
             // 
             // InputInformation
             // 
             this.InputInformation.DataPropertyName = "InputInformation";
-            this.InputInformation.HeaderText = "输入信息";
+            this.InputInformation.HeaderText = "🕒 输入信息";
             this.InputInformation.MinimumWidth = 6;
             this.InputInformation.Name = "InputInformation";
             this.InputInformation.ReadOnly = true;
-            this.InputInformation.Width = 125;
+            this.InputInformation.Width = 150;
             // 
             // Edit
             // 
-            this.Edit.HeaderText = "操作";
+            this.Edit.HeaderText = "✏️ 操作";
             this.Edit.MinimumWidth = 6;
             this.Edit.Name = "Edit";
             this.Edit.ReadOnly = true;
             this.Edit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Edit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Edit.Text = "编辑";
+            this.Edit.Text = "🛠️ 编辑";
             this.Edit.UseColumnTextForButtonValue = true;
             this.Edit.Width = 125;
             // 
@@ -277,18 +275,9 @@ namespace WindowsFormsApp1.Form1Tea.zy
             this.Delete.MinimumWidth = 6;
             this.Delete.Name = "Delete";
             this.Delete.ReadOnly = true;
-            this.Delete.Text = "删除";
+            this.Delete.Text = "🗑️ 删除";
             this.Delete.UseColumnTextForButtonValue = true;
             this.Delete.Width = 125;
-            // 
-            // customSearchBar2
-            // 
-            this.customSearchBar2.Location = new System.Drawing.Point(653, 36);
-            this.customSearchBar2.Name = "customSearchBar2";
-            this.customSearchBar2.Size = new System.Drawing.Size(180, 25);
-            this.customSearchBar2.TabIndex = 2;
-            this.customSearchBar2.WaterText = " 题目标题的索引词  ";
-            this.customSearchBar2.TextChanged += new System.EventHandler(this.customSearchBar2_TextChanged);
             // 
             // zyovw
             // 
@@ -311,7 +300,6 @@ namespace WindowsFormsApp1.Form1Tea.zy
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private CustomSearchBar customSearchBar2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private RadioButton radioButton3;
         private RadioButton radioButton2;
