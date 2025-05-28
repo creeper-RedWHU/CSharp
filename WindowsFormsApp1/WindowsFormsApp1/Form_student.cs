@@ -8,11 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using EduAdminApp;
+using MaterialSkin;
+using MaterialSkin.Controls;
 
 
 namespace WindowsFormsApp1
 {
-    public partial class Form_student : Form
+    public partial class Form_student : MaterialForm
     {
 
         private const int WM_NCHITTEST = 0x84;
@@ -36,14 +39,6 @@ namespace WindowsFormsApp1
             _studentId = studentId;
             //设置无边框的
             this.FormBorderStyle = FormBorderStyle.None;
-            // 添加事件处理程序
-            btnMinimize.Click += BtnMinimize_Click;
-            btnMinimize.MouseEnter += BtnMinimize_MouseEnter;
-            btnMinimize.MouseLeave += BtnMinimize_MouseLeave;
-
-            btnMaximize.Click += BtnMaximize_Click;
-            btnMaximize.MouseEnter += BtnMaximize_MouseEnter;
-            btnMaximize.MouseLeave += BtnMaximize_MouseLeave;
 
             // 加载课程
             LoadCoursesForStudent(_studentId);
@@ -118,7 +113,7 @@ namespace WindowsFormsApp1
 
         private void panel4_Paint(object sender, PaintEventArgs e)
         {
-            
+
         }
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
@@ -174,17 +169,6 @@ namespace WindowsFormsApp1
             Application.Exit();
         }
 
-        private void btnExit_MouseEnter(object sender, EventArgs e)
-        {
-            btnExit.BackColor = Color.Red;
-            btnExit.ForeColor = Color.White;
-        }
-
-        private void btnExit_MouseLeave(object sender, EventArgs e)
-        {
-            btnExit.BackColor = Color.White; // 或你的默认色
-            btnExit.ForeColor = Color.Black; // 或你的默认色
-        }
 
         private void button8_Click(object sender, EventArgs e)
         {
@@ -200,7 +184,7 @@ namespace WindowsFormsApp1
                 return;
             }
             exam examControl = new exam(courseId, _studentId);
-            
+
             examControl.Dock = DockStyle.Fill;
             panel3.Controls.Add(examControl);
         }

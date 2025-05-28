@@ -179,7 +179,6 @@ Z:\Desktop\eqfqe\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\EduAdminApp.
 Z:\Desktop\eqfqe\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\EduAdminApp.StudentForm.resources
 Z:\Desktop\eqfqe\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\EduAdminApp.TeacherForm.resources
 Z:\Desktop\eqfqe\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
-Z:\Desktop\eqfqe\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Course.resources
 Z:\Desktop\eqfqe\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.due_work.resources
 Z:\Desktop\eqfqe\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exam.resources
 Z:\Desktop\eqfqe\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormProblems.resources
@@ -241,6 +240,7 @@ Z:\Desktop\eqfqe\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsF.A1E
 Z:\Desktop\eqfqe\CSharp\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\MaterialSkin.dll
 Z:\Desktop\eqfqe\CSharp\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\SunnyUI.Common.dll
 Z:\Desktop\eqfqe\CSharp\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\SunnyUI.dll
+<<<<<<< HEAD
 E:\pr\CSharp\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\MaterialSkin.dll
 E:\pr\CSharp\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\SunnyUI.Common.dll
 E:\pr\CSharp\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\SunnyUI.dll
@@ -252,5 +252,11 @@ E:\pr\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1T
 E:\pr\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1Tea.home_s.resources
 E:\pr\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1Tea._5exam.examPG.resources
 E:\pr\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1Tea._5exam.zyPG.resources
+<<<<<<< HEAD
 E:\pr\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1Tea._5exam.PGNext.resources
 E:\pr\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1Tea._5exam.PYFinal.resources
+=======
+=======
+Z:\Desktop\eqfqe\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\EduAdminApp.Course.resources
+>>>>>>> b769513 (Course&database)
+>>>>>>> 7a1767dbb8dc067e9c383763f2b1c7fa0071a9c9
