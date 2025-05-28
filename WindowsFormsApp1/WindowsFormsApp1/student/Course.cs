@@ -1,15 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SQLite;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp1
+namespace EduAdminApp
 {
     public partial class Course : UserControl
     {
@@ -24,45 +17,46 @@ namespace WindowsFormsApp1
 
         private void LoadCourseInfo()
         {
-            string dbPath = "StudentSystem.db";
-            string connStr = $"Data Source={dbPath};Version=3;";
+            string connStr = "Data Source=StudentSystem.db;Version=3;";
             using (SQLiteConnection conn = new SQLiteConnection(connStr))
             {
                 conn.Open();
-                string sql = @"SELECT c.CourseName, u.Username AS TeacherName, c.StartTime
-                               FROM Course c
-                               JOIN Users u ON c.TeacherID = u.ID
-                               WHERE c.CourseID = @courseId";
+
+                string sql = @"
+                    SELECT c.CourseID, c.CourseName, c.TeacherID, c.StartTime,
+                           c.CourseDescription, c.Credits, c.Duration, c.Classroom, c.Schedule,
+                           u.Name AS TeacherName
+                    FROM Course c
+                    LEFT JOIN Users u ON c.TeacherID = u.ID
+                    WHERE c.CourseID = @id";
+
                 using (SQLiteCommand cmd = new SQLiteCommand(sql, conn))
                 {
-                    cmd.Parameters.AddWithValue("@courseId", _courseId);
+                    cmd.Parameters.AddWithValue("@id", _courseId);
                     using (SQLiteDataReader reader = cmd.ExecuteReader())
                     {
                         if (reader.Read())
                         {
-                            var dt = new DataTable();
-                            dt.Columns.Add("Field");
-                            dt.Columns.Add("Value");
+                            labelCourseID.Text = "课程编号：" + reader["CourseID"].ToString();
+                            labelCourseName.Text = "课程名称：" + reader["CourseName"].ToString();
+                            labelTeacher.Text = "授课教师：" + reader["TeacherName"].ToString();
+                            labelStartTime.Text = "开课时间：" + Convert.ToDateTime(reader["StartTime"]).ToString("yyyy-MM-dd");
+                            labelCredits.Text = "学分：" + reader["Credits"].ToString();
+                            labelDuration.Text = "课时：" + reader["Duration"].ToString();
+                            labelClassroom.Text = "上课地点：" + reader["Classroom"].ToString();
+                            labelSchedule.Text = "上课时间：" + reader["Schedule"].ToString();
 
-                            dt.Rows.Add("课程名称", reader["CourseName"].ToString());
-                            dt.Rows.Add("课程老师", reader["TeacherName"].ToString());
-                            dt.Rows.Add("开课时间", reader["StartTime"].ToString());
-
-                            dgvcourses.DataSource = dt;
+                            // 强制测试输出是否可见
+                            string desc = reader["CourseDescription"]?.ToString();
+                            labelDescription.Text = string.IsNullOrWhiteSpace(desc) ? "暂无课程简介" : desc;
+                        }
+                        else
+                        {
+                            MessageBox.Show("未找到课程信息。");
                         }
                     }
                 }
             }
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-            // 可以留空，或写你需要的逻辑
-        }
-
-        private void dgvcourses_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            // 可以留空，或写你需要的逻辑
         }
     }
 }
