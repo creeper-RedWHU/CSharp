@@ -40,8 +40,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Score = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -65,6 +70,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Controls.Add(this.textBox2);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.button1);
@@ -103,7 +109,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("宋体", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button1.Location = new System.Drawing.Point(694, 488);
+            this.button1.Location = new System.Drawing.Point(739, 587);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(113, 46);
             this.button1.TabIndex = 4;
@@ -167,6 +173,44 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "作业标题";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.Title,
+            this.Score});
+            this.dataGridView1.Location = new System.Drawing.Point(0, 399);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 27;
+            this.dataGridView1.Size = new System.Drawing.Size(871, 170);
+            this.dataGridView1.TabIndex = 16;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "题目id";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Width = 125;
+            // 
+            // Title
+            // 
+            this.Title.HeaderText = "题目标题";
+            this.Title.MinimumWidth = 6;
+            this.Title.Name = "Title";
+            this.Title.ReadOnly = true;
+            this.Title.Width = 125;
+            // 
+            // Score
+            // 
+            this.Score.HeaderText = "分数";
+            this.Score.MinimumWidth = 6;
+            this.Score.Name = "Score";
+            this.Score.Width = 125;
+            // 
             // glinputSec
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -179,6 +223,7 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -197,5 +242,9 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Title;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Score;
     }
 }

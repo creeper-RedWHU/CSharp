@@ -252,3 +252,5 @@ E:\pr\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1T
 E:\pr\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1Tea.home_s.resources
 E:\pr\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1Tea._5exam.examPG.resources
 E:\pr\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1Tea._5exam.zyPG.resources
+E:\pr\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1Tea._5exam.PGNext.resources
+E:\pr\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1Tea._5exam.PYFinal.resources

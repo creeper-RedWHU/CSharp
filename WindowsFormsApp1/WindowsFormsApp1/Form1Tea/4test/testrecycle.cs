@@ -25,7 +25,7 @@ namespace WindowsFormsApp1.Form1Tea._4test
             dataGridView1.DataSource=null;
             if (list.Count != 0)
             {
-                getID.HMKBindToTable(dataGridView1, "HMK", "1", x, list);
+                getID.HMKBindToTable(dataGridView1, "HMK", "0", x, list);
             }
         }
 
