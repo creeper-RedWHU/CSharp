@@ -35,9 +35,9 @@ namespace WindowsFormsApp1.Form1Tea._6home
         {
             const string sql = @"
                 INSERT INTO Course (
-                    CourseName, TeacherID, StartTime, EndTime,NUM
+                    CourseName, TeacherID, StartTime, EndTime,NUM,Classroom,Credit
                 ) VALUES (
-                    @CourseName, @TeacherID, @StartTime, @EndTime ,@NUM
+                    @CourseName, @TeacherID, @StartTime, @EndTime ,@NUM,@Classroom,@Credit
                 )";
 
             SqliteProblemConnectionManager.SafeExecute(conn =>
@@ -53,6 +53,8 @@ namespace WindowsFormsApp1.Form1Tea._6home
                     cmd.Parameters.Add("@StartTime", DbType.String).Value = classes.StartTime;
                     cmd.Parameters.Add("@EndTime", DbType.String).Value = classes.EndTime;
                     cmd.Parameters.Add("@NUM", DbType.Int32).Value = idList.Count;
+                    cmd.Parameters.Add("@Classroom", DbType.Int32).Value = classes.Classroom;
+                    cmd.Parameters.Add("@Credit", DbType.Int32).Value = classes.Credits;
 
                     if (cmd.ExecuteNonQuery() != 1)
                     {

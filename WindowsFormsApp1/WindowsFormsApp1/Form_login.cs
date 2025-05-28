@@ -115,6 +115,9 @@ namespace WindowsFormsApp1
                 else if (role == "老师")
                 {
                     //nextForm = new Form1(userId); // 你需要有Form_teacher窗体，并支持传入userId
+                    Params.TeacherID = userId;
+                    Params.TeacherName = username;
+                    nextForm = new Form1();
                 }
                 else if (role == "管理员")
                 {
