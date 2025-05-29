@@ -226,7 +226,7 @@ namespace WindowsFormsApp1.Form1Tea._5exam
             this.labelEmoji.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(201)))), ((int)(((byte)(151)))));
             this.labelEmoji.Location = new System.Drawing.Point(260, 18);
             this.labelEmoji.Name = "labelEmoji";
-            this.labelEmoji.Size = new System.Drawing.Size(60, 45);
+            this.labelEmoji.Size = new System.Drawing.Size(50, 34);
             this.labelEmoji.TabIndex = 0;
             this.labelEmoji.Text = "👩‍🎓";
             // 
@@ -237,7 +237,7 @@ namespace WindowsFormsApp1.Form1Tea._5exam
             this.labelTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(201)))), ((int)(((byte)(151)))));
             this.labelTitle.Location = new System.Drawing.Point(320, 18);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(300, 45);
+            this.labelTitle.Size = new System.Drawing.Size(295, 34);
             this.labelTitle.TabIndex = 1;
             this.labelTitle.Text = "选择学生进行批阅";
             // 
@@ -296,6 +296,7 @@ namespace WindowsFormsApp1.Form1Tea._5exam
             this.StuID.MinimumWidth = 6;
             this.StuID.Name = "StuID";
             this.StuID.ReadOnly = true;
+            this.StuID.Width = 125;
             // 
             // StuName
             // 
@@ -338,8 +339,7 @@ namespace WindowsFormsApp1.Form1Tea._5exam
             this.Choose.ReadOnly = true;
             this.Choose.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Choose.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Choose.Text = "🛠️ 选择";
-            this.Choose.UseColumnTextForButtonValue = true;
+            this.Choose.Text = "";
             // 
             // PGNext
             // 

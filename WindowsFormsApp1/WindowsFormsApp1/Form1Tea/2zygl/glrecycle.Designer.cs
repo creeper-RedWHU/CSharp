@@ -218,6 +218,7 @@ namespace WindowsFormsApp1.Form1Tea._2zygl
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.HID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -226,7 +227,7 @@ namespace WindowsFormsApp1.Form1Tea._2zygl
             this.EndTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.InputInformation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Del = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.label2 = new System.Windows.Forms.Label();
+            this.Rec = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -240,6 +241,17 @@ namespace WindowsFormsApp1.Form1Tea._2zygl
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(871, 100);
             this.panel1.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Emoji", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
+            this.label2.Location = new System.Drawing.Point(69, 20);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(207, 37);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "作业回收站";
             // 
             // label1
             // 
@@ -257,7 +269,6 @@ namespace WindowsFormsApp1.Form1Tea._2zygl
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -277,7 +288,8 @@ namespace WindowsFormsApp1.Form1Tea._2zygl
             this.StartTime,
             this.EndTime,
             this.InputInformation,
-            this.Del});
+            this.Del,
+            this.Rec});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Emoji", 11F);
@@ -311,7 +323,6 @@ namespace WindowsFormsApp1.Form1Tea._2zygl
             this.HID.MinimumWidth = 6;
             this.HID.Name = "HID";
             this.HID.ReadOnly = true;
-            this.HID.Width = 125;
             // 
             // HName
             // 
@@ -320,7 +331,7 @@ namespace WindowsFormsApp1.Form1Tea._2zygl
             this.HName.MinimumWidth = 6;
             this.HName.Name = "HName";
             this.HName.ReadOnly = true;
-            this.HName.Width = 180;
+            this.HName.Width = 160;
             // 
             // StartTime
             // 
@@ -347,12 +358,11 @@ namespace WindowsFormsApp1.Form1Tea._2zygl
             this.InputInformation.MinimumWidth = 6;
             this.InputInformation.Name = "InputInformation";
             this.InputInformation.ReadOnly = true;
-            this.InputInformation.Width = 160;
+            this.InputInformation.Width = 140;
             // 
             // Del
             // 
-            this.Del.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Del.HeaderText = "🗑️ 操作";
+            this.Del.HeaderText = "🔄 操作";
             this.Del.MinimumWidth = 6;
             this.Del.Name = "Del";
             this.Del.ReadOnly = true;
@@ -360,17 +370,19 @@ namespace WindowsFormsApp1.Form1Tea._2zygl
             this.Del.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Del.Text = "🗑️ 删除";
             this.Del.UseColumnTextForButtonValue = true;
+            this.Del.Width = 125;
             // 
-            // label2
+            // Rec
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Emoji", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
-            this.label2.Location = new System.Drawing.Point(69, 20);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(207, 37);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "作业回收站";
+            this.Rec.HeaderText = "";
+            this.Rec.MinimumWidth = 6;
+            this.Rec.Name = "Rec";
+            this.Rec.ReadOnly = true;
+            this.Rec.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Rec.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Rec.Text = "♻️ 恢复";
+            this.Rec.UseColumnTextForButtonValue = true;
+            this.Rec.Width = 125;
             // 
             // glrecycle
             // 
@@ -391,12 +403,13 @@ namespace WindowsFormsApp1.Form1Tea._2zygl
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridViewTextBoxColumn HID;
         private System.Windows.Forms.DataGridViewTextBoxColumn HName;
         private System.Windows.Forms.DataGridViewTextBoxColumn StartTime;
         private System.Windows.Forms.DataGridViewTextBoxColumn EndTime;
         private System.Windows.Forms.DataGridViewTextBoxColumn InputInformation;
         private System.Windows.Forms.DataGridViewButtonColumn Del;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridViewButtonColumn Rec;
     }
 }

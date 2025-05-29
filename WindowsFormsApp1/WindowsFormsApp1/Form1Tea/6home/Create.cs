@@ -44,11 +44,12 @@ namespace WindowsFormsApp1.Form1Tea._6home
             if (!CompareDateTimeWithNow(dateTimePicker2)) { MessageBox.Show("结束时间过早，无效！"); return; }
             classes = new Classes();
             classes.ClassName=textBox1.Text;
-            classes.ClassSaying=textBox2.Text;
+            classes.CourseDescription=textBox2.Text;
             classes.StartTime=dateTimePicker1.Text;
             classes.EndTime=dateTimePicker2.Text;
             classes.Classroom=textBox3.Text;
             classes.Credits=int.Parse(textBox4.Text);
+            classes.Schedule=textBox5.Text;
             GoToNextHome?.Invoke(this, classes);
         }
     }
