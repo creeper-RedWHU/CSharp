@@ -109,14 +109,14 @@ namespace WindowsFormsApp1.Form1Tea._5exam
             if (dataGridView1.Columns[e.ColumnIndex].Name == "Choose" && dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString()!="无法批阅")
             {
                 string x = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-                MessageBox.Show("您将要批阅" + x + "的作业");
+                MessageBox.Show("您将要批阅" + x + "的已作答题目！");
                 //GoToEditPage?.Invoke(x);
                 Params.PYFinalStuID=int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
                 GoToFinal?.Invoke(HID);
             }
             else if(dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString() == "无法批阅")
             {
-                MessageBox.Show("该同学尚未完成作业！");
+                MessageBox.Show("该同学尚未完成！");
             }
         }
     }

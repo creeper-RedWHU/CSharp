@@ -35,7 +35,6 @@ namespace WindowsFormsApp1.Form1Tea.zy
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.customSearchBar2 = new WindowsFormsApp1.CustomSearchBar();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Num = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,7 +54,6 @@ namespace WindowsFormsApp1.Form1Tea.zy
             this.panel1.Controls.Add(this.radioButton1);
             this.panel1.Controls.Add(this.radioButton3);
             this.panel1.Controls.Add(this.radioButton2);
-            this.panel1.Controls.Add(this.customSearchBar2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -66,72 +64,65 @@ namespace WindowsFormsApp1.Form1Tea.zy
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("微软雅黑", 10F, System.Drawing.FontStyle.Bold);
-            this.radioButton1.Location = new System.Drawing.Point(209, 36);
+            this.radioButton1.Font = new System.Drawing.Font("Segoe UI Emoji", 10F, System.Drawing.FontStyle.Bold);
+            this.radioButton1.Location = new System.Drawing.Point(289, 40);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(65, 28);
+            this.radioButton1.Size = new System.Drawing.Size(99, 26);
             this.radioButton1.TabIndex = 3;
             this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "全部";
+            this.radioButton1.Text = "📋 全部";
             this.radioButton1.UseVisualStyleBackColor = true;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Font = new System.Drawing.Font("微软雅黑", 10F);
-            this.radioButton3.Location = new System.Drawing.Point(456, 36);
+            this.radioButton3.Font = new System.Drawing.Font("Segoe UI Emoji", 10F);
+            this.radioButton3.Location = new System.Drawing.Point(577, 40);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(133, 27);
+            this.radioButton3.Size = new System.Drawing.Size(167, 26);
             this.radioButton3.TabIndex = 5;
             this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "仅查看作业题";
+            this.radioButton3.Text = "✏️ 仅查看作业题";
             this.radioButton3.UseVisualStyleBackColor = true;
             this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("微软雅黑", 10F);
-            this.radioButton2.Location = new System.Drawing.Point(312, 36);
+            this.radioButton2.Font = new System.Drawing.Font("Segoe UI Emoji", 10F);
+            this.radioButton2.Location = new System.Drawing.Point(404, 40);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(133, 27);
+            this.radioButton2.Size = new System.Drawing.Size(167, 26);
             this.radioButton2.TabIndex = 4;
             this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "仅查看考试题";
+            this.radioButton2.Text = "📝 仅查看考试题";
             this.radioButton2.UseVisualStyleBackColor = true;
             this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged_1);
-            // 
-            // customSearchBar2
-            // 
-            this.customSearchBar2.Location = new System.Drawing.Point(653, 36);
-            this.customSearchBar2.Name = "customSearchBar2";
-            this.customSearchBar2.Size = new System.Drawing.Size(147, 25);
-            this.customSearchBar2.TabIndex = 3;
-            this.customSearchBar2.WaterText = " 题目标题的索引词  ";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("微软雅黑", 22F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Segoe UI Emoji", 22F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
             this.label1.Location = new System.Drawing.Point(20, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 50);
+            this.label1.Size = new System.Drawing.Size(202, 49);
             this.label1.TabIndex = 0;
-            this.label1.Text = "回收站";
+            this.label1.Text = "🗑️ 回收站";
             // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Emoji", 11F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -148,7 +139,7 @@ namespace WindowsFormsApp1.Form1Tea.zy
             this.Del});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("微软雅黑", 10F);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Emoji", 10F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(245)))), ((int)(((byte)(233)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
@@ -172,16 +163,16 @@ namespace WindowsFormsApp1.Form1Tea.zy
             // Num
             // 
             this.Num.DataPropertyName = "PID";
-            this.Num.HeaderText = "序号";
+            this.Num.HeaderText = "🔢 序号";
             this.Num.MinimumWidth = 6;
             this.Num.Name = "Num";
             this.Num.ReadOnly = true;
-            this.Num.Width = 80;
+            this.Num.Width = 125;
             // 
             // Title
             // 
             this.Title.DataPropertyName = "ProName";
-            this.Title.HeaderText = "题目";
+            this.Title.HeaderText = "🏷️ 题目";
             this.Title.MinimumWidth = 6;
             this.Title.Name = "Title";
             this.Title.ReadOnly = true;
@@ -190,16 +181,16 @@ namespace WindowsFormsApp1.Form1Tea.zy
             // Type
             // 
             this.Type.DataPropertyName = "IsTest";
-            this.Type.HeaderText = "类型";
+            this.Type.HeaderText = "📑 类型";
             this.Type.MinimumWidth = 6;
             this.Type.Name = "Type";
             this.Type.ReadOnly = true;
-            this.Type.Width = 85;
+            this.Type.Width = 110;
             // 
             // Point
             // 
             this.Point.DataPropertyName = "ProCategory";
-            this.Point.HeaderText = "考点";
+            this.Point.HeaderText = "📍 考点";
             this.Point.MinimumWidth = 6;
             this.Point.Name = "Point";
             this.Point.ReadOnly = true;
@@ -208,7 +199,7 @@ namespace WindowsFormsApp1.Form1Tea.zy
             // Information
             // 
             this.Information.DataPropertyName = "InputInformation";
-            this.Information.HeaderText = "录入信息";
+            this.Information.HeaderText = "🕒 录入信息";
             this.Information.MinimumWidth = 6;
             this.Information.Name = "Information";
             this.Information.ReadOnly = true;
@@ -216,13 +207,13 @@ namespace WindowsFormsApp1.Form1Tea.zy
             // 
             // Recover
             // 
-            this.Recover.HeaderText = "操作";
+            this.Recover.HeaderText = "🔄 操作";
             this.Recover.MinimumWidth = 6;
             this.Recover.Name = "Recover";
             this.Recover.ReadOnly = true;
             this.Recover.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Recover.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Recover.Text = "恢复";
+            this.Recover.Text = "♻️ 恢复";
             this.Recover.UseColumnTextForButtonValue = true;
             this.Recover.Width = 125;
             // 
@@ -233,7 +224,7 @@ namespace WindowsFormsApp1.Form1Tea.zy
             this.Del.MinimumWidth = 6;
             this.Del.Name = "Del";
             this.Del.ReadOnly = true;
-            this.Del.Text = "删除";
+            this.Del.Text = "🗑️ 删除";
             this.Del.UseColumnTextForButtonValue = true;
             // 
             // zyrecycle
@@ -256,7 +247,6 @@ namespace WindowsFormsApp1.Form1Tea.zy
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private CustomSearchBar customSearchBar2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton3;

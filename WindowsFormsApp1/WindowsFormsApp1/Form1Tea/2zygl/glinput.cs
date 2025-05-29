@@ -88,5 +88,10 @@ namespace WindowsFormsApp1.Form1Tea._2zygl
                 dataGridView1.CommitEdit(DataGridViewDataErrorContexts.Commit);
             }
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

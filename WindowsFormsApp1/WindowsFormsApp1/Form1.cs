@@ -85,7 +85,7 @@ namespace WindowsFormsApp1
              常数
              */
             TeacherID = 2;
-            TeacherName = "mm";
+            TeacherName = "李华";
             /*
              修改为：
              */
@@ -430,7 +430,7 @@ namespace WindowsFormsApp1
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         

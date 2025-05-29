@@ -76,6 +76,30 @@ namespace WindowsFormsApp1.Form1Tea._4test
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+            else if (dataGridView1.Columns[e.ColumnIndex].Name == "Rec")
+            {
+                string x = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                int xint = int.Parse(x);
+                //补充代码，实现更新HMK数据表中HID的值为xint的数据项的isValid列为1.参考上面的代码
+                try
+                {
+                    SqliteProblemConnectionManager.SafeExecute(conn =>
+                    {
+                        const string updateSql = "UPDATE HMK SET isValid = 1 WHERE HID = @HID";
+                        using var cmd = new SQLiteCommand(updateSql, conn);
+                        cmd.Parameters.Add("@HID", DbType.Int32).Value = xint;
+                        if (cmd.ExecuteNonQuery() == 0)
+                            throw new KeyNotFoundException("HMK记录不存在");
+                    });
+                    MessageBox.Show("恢复成功！");
+                    UpdateData();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"恢复失败: {ex.Message}", "错误",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }

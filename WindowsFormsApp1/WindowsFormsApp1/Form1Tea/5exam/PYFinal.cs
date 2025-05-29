@@ -37,8 +37,8 @@ namespace WindowsFormsApp1.Form1Tea._5exam
         private void InitialPainter()
         {
             this.label1.Text = "您正在批阅学生" + Params.PYFinalStuID.ToString() + "的";
-            if(ht.IsTest == 1) { label1.Text += "考试，试卷编号为" + HID; }
-            else { label1.Text += "作业，作业编号为" + HID; }
+            if(ht.IsTest == 1) { label1.Text += "考试，试卷编号为" + HID;labelTitle.Text = "考试批阅中"; }
+            else { label1.Text += "作业，作业编号为" + HID;labelTitle.Text = "作业批阅中"; }
         }
 
         private void getScore()
