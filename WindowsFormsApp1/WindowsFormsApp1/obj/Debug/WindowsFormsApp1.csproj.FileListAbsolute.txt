@@ -247,19 +247,12 @@ E:\pr\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1T
 E:\pr\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1Tea.home_s.resources
 E:\pr\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1Tea._5exam.examPG.resources
 E:\pr\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1Tea._5exam.zyPG.resources
-<<<<<<< HEAD
 Z:\Desktop\eqfqe\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1Tea._5exam.examPG.resources
 Z:\Desktop\eqfqe\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1Tea._5exam.zyPG.resources
 Z:\Desktop\eqfqe\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1Tea._6home.Create.resources
 Z:\Desktop\eqfqe\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1Tea._6home.CreateNext.resources
 Z:\Desktop\eqfqe\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1Tea.home_s.resources
 Z:\Desktop\eqfqe\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\EduAdminApp.Course.resources
-=======
-E:\pr\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1Tea._5exam.PGNext.resources
-E:\pr\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1Tea._5exam.PYFinal.resources
-=======
-Z:\Desktop\eqfqe\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\EduAdminApp.Course.resources
->>>>>>> b769513 (Course&database)
->>>>>>> 7a1767dbb8dc067e9c383763f2b1c7fa0071a9c9
 E:\pr\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\EduAdminApp.Course.resources
->>>>>>> d9029d52abcd67fd18c54d1e7f3489bc185ec69d
+Z:\Desktop\eqfqe\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1Tea._5exam.PGNext.resources
+Z:\Desktop\eqfqe\CSharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1Tea._5exam.PYFinal.resources

@@ -22,7 +22,8 @@
             this.labelTeacher = new System.Windows.Forms.Label();
             this.labelStartTime = new System.Windows.Forms.Label();
             this.labelCredits = new System.Windows.Forms.Label();
-            this.labelDuration = new System.Windows.Forms.Label();
+            this.labelEndTime = new System.Windows.Forms.Label();
+            this.labelNum = new System.Windows.Forms.Label();
             this.panelScheduleInfo = new System.Windows.Forms.Panel();
             this.labelClassroom = new System.Windows.Forms.Label();
             this.labelSchedule = new System.Windows.Forms.Label();
@@ -54,10 +55,9 @@
             this.panelCourseInfo.Controls.Add(this.labelTeacher);
             this.panelCourseInfo.Controls.Add(this.labelStartTime);
             this.panelCourseInfo.Controls.Add(this.labelCredits);
-            this.panelCourseInfo.Controls.Add(this.labelDuration);
             this.panelCourseInfo.Location = new System.Drawing.Point(104, 104);
             this.panelCourseInfo.Name = "panelCourseInfo";
-            this.panelCourseInfo.Size = new System.Drawing.Size(580, 300);
+            this.panelCourseInfo.Size = new System.Drawing.Size(580, 280); // 高度略增
             this.panelCourseInfo.TabIndex = 1;
             // 
             // labelCourseID
@@ -74,7 +74,7 @@
             // 
             this.labelCourseName.Font = new System.Drawing.Font("微软雅黑", 11.5F);
             this.labelCourseName.ForeColor = System.Drawing.Color.DimGray;
-            this.labelCourseName.Location = new System.Drawing.Point(20, 65);
+            this.labelCourseName.Location = new System.Drawing.Point(20, 70); // 行间距加大
             this.labelCourseName.Name = "labelCourseName";
             this.labelCourseName.Size = new System.Drawing.Size(540, 40);
             this.labelCourseName.TabIndex = 1;
@@ -84,7 +84,7 @@
             // 
             this.labelTeacher.Font = new System.Drawing.Font("微软雅黑", 11.5F);
             this.labelTeacher.ForeColor = System.Drawing.Color.DimGray;
-            this.labelTeacher.Location = new System.Drawing.Point(20, 111);
+            this.labelTeacher.Location = new System.Drawing.Point(20, 120); // 行间距加大
             this.labelTeacher.Name = "labelTeacher";
             this.labelTeacher.Size = new System.Drawing.Size(540, 40);
             this.labelTeacher.TabIndex = 2;
@@ -94,7 +94,7 @@
             // 
             this.labelStartTime.Font = new System.Drawing.Font("微软雅黑", 11.5F);
             this.labelStartTime.ForeColor = System.Drawing.Color.DimGray;
-            this.labelStartTime.Location = new System.Drawing.Point(20, 157);
+            this.labelStartTime.Location = new System.Drawing.Point(20, 170); // 行间距加大
             this.labelStartTime.Name = "labelStartTime";
             this.labelStartTime.Size = new System.Drawing.Size(540, 40);
             this.labelStartTime.TabIndex = 3;
@@ -104,38 +104,50 @@
             // 
             this.labelCredits.Font = new System.Drawing.Font("微软雅黑", 11.5F);
             this.labelCredits.ForeColor = System.Drawing.Color.DimGray;
-            this.labelCredits.Location = new System.Drawing.Point(20, 201);
+            this.labelCredits.Location = new System.Drawing.Point(20, 220); // 行间距加大
             this.labelCredits.Name = "labelCredits";
             this.labelCredits.Size = new System.Drawing.Size(540, 40);
             this.labelCredits.TabIndex = 4;
             this.labelCredits.Text = "🎓 学分：";
             // 
-            // labelDuration
+            // labelEndTime
             // 
-            this.labelDuration.Font = new System.Drawing.Font("微软雅黑", 11.5F);
-            this.labelDuration.ForeColor = System.Drawing.Color.DimGray;
-            this.labelDuration.Location = new System.Drawing.Point(20, 246);
-            this.labelDuration.Name = "labelDuration";
-            this.labelDuration.Size = new System.Drawing.Size(540, 40);
-            this.labelDuration.TabIndex = 5;
-            this.labelDuration.Text = "⏳ 课时：";
+            this.labelEndTime.Font = new System.Drawing.Font("微软雅黑", 11.5F);
+            this.labelEndTime.ForeColor = System.Drawing.Color.DimGray;
+            this.labelEndTime.Location = new System.Drawing.Point(20, 20);
+            this.labelEndTime.Name = "labelEndTime";
+            this.labelEndTime.Size = new System.Drawing.Size(540, 40);
+            this.labelEndTime.TabIndex = 6;
+            this.labelEndTime.Text = "⏰ 结束时间：";
+            // 
+            // labelNum
+            // 
+            this.labelNum.Font = new System.Drawing.Font("微软雅黑", 11.5F);
+            this.labelNum.ForeColor = System.Drawing.Color.DimGray;
+            this.labelNum.Location = new System.Drawing.Point(20, 70); // 行间距加大
+            this.labelNum.Name = "labelNum";
+            this.labelNum.Size = new System.Drawing.Size(540, 40);
+            this.labelNum.TabIndex = 7;
+            this.labelNum.Text = "👥 上课人数：";
             // 
             // panelScheduleInfo
             // 
             this.panelScheduleInfo.BackColor = System.Drawing.Color.White;
             this.panelScheduleInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelScheduleInfo.Controls.Add(this.labelEndTime);
+            this.panelScheduleInfo.Controls.Add(this.labelNum);
             this.panelScheduleInfo.Controls.Add(this.labelClassroom);
             this.panelScheduleInfo.Controls.Add(this.labelSchedule);
             this.panelScheduleInfo.Location = new System.Drawing.Point(734, 104);
             this.panelScheduleInfo.Name = "panelScheduleInfo";
-            this.panelScheduleInfo.Size = new System.Drawing.Size(580, 300);
+            this.panelScheduleInfo.Size = new System.Drawing.Size(580, 280); // 高度略增
             this.panelScheduleInfo.TabIndex = 2;
             // 
             // labelClassroom
             // 
             this.labelClassroom.Font = new System.Drawing.Font("微软雅黑", 11.5F);
             this.labelClassroom.ForeColor = System.Drawing.Color.DimGray;
-            this.labelClassroom.Location = new System.Drawing.Point(20, 44);
+            this.labelClassroom.Location = new System.Drawing.Point(20, 120); // 行间距加大
             this.labelClassroom.Name = "labelClassroom";
             this.labelClassroom.Size = new System.Drawing.Size(540, 40);
             this.labelClassroom.TabIndex = 0;
@@ -145,7 +157,7 @@
             // 
             this.labelSchedule.Font = new System.Drawing.Font("微软雅黑", 11.5F);
             this.labelSchedule.ForeColor = System.Drawing.Color.DimGray;
-            this.labelSchedule.Location = new System.Drawing.Point(20, 180);
+            this.labelSchedule.Location = new System.Drawing.Point(20, 170); // 行间距加大
             this.labelSchedule.Name = "labelSchedule";
             this.labelSchedule.Size = new System.Drawing.Size(540, 40);
             this.labelSchedule.TabIndex = 1;
@@ -175,13 +187,16 @@
             // labelDescription
             // 
             this.labelDescription.Font = new System.Drawing.Font("微软雅黑", 11F);
-            this.labelDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.labelDescription.ForeColor = System.Drawing.Color.FromArgb(70, 70, 70);
             this.labelDescription.Location = new System.Drawing.Point(20, 84);
             this.labelDescription.MaximumSize = new System.Drawing.Size(1160, 0);
             this.labelDescription.Name = "labelDescription";
             this.labelDescription.Size = new System.Drawing.Size(1160, 327);
             this.labelDescription.TabIndex = 1;
             this.labelDescription.Text = "该课程将帮助学生深入了解……（从数据库加载），自动换行，完整展示内容，无需滚动条。";
+            this.labelDescription.AutoSize = false;
+            this.labelDescription.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10); // 上下增加内边距
+            this.labelDescription.UseCompatibleTextRendering = true; // 支持更好的换行和间距
             // 
             // Course
             // 
@@ -211,7 +226,8 @@
         private System.Windows.Forms.Label labelTeacher;
         private System.Windows.Forms.Label labelStartTime;
         private System.Windows.Forms.Label labelCredits;
-        private System.Windows.Forms.Label labelDuration;
+        private System.Windows.Forms.Label labelEndTime; // 新增
+        private System.Windows.Forms.Label labelNum;     // 新增
         private System.Windows.Forms.Label labelClassroom;
         private System.Windows.Forms.Label labelSchedule;
         private System.Windows.Forms.Label labelDescriptionTitle;

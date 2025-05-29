@@ -53,6 +53,7 @@ namespace EduAdminApp.Forms
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.btnExportExcel = new System.Windows.Forms.Button();
             this.dataGridPanel = new System.Windows.Forms.Panel();
             this.dataGridViewMain = new System.Windows.Forms.DataGridView();
             this.contentHeaderPanel = new System.Windows.Forms.Panel();
@@ -154,7 +155,7 @@ namespace EduAdminApp.Forms
             this.lblTitle.ForeColor = System.Drawing.Color.White;
             this.lblTitle.Location = new System.Drawing.Point(20, 8);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(483, 42);
+            this.lblTitle.Size = new System.Drawing.Size(657, 57);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "🎓 教学作业考试一体化管理平台";
             this.lblTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseDown);
@@ -235,7 +236,7 @@ namespace EduAdminApp.Forms
             this.lblNavigation.ForeColor = System.Drawing.Color.White;
             this.lblNavigation.Location = new System.Drawing.Point(35, 18);
             this.lblNavigation.Name = "lblNavigation";
-            this.lblNavigation.Size = new System.Drawing.Size(158, 34);
+            this.lblNavigation.Size = new System.Drawing.Size(214, 46);
             this.lblNavigation.TabIndex = 0;
             this.lblNavigation.Text = "🔧 管理功能";
             // 
@@ -257,6 +258,7 @@ namespace EduAdminApp.Forms
             this.actionButtonsPanel.Controls.Add(this.btnDelete);
             this.actionButtonsPanel.Controls.Add(this.btnEdit);
             this.actionButtonsPanel.Controls.Add(this.btnAdd);
+            this.actionButtonsPanel.Controls.Add(this.btnExportExcel);
             this.actionButtonsPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.actionButtonsPanel.Location = new System.Drawing.Point(20, 1146);
             this.actionButtonsPanel.Name = "actionButtonsPanel";
@@ -271,7 +273,7 @@ namespace EduAdminApp.Forms
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Bold);
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(1256, 20);
+            this.btnDelete.Location = new System.Drawing.Point(837, 15);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(140, 40);
             this.btnDelete.TabIndex = 2;
@@ -286,7 +288,7 @@ namespace EduAdminApp.Forms
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Bold);
             this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(633, 20);
+            this.btnEdit.Location = new System.Drawing.Point(423, 15);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(140, 40);
             this.btnEdit.TabIndex = 1;
@@ -307,6 +309,21 @@ namespace EduAdminApp.Forms
             this.btnAdd.Text = "➕ 添加新建";
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnExportExcel
+            // 
+            this.btnExportExcel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnExportExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btnExportExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExportExcel.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Bold);
+            this.btnExportExcel.ForeColor = System.Drawing.Color.White;
+            this.btnExportExcel.Location = new System.Drawing.Point(1205, 15);
+            this.btnExportExcel.Name = "btnExportExcel";
+            this.btnExportExcel.Size = new System.Drawing.Size(140, 40);
+            this.btnExportExcel.TabIndex = 3;
+            this.btnExportExcel.Text = "📥 导出Excel";
+            this.btnExportExcel.UseVisualStyleBackColor = false;
+            this.btnExportExcel.Click += new System.EventHandler(this.btnExportExcel_Click);
             // 
             // dataGridPanel
             // 
@@ -379,13 +396,13 @@ namespace EduAdminApp.Forms
             this.uiLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.uiLabel1.Location = new System.Drawing.Point(15, 15);
             this.uiLabel1.Name = "uiLabel1";
-            this.uiLabel1.Size = new System.Drawing.Size(259, 42);
+            this.uiLabel1.Size = new System.Drawing.Size(356, 57);
             this.uiLabel1.TabIndex = 0;
             this.uiLabel1.Text = "📊 人员信息管理";
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(1650, 1290);
@@ -444,5 +461,6 @@ namespace EduAdminApp.Forms
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnExportExcel; // 新增字段
     }
 }

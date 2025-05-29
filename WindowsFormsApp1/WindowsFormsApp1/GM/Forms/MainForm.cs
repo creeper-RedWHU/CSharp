@@ -3,8 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using System.Threading.Tasks; // 顶部添加
 using EduAdminApp.DAL;
 using EduAdminApp.Models;
 using EduAdminApp.Forms;
@@ -250,16 +254,58 @@ namespace EduAdminApp.Forms
         {
             SetActiveNavigationButton(btnTeacher);
             currentMode = ViewMode.Teacher;
-            teachers = TeacherDAL.GetAll();
-            dataGridViewMain.DataSource = teachers;
+
+            // 开启后台线程查询
+            Task.Run(() =>
+            {
+                try
+                {
+                    var teachersResult = TeacherDAL.GetAll();
+
+                    // 正则表达式
+                    Regex phoneRegex = new Regex(@"^\d{11}$");
+                    Regex emailRegex = new Regex(@"^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$");
+                    Regex nameRegex = new Regex(@"^[\u4e00-\u9fa5A-Za-z]{2,20}$");
+
+                    var filteredTeachers = teachersResult
+                        .Where(t =>
+                            !string.IsNullOrEmpty(t.Phone) && phoneRegex.IsMatch(t.Phone) &&
+                            !string.IsNullOrEmpty(t.Email) && emailRegex.IsMatch(t.Email) &&
+                            !string.IsNullOrEmpty(t.Name) && nameRegex.IsMatch(t.Name)
+                        )
+                        .OrderBy(t => t.Id)
+                        .ToList();
+
+                    // 回到主线程更新UI
+                    this.Invoke((MethodInvoker)delegate
+                    {
+                        teachers = teachersResult;
+                        dataGridViewMain.DataSource = filteredTeachers;
+                    });
+                }
+                catch (Exception ex)
+                {
+                    this.Invoke((MethodInvoker)delegate
+                    {
+                        MessageBox.Show("获取教师数据失败：" + ex.Message, "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    });
+                }
+            });
         }
 
         private void btnStudent_Click(object sender, EventArgs e)
         {
             SetActiveNavigationButton(btnStudent);
             currentMode = ViewMode.Student;
-            students = StudentDAL.GetAll();
-            dataGridViewMain.DataSource = students;
+            try
+            {
+                students = StudentDAL.GetAll();
+                dataGridViewMain.DataSource = students;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("获取学生数据失败：" + ex.Message, "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -271,8 +317,15 @@ namespace EduAdminApp.Forms
                 {
                     StudentDAL dal = new StudentDAL();
                     dal.Add(form.Student);
-                    students = StudentDAL.GetAll();
-                    RefreshStudentGrid(students);
+                    try
+                    {
+                        students = StudentDAL.GetAll();
+                        RefreshStudentGrid(students);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("获取学生数据失败：" + ex.Message, "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
             else if (currentMode == ViewMode.Teacher)
@@ -282,8 +335,15 @@ namespace EduAdminApp.Forms
                 {
                     TeacherDAL dal = new TeacherDAL();
                     dal.Add(form.Teacher);
-                    teachers = TeacherDAL.GetAll();
-                    RefreshTeacherGrid(teachers);
+                    try
+                    {
+                        teachers = TeacherDAL.GetAll();
+                        RefreshTeacherGrid(teachers);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("获取教师数据失败：" + ex.Message, "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
         }
@@ -363,8 +423,15 @@ namespace EduAdminApp.Forms
                 {
                     StudentDAL dal = new StudentDAL();
                     dal.Delete(selectedStudent.Id);
-                    students = StudentDAL.GetAll();
-                    RefreshStudentGrid(students);
+                    try
+                    {
+                        students = StudentDAL.GetAll();
+                        RefreshStudentGrid(students);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("获取学生数据失败：" + ex.Message, "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
             else if (currentMode == ViewMode.Teacher)
@@ -374,8 +441,15 @@ namespace EduAdminApp.Forms
                 {
                     TeacherDAL dal = new TeacherDAL();
                     dal.Delete(selectedTeacher.Id);
-                    teachers = TeacherDAL.GetAll();
-                    RefreshTeacherGrid(teachers);
+                    try
+                    {
+                        teachers = TeacherDAL.GetAll();
+                        RefreshTeacherGrid(teachers);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("获取教师数据失败：" + ex.Message, "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
         }
@@ -398,8 +472,15 @@ namespace EduAdminApp.Forms
                     {
                         StudentDAL dal = new StudentDAL();
                         dal.Update(form.Student);
-                        students = StudentDAL.GetAll();
-                        RefreshStudentGrid(students);
+                        try
+                        {
+                            students = StudentDAL.GetAll();
+                            RefreshStudentGrid(students);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("获取学生数据失败：" + ex.Message, "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
             }
@@ -413,8 +494,67 @@ namespace EduAdminApp.Forms
                     {
                         TeacherDAL dal = new TeacherDAL();
                         dal.Update(form.Teacher);
-                        teachers = TeacherDAL.GetAll();
-                        RefreshTeacherGrid(teachers);
+                        try
+                        {
+                            teachers = TeacherDAL.GetAll();
+                            RefreshTeacherGrid(teachers);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("获取教师数据失败：" + ex.Message, "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+            }
+        }
+
+        private void btnExportExcel_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewMain.Rows.Count == 0)
+            {
+                MessageBox.Show("没有可导出的数据！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            using (SaveFileDialog sfd = new SaveFileDialog())
+            {
+                sfd.Filter = "Excel文件 (*.csv)|*.csv";
+                sfd.FileName = "导出数据.csv";
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        StringBuilder sb = new StringBuilder();
+
+                        // 导出列标题
+                        for (int i = 0; i < dataGridViewMain.Columns.Count; i++)
+                        {
+                            sb.Append(dataGridViewMain.Columns[i].HeaderText);
+                            if (i < dataGridViewMain.Columns.Count - 1)
+                                sb.Append(",");
+                        }
+                        sb.AppendLine();
+
+                        // 导出每行数据
+                        foreach (DataGridViewRow row in dataGridViewMain.Rows)
+                        {
+                            if (row.IsNewRow) continue;
+                            for (int i = 0; i < dataGridViewMain.Columns.Count; i++)
+                            {
+                                var value = row.Cells[i].Value?.ToString().Replace(",", "，") ?? "";
+                                sb.Append(value);
+                                if (i < dataGridViewMain.Columns.Count - 1)
+                                    sb.Append(",");
+                            }
+                            sb.AppendLine();
+                        }
+
+                        File.WriteAllText(sfd.FileName, sb.ToString(), Encoding.UTF8);
+                        MessageBox.Show("导出成功！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("导出失败：" + ex.Message, "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }

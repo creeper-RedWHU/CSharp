@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using EduAdminApp.Models;
 using MaterialSkin;
@@ -46,6 +47,27 @@ namespace EduAdminApp
                 string.IsNullOrWhiteSpace(txtName.Text))
             {
                 MessageBox.Show("用户名、密码和姓名不能为空！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // 正则表达式校验
+            Regex nameRegex = new Regex(@"^[\u4e00-\u9fa5A-Za-z]{2,20}$");
+            Regex phoneRegex = new Regex(@"^\d{11}$");
+            Regex emailRegex = new Regex(@"^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$");
+
+            if (!nameRegex.IsMatch(txtName.Text.Trim()))
+            {
+                MessageBox.Show("姓名格式不正确，应为2-20位中英文字符！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (!string.IsNullOrWhiteSpace(txtPhone.Text) && !phoneRegex.IsMatch(txtPhone.Text.Trim()))
+            {
+                MessageBox.Show("手机号格式不正确，应为11位数字！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (!string.IsNullOrWhiteSpace(txtEmail.Text) && !emailRegex.IsMatch(txtEmail.Text.Trim()))
+            {
+                MessageBox.Show("邮箱格式不正确！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 

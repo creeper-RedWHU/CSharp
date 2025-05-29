@@ -32,6 +32,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dgvcourses = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnEndTime = new System.Windows.Forms.DataGridViewTextBoxColumn(); // 新增
+            this.ColumnNum = new System.Windows.Forms.DataGridViewTextBoxColumn();     // 新增
             this.TitlePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvcourses)).BeginInit();
             this.SuspendLayout();
@@ -53,7 +55,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(110, 31);
             this.label1.TabIndex = 0;
-            this.label1.Text = "课程名称";
+            this.label1.Text = "课程信息";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
@@ -63,7 +65,10 @@
             this.dgvcourses.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvcourses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvcourses.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1});
+                this.Column1,
+                this.ColumnEndTime, // 新增
+                this.ColumnNum      // 新增
+            });
             this.dgvcourses.Location = new System.Drawing.Point(0, 102);
             this.dgvcourses.MultiSelect = false;
             this.dgvcourses.Name = "dgvcourses";
@@ -76,10 +81,24 @@
             // 
             // Column1
             // 
-            this.Column1.DataPropertyName = "(无）";
-            this.Column1.HeaderText = "Column1";
+            this.Column1.DataPropertyName = "CourseName";
+            this.Column1.HeaderText = "课程名称";
             this.Column1.MinimumWidth = 8;
             this.Column1.Name = "Column1";
+            // 
+            // ColumnEndTime
+            // 
+            this.ColumnEndTime.DataPropertyName = "Endtim";
+            this.ColumnEndTime.HeaderText = "结束时间";
+            this.ColumnEndTime.MinimumWidth = 8;
+            this.ColumnEndTime.Name = "ColumnEndTime";
+            // 
+            // ColumnNum
+            // 
+            this.ColumnNum.DataPropertyName = "NUM";
+            this.ColumnNum.HeaderText = "上课人数";
+            this.ColumnNum.MinimumWidth = 8;
+            this.ColumnNum.Name = "ColumnNum";
             // 
             // Course
             // 
@@ -102,5 +121,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvcourses;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnEndTime; // 新增
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNum;    // 新增
     }
 }
