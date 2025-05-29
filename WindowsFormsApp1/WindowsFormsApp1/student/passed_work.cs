@@ -59,13 +59,12 @@ namespace WindowsFormsApp1
             {
                 conn.Open();
                 string sql = @"
-                    SELECT h.HID, h.HName, h.StartTime, h.EndTime
-                    FROM HMK h
-                    JOIN CourseHMK ch ON h.HID = ch.HID
-                    WHERE ch.CourseID = @courseId
-                      AND date('now') > h.EndTime
-                      AND h.IsTest = 0
-                    ORDER BY h.EndTime DESC";
+            SELECT h.HID, h.HName, h.StartTime, h.EndTime
+            FROM HMK h
+            JOIN CourseHMK ch ON h.HID = ch.HID
+            WHERE ch.CourseID = @courseId
+                AND h.IsTest = 0
+            ORDER BY h.EndTime DESC";
 
                 using (SQLiteCommand cmd = new SQLiteCommand(sql, conn))
                 {
@@ -76,14 +75,20 @@ namespace WindowsFormsApp1
                         {
                             var work = new WorkInfo
                             {
-                                HID = reader.GetInt32("HID"),
-                                HName = reader.GetString("HName"),
-                                StartTime = reader.GetString("StartTime"),
-                                EndTime = reader.GetString("EndTime")
+                                HID = reader.GetInt32(0),
+                                HName = reader.GetString(1),
+                                StartTime = reader.GetString(2),
+                                EndTime = reader.GetString(3)
                             };
 
-                            _passedWorks.Add(work);
-                            CreateWorkCard(work);
+                            // 只显示已过期的作业
+                            DateTime now = DateTime.Now;
+                            DateTime end = DateTime.Parse(work.EndTime);
+                            if (now > end)
+                            {
+                                _passedWorks.Add(work);
+                                CreateWorkCard(work);
+                            }
                         }
                     }
                 }

@@ -59,13 +59,12 @@ namespace WindowsFormsApp1
             {
                 conn.Open();
                 string sql = @"
-                    SELECT h.HID, h.HName, h.StartTime, h.EndTime
-                    FROM HMK h
-                    JOIN CourseHMK ch ON h.HID = ch.HID
-                    WHERE ch.CourseID = @courseId
-                      AND date('now') BETWEEN h.StartTime AND h.EndTime
-                      AND h.IsTest = 0
-                    ORDER BY h.EndTime ASC";
+            SELECT h.HID, h.HName, h.StartTime, h.EndTime
+            FROM HMK h
+            JOIN CourseHMK ch ON h.HID = ch.HID
+            WHERE ch.CourseID = @courseId
+                AND h.IsTest = 0
+            ORDER BY h.EndTime ASC";
 
                 using (SQLiteCommand cmd = new SQLiteCommand(sql, conn))
                 {
@@ -76,14 +75,21 @@ namespace WindowsFormsApp1
                         {
                             var work = new WorkInfo
                             {
-                                HID = reader.GetInt32(0),        // 0是HID的索引
-                                HName = reader.GetString(1),     // 1是HName的索引  
-                                StartTime = reader.GetString(2), // 2是StartTime的索引
-                                EndTime = reader.GetString(3)    // 3是EndTime的索引
+                                HID = reader.GetInt32(0),
+                                HName = reader.GetString(1),
+                                StartTime = reader.GetString(2),
+                                EndTime = reader.GetString(3)
                             };
 
-                            _dueWorks.Add(work);
-                            CreateWorkCard(work);
+                            // 只显示当前时间在开始和结束之间的作业
+                            DateTime now = DateTime.Now;
+                            DateTime start = DateTime.Parse(work.StartTime);
+                            DateTime end = DateTime.Parse(work.EndTime);
+                            if (now >= start && now <= end)
+                            {
+                                _dueWorks.Add(work);
+                                CreateWorkCard(work);
+                            }
                         }
                     }
                 }
