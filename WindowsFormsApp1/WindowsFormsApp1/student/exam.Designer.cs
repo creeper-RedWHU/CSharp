@@ -1,4 +1,7 @@
-﻿namespace WindowsFormsApp1
+﻿using System.Drawing;
+using System.Windows.Forms;
+
+namespace WindowsFormsApp1
 {
     partial class exam
     {
@@ -28,39 +31,136 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.headerPanel = new System.Windows.Forms.Panel();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.mainPanel = new System.Windows.Forms.Panel();
+            this.flpExams = new System.Windows.Forms.FlowLayoutPanel();
+            this.footerPanel = new System.Windows.Forms.Panel();
+            this.lblNotice = new System.Windows.Forms.Label();
+            this.headerPanel.SuspendLayout();
+            this.mainPanel.SuspendLayout();
+            this.footerPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // headerPanel
             // 
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeColumns = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(68, 54);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 30;
-            this.dataGridView1.Size = new System.Drawing.Size(801, 588);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            this.headerPanel.BackColor = System.Drawing.Color.DodgerBlue;
+            this.headerPanel.Controls.Add(this.lblTitle);
+            this.headerPanel.Controls.Add(this.btnRefresh);
+            this.headerPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.headerPanel.Location = new System.Drawing.Point(0, 0);
+            this.headerPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.headerPanel.Name = "headerPanel";
+            this.headerPanel.Size = new System.Drawing.Size(1087, 72);
+            this.headerPanel.TabIndex = 0;
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Bold);
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(22, 18);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(57, 42);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "📊";
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRefresh.BackColor = System.Drawing.Color.Orange;
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefresh.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Bold);
+            this.btnRefresh.ForeColor = System.Drawing.Color.White;
+            this.btnRefresh.Location = new System.Drawing.Point(929, 12);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(135, 48);
+            this.btnRefresh.TabIndex = 1;
+            this.btnRefresh.Text = "🔄 刷新";
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // mainPanel
+            // 
+            this.mainPanel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.mainPanel.Controls.Add(this.flpExams);
+            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainPanel.Location = new System.Drawing.Point(0, 72);
+            this.mainPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Padding = new System.Windows.Forms.Padding(17, 18, 17, 18);
+            this.mainPanel.Size = new System.Drawing.Size(1087, 790);
+            this.mainPanel.TabIndex = 1;
+            // 
+            // flpExams
+            // 
+            this.flpExams.AutoScroll = true;
+            this.flpExams.BackColor = System.Drawing.Color.White;
+            this.flpExams.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flpExams.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flpExams.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flpExams.Location = new System.Drawing.Point(17, 18);
+            this.flpExams.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.flpExams.Name = "flpExams";
+            this.flpExams.Padding = new System.Windows.Forms.Padding(11, 12, 11, 12);
+            this.flpExams.Size = new System.Drawing.Size(1053, 754);
+            this.flpExams.TabIndex = 0;
+            this.flpExams.WrapContents = false;
+            // 
+            // footerPanel
+            // 
+            this.footerPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.footerPanel.Controls.Add(this.lblNotice);
+            this.footerPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.footerPanel.Location = new System.Drawing.Point(0, 862);
+            this.footerPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.footerPanel.Name = "footerPanel";
+            this.footerPanel.Size = new System.Drawing.Size(1087, 60);
+            this.footerPanel.TabIndex = 2;
+            // 
+            // lblNotice
+            // 
+            this.lblNotice.AutoSize = true;
+            this.lblNotice.Font = new System.Drawing.Font("微软雅黑", 11F, System.Drawing.FontStyle.Bold);
+            this.lblNotice.ForeColor = System.Drawing.Color.White;
+            this.lblNotice.Location = new System.Drawing.Point(22, 18);
+            this.lblNotice.Name = "lblNotice";
+            this.lblNotice.Size = new System.Drawing.Size(623, 60);
+            this.lblNotice.TabIndex = 0;
+            this.lblNotice.Text = "💡 温馨提示：双击考试卡片或点击‘开始考试’按钮进入考试\r\n\r\n";
             // 
             // exam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dataGridView1);
+            this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.mainPanel);
+            this.Controls.Add(this.footerPanel);
+            this.Controls.Add(this.headerPanel);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "exam";
-            this.Size = new System.Drawing.Size(966, 768);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Size = new System.Drawing.Size(1087, 922);
+            this.Load += new System.EventHandler(this.exam_Load);
+            this.Resize += new System.EventHandler(this.exam_Resize);
+            this.headerPanel.ResumeLayout(false);
+            this.headerPanel.PerformLayout();
+            this.mainPanel.ResumeLayout(false);
+            this.footerPanel.ResumeLayout(false);
+            this.footerPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Panel headerPanel;
+        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Panel mainPanel;
+        private System.Windows.Forms.FlowLayoutPanel flpExams;
+        private System.Windows.Forms.Panel footerPanel;
+        private System.Windows.Forms.Label lblNotice;
     }
 }

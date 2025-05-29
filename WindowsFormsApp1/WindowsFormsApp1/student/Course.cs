@@ -15,6 +15,12 @@ namespace EduAdminApp
             LoadCourseInfo();
         }
 
+        public Course()
+        {
+            InitializeComponent();
+      
+        }
+
         private void LoadCourseInfo()
         {
             string connStr = "Data Source=StudentSystem.db;Version=3;";
@@ -24,7 +30,7 @@ namespace EduAdminApp
 
                 string sql = @"
                     SELECT c.CourseID, c.CourseName, c.TeacherID, c.StartTime,
-                           c.CourseDescription, c.Credits, c.Duration, c.Classroom, c.Schedule,
+                           c.Endtime, c.NUM, c.CourseDescription, c.Credit, c.Classroom, c.Schedule,
                            u.Name AS TeacherName
                     FROM Course c
                     LEFT JOIN Users u ON c.TeacherID = u.ID
@@ -37,16 +43,16 @@ namespace EduAdminApp
                     {
                         if (reader.Read())
                         {
-                            labelCourseID.Text = "课程编号：" + reader["CourseID"].ToString();
-                            labelCourseName.Text = "课程名称：" + reader["CourseName"].ToString();
-                            labelTeacher.Text = "授课教师：" + reader["TeacherName"].ToString();
-                            labelStartTime.Text = "开课时间：" + Convert.ToDateTime(reader["StartTime"]).ToString("yyyy-MM-dd");
-                            labelCredits.Text = "学分：" + reader["Credits"].ToString();
-                            labelDuration.Text = "课时：" + reader["Duration"].ToString();
-                            labelClassroom.Text = "上课地点：" + reader["Classroom"].ToString();
-                            labelSchedule.Text = "上课时间：" + reader["Schedule"].ToString();
+                            labelCourseID.Text = "📘 课程编号：" + reader["CourseID"].ToString();
+                            labelCourseName.Text = "📖 课程名称：" + reader["CourseName"].ToString();
+                            labelTeacher.Text = "👨‍🏫 授课教师：" + reader["TeacherName"].ToString();
+                            labelStartTime.Text = "🕒 开课时间：" + Convert.ToDateTime(reader["StartTime"]).ToString("yyyy-MM-dd");
+                            labelCredits.Text = "🎓 学分：" + reader["Credit"].ToString();
+                            labelEndTime.Text = "⏰ 结束时间：" + Convert.ToDateTime(reader["Endtime"]).ToString("yyyy-MM-dd"); // 新增
+                            labelNum.Text = "👥 上课人数：" + reader["NUM"].ToString(); // 新增
+                            labelClassroom.Text = "🏫 上课地点：" + reader["Classroom"].ToString();
+                            labelSchedule.Text = "📅 上课时间：" + reader["Schedule"].ToString();
 
-                            // 强制测试输出是否可见
                             string desc = reader["CourseDescription"]?.ToString();
                             labelDescription.Text = string.IsNullOrWhiteSpace(desc) ? "暂无课程简介" : desc;
                         }

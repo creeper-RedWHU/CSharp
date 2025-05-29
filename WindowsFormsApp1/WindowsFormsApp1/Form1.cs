@@ -84,13 +84,13 @@ namespace WindowsFormsApp1
             /*
              常数
              */
-            TeacherID = 2;
-            TeacherName = "李华";
+            //TeacherID = 2;
+            //TeacherName = "李华";
             /*
              修改为：
              */
-            //TeacherID=Params.TeacherID;
-            //TeacherName=Params.TeacherName;
+            TeacherID=Params.TeacherID;
+            TeacherName=Params.TeacherName;
 
 
             Home=new home_s();

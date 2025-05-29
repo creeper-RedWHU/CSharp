@@ -31,48 +31,50 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvPassedWork = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPassedWork)).BeginInit();
+            this.lblHeader = new System.Windows.Forms.Label();
+            this.flpPassedWorks = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
-            // dgvPassedWork
+            // lblHeader
             // 
-            this.dgvPassedWork.AllowUserToAddRows = false;
-            this.dgvPassedWork.AllowUserToDeleteRows = false;
-            this.dgvPassedWork.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPassedWork.Location = new System.Drawing.Point(20, 18);
-            this.dgvPassedWork.Name = "dgvPassedWork";
-            this.dgvPassedWork.ReadOnly = true;
-            this.dgvPassedWork.RowHeadersWidth = 62;
-            this.dgvPassedWork.RowTemplate.Height = 30;
-            this.dgvPassedWork.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPassedWork.Size = new System.Drawing.Size(819, 616);
-            this.dgvPassedWork.TabIndex = 0;
-            this.dgvPassedWork.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDueWork_CellDoubleClick);
-            this.dgvPassedWork.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill; // 或者 AllCells
-            this.dgvPassedWork.RowTemplate.Height = 32;
-            this.dgvPassedWork.Font = new Font("微软雅黑", 12F);
-            this.dgvPassedWork.ColumnHeadersDefaultCellStyle.Font = new Font("微软雅黑", 12F, FontStyle.Bold);
-            this.dgvPassedWork.EnableHeadersVisualStyles = false;
-            this.dgvPassedWork.ColumnHeadersDefaultCellStyle.BackColor = Color.DodgerBlue;
-            this.dgvPassedWork.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-            this.dgvPassedWork.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            this.dgvPassedWork.AlternatingRowsDefaultCellStyle.BackColor = Color.AliceBlue;
+            this.lblHeader.AutoSize = true;
+            this.lblHeader.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Bold);
+            this.lblHeader.ForeColor = System.Drawing.Color.Gray;
+            this.lblHeader.Location = new System.Drawing.Point(15, 15);
+            this.lblHeader.Name = "lblHeader";
+            this.lblHeader.Size = new System.Drawing.Size(240, 26);
+            this.lblHeader.TabIndex = 0;
+            this.lblHeader.Text = "📋 过期作业 (仅可查看)";
+            // 
+            // flpPassedWorks
+            // 
+            this.flpPassedWorks.AutoScroll = true;
+            this.flpPassedWorks.BackColor = System.Drawing.Color.White;
+            this.flpPassedWorks.Location = new System.Drawing.Point(15, 50);
+            this.flpPassedWorks.Name = "flpPassedWorks";
+            this.flpPassedWorks.Padding = new System.Windows.Forms.Padding(10);
+            this.flpPassedWorks.Size = new System.Drawing.Size(1010, 580);
+            this.flpPassedWorks.TabIndex = 1;
             // 
             // passed_work
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dgvPassedWork);
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Controls.Add(this.flpPassedWorks);
+            this.Controls.Add(this.lblHeader);
             this.Name = "passed_work";
-            this.Size = new System.Drawing.Size(859, 652);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPassedWork)).EndInit();
+            this.Size = new System.Drawing.Size(1040, 645);
+            this.Load += new System.EventHandler(this.passed_work_Load);
+            this.Resize += new System.EventHandler(this.passed_work_Resize);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvPassedWork;
+        private System.Windows.Forms.Label lblHeader;
+        private System.Windows.Forms.FlowLayoutPanel flpPassedWorks;
     }
 }

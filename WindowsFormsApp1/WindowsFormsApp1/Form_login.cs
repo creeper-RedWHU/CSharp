@@ -1,6 +1,4 @@
-﻿
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,43 +10,109 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MaterialSkin;
-using MaterialSkin.Controls;
+// 移除 MaterialSkin 引用
 using EduAdminApp.Forms;
+
 namespace WindowsFormsApp1
 {
-    public partial class Form_login : MaterialForm
+    public partial class Form_login : Form  // 改为普通 Form
     {
-
         public Form_login()
         {
             InitializeComponent();
 
-            // 创建圆角窗体
+            // 设置无边框窗体
             this.FormBorderStyle = FormBorderStyle.None;
-            var materialSkinManager = MaterialSkinManager.Instance;
-            materialSkinManager.AddFormToManage(this);
-            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT; 
-            materialSkinManager.ColorScheme = new ColorScheme(
-                Primary.Blue600, Primary.Blue700,
-                Primary.Blue200, Accent.LightBlue200,
-                TextShade.WHITE
-            );
 
+            // 初始化样式
+            InitializeStyles();
         }
 
-        // 重写窗体大小改变事件，保持圆角效果
-        protected override void OnResize(EventArgs e)
+        // ...existing code...
+
+        private void InitializeStyles()
         {
-            base.OnResize(e);
+            // 设置窗体的清晰度和渲染质量
+            this.SetStyle(ControlStyles.OptimizedDoubleBuffer |
+                          ControlStyles.ResizeRedraw |
+                          ControlStyles.AllPaintingInWmPaint |
+                          ControlStyles.UserPaint, true);
+            this.UpdateStyles();
+
+            // 设置登录按钮样式
+            //SetButtonStyle(btnLogin, Color.DodgerBlue);
+            //SetButtonStyle(btnExit, Color.FromArgb(231, 76, 60));
+
+            // 设置输入框样式
+            SetTextBoxStyle(txtUsername);
+            SetTextBoxStyle(txtPassword);
+
+            // 设置下拉框样式
+            SetComboBoxStyle(cboRole);
+
+            // 设置登录卡片圆角效果
+            SetCardShadow();
         }
 
+        private void SetCardShadow()
+        {
+            // 给登录卡片添加阴影效果
+            loginCard.Paint += (s, e) => {
+                using (var path = new System.Drawing.Drawing2D.GraphicsPath())
+                {
+                    path.AddRectangle(new Rectangle(0, 0, loginCard.Width - 1, loginCard.Height - 1));
+                    using (var pen = new Pen(Color.FromArgb(200, 200, 200), 1))
+                    {
+                        e.Graphics.DrawPath(pen, path);
+                    }
+                }
+            };
+        }
+
+        private void SetTextBoxStyle(TextBox txt)
+        {
+            txt.BorderStyle = BorderStyle.FixedSingle;
+            txt.BackColor = Color.White;
+            txt.Font = new Font("微软雅黑", 11F, FontStyle.Regular, GraphicsUnit.Point);
+
+            // 添加焦点效果
+            txt.Enter += (s, e) => {
+                txt.BackColor = Color.FromArgb(240, 248, 255);
+                txt.BorderStyle = BorderStyle.FixedSingle;
+            };
+            txt.Leave += (s, e) => {
+                txt.BackColor = Color.White;
+            };
+        }
+
+        private void SetComboBoxStyle(ComboBox cbo)
+        {
+            cbo.FlatStyle = FlatStyle.Standard;
+            cbo.BackColor = Color.White;
+            cbo.Font = new Font("微软雅黑", 10F, FontStyle.Regular, GraphicsUnit.Point);
+        }
+
+        // 绘制更清晰的边框
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            base.OnPaint(e);
+
+            // 启用抗锯齿
+            e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            e.Graphics.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+
+            using (Pen borderPen = new Pen(Color.DodgerBlue, 2))
+            {
+                e.Graphics.DrawRectangle(borderPen, 1, 1, this.Width - 3, this.Height - 3);
+            }
+        }
+
+        // ...existing code...
 
         private void Form1_Load(object sender, EventArgs e)
         {
             // 设置窗体标题
             this.Text = "用户登录";
-
 
             // 添加角色选项
             cboRole.Items.Add("学生");
@@ -57,16 +121,7 @@ namespace WindowsFormsApp1
 
             // 默认选择第一个选项
             cboRole.SelectedIndex = 0;
-
-            cboRole.UseTallSize = true;
-            txtPassword.UseTallSize = true;
-            txtUsername.UseTallSize = true;
-            cboRole.Font = new Font("微软雅黑", 10F);
-            label1.Font = new System.Drawing.Font("宋体", 10F);
-            label2.Font = new System.Drawing.Font("宋体", 10F);
-            btnLogin.Font = new System.Drawing.Font("微软雅黑", 10F);
         }
-
 
         #region 窗口移动
         private Point mPoint;
@@ -74,6 +129,7 @@ namespace WindowsFormsApp1
         {
             mPoint = new Point(e.X, e.Y);
         }
+
         private void Title_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -81,7 +137,6 @@ namespace WindowsFormsApp1
                 this.Location = new Point(this.Location.X + e.X - mPoint.X, this.Location.Y + e.Y - mPoint.Y);
             }
         }
-
         #endregion
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -137,7 +192,6 @@ namespace WindowsFormsApp1
             }
         }
 
-
         // 新增：根据用户名查找ID
         private int GetUserIdByUsername(string username)
         {
@@ -158,11 +212,10 @@ namespace WindowsFormsApp1
                 }
             }
         }
+
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
-
     }
 }

@@ -37,38 +37,40 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(86, 79);
+            this.label1.Location = new System.Drawing.Point(349, 87);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 18);
+            this.label1.Size = new System.Drawing.Size(98, 18);
             this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            this.label1.Text = "请提出问题";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(155, 224);
+            this.textBox1.Location = new System.Drawing.Point(138, 198);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 28);
+            this.textBox1.Size = new System.Drawing.Size(473, 28);
             this.textBox1.TabIndex = 1;
             // 
             // btnOK
             // 
             this.btnOK.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnOK.Location = new System.Drawing.Point(493, 112);
+            this.btnOK.Location = new System.Drawing.Point(191, 304);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(75, 23);
+            this.btnOK.Size = new System.Drawing.Size(75, 42);
             this.btnOK.TabIndex = 2;
-            this.btnOK.Text = "button1";
+            this.btnOK.Text = "提交";
             this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // btnCancel
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(462, 228);
+            this.btnCancel.Location = new System.Drawing.Point(485, 304);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.Size = new System.Drawing.Size(86, 42);
             this.btnCancel.TabIndex = 3;
-            this.btnCancel.Text = "button2";
+            this.btnCancel.Text = "取消";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // InputBoxForm
             // 

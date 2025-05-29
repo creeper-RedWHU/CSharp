@@ -31,55 +31,50 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dgvDueWork = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDueWork)).BeginInit();
+            this.lblHeader = new System.Windows.Forms.Label();
+            this.flpDueWorks = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
-            // dgvDueWork
+            // lblHeader
             // 
-            this.dgvDueWork.AllowUserToAddRows = false;
-            this.dgvDueWork.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.AliceBlue;
-            this.dgvDueWork.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvDueWork.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvDueWork.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDueWork.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvDueWork.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDueWork.EnableHeadersVisualStyles = false;
-            this.dgvDueWork.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.dgvDueWork.Location = new System.Drawing.Point(0, 0);
-            this.dgvDueWork.Name = "dgvDueWork";
-            this.dgvDueWork.ReadOnly = true;
-            this.dgvDueWork.RowHeadersWidth = 62;
-            this.dgvDueWork.RowTemplate.Height = 32;
-            this.dgvDueWork.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDueWork.Size = new System.Drawing.Size(840, 650);
-            this.dgvDueWork.TabIndex = 0;
-            this.dgvDueWork.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDueWork_CellDoubleClick);
+            this.lblHeader.AutoSize = true;
+            this.lblHeader.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Bold);
+            this.lblHeader.ForeColor = System.Drawing.Color.Green;
+            this.lblHeader.Location = new System.Drawing.Point(15, 15);
+            this.lblHeader.Name = "lblHeader";
+            this.lblHeader.Size = new System.Drawing.Size(240, 26);
+            this.lblHeader.TabIndex = 0;
+            this.lblHeader.Text = "⏰ 正在进行的作业 (可提交)";
+            // 
+            // flpDueWorks
+            // 
+            this.flpDueWorks.AutoScroll = true;
+            this.flpDueWorks.BackColor = System.Drawing.Color.White;
+            this.flpDueWorks.Location = new System.Drawing.Point(15, 50);
+            this.flpDueWorks.Name = "flpDueWorks";
+            this.flpDueWorks.Padding = new System.Windows.Forms.Padding(10);
+            this.flpDueWorks.Size = new System.Drawing.Size(1010, 580);
+            this.flpDueWorks.TabIndex = 1;
             // 
             // due_work
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dgvDueWork);
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Controls.Add(this.flpDueWorks);
+            this.Controls.Add(this.lblHeader);
             this.Name = "due_work";
-            this.Size = new System.Drawing.Size(843, 650);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDueWork)).EndInit();
+            this.Size = new System.Drawing.Size(1040, 645);
+            this.Load += new System.EventHandler(this.due_work_Load);
+            this.Resize += new System.EventHandler(this.due_work_Resize);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvDueWork;
+        private System.Windows.Forms.Label lblHeader;
+        private System.Windows.Forms.FlowLayoutPanel flpDueWorks;
     }
 }
