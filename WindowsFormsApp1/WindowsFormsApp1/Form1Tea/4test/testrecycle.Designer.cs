@@ -212,6 +212,7 @@ namespace WindowsFormsApp1.Form1Tea._4test
             this.EndTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.InputInformation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Del = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Rec = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -272,7 +273,8 @@ namespace WindowsFormsApp1.Form1Tea._4test
             this.StartTime,
             this.EndTime,
             this.InputInformation,
-            this.Del});
+            this.Del,
+            this.Rec});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Emoji", 11F);
@@ -306,7 +308,6 @@ namespace WindowsFormsApp1.Form1Tea._4test
             this.HID.MinimumWidth = 6;
             this.HID.Name = "HID";
             this.HID.ReadOnly = true;
-            this.HID.Width = 125;
             // 
             // HName
             // 
@@ -315,7 +316,7 @@ namespace WindowsFormsApp1.Form1Tea._4test
             this.HName.MinimumWidth = 6;
             this.HName.Name = "HName";
             this.HName.ReadOnly = true;
-            this.HName.Width = 150;
+            this.HName.Width = 140;
             // 
             // StartTime
             // 
@@ -342,17 +343,27 @@ namespace WindowsFormsApp1.Form1Tea._4test
             this.InputInformation.MinimumWidth = 6;
             this.InputInformation.Name = "InputInformation";
             this.InputInformation.ReadOnly = true;
-            this.InputInformation.Width = 160;
+            this.InputInformation.Width = 140;
             // 
             // Del
             // 
-            this.Del.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Del.HeaderText = "🗑️ 操作";
             this.Del.MinimumWidth = 6;
             this.Del.Name = "Del";
             this.Del.ReadOnly = true;
             this.Del.Text = "🗑️ 删除";
             this.Del.UseColumnTextForButtonValue = true;
+            this.Del.Width = 140;
+            // 
+            // Rec
+            // 
+            this.Rec.HeaderText = "";
+            this.Rec.MinimumWidth = 6;
+            this.Rec.Name = "Rec";
+            this.Rec.ReadOnly = true;
+            this.Rec.Text = "♻️ 恢复";
+            this.Rec.UseColumnTextForButtonValue = true;
+            this.Rec.Width = 125;
             // 
             // testrecycle
             // 
@@ -380,5 +391,6 @@ namespace WindowsFormsApp1.Form1Tea._4test
         private System.Windows.Forms.DataGridViewTextBoxColumn EndTime;
         private System.Windows.Forms.DataGridViewTextBoxColumn InputInformation;
         private System.Windows.Forms.DataGridViewButtonColumn Del;
+        private System.Windows.Forms.DataGridViewButtonColumn Rec;
     }
 }

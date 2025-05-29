@@ -85,7 +85,7 @@ namespace WindowsFormsApp1
              常数
              */
             TeacherID = 2;
-            TeacherName = "mm";
+            TeacherName = "李华";
             /*
              修改为：
              */

@@ -38,11 +38,6 @@ namespace WindowsFormsApp1.Form1Tea.zy
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Num = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Point = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TimeStamp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,6 +45,11 @@ namespace WindowsFormsApp1.Form1Tea.zy
             this.InputInformation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Num = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Point = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TimeStamp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -123,7 +123,7 @@ namespace WindowsFormsApp1.Form1Tea.zy
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -166,51 +166,6 @@ namespace WindowsFormsApp1.Form1Tea.zy
             this.dataGridView1.Size = new System.Drawing.Size(871, 650);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // Num
-            // 
-            this.Num.DataPropertyName = "PID";
-            this.Num.HeaderText = "🔢 序号";
-            this.Num.MinimumWidth = 6;
-            this.Num.Name = "Num";
-            this.Num.ReadOnly = true;
-            this.Num.Width = 80;
-            // 
-            // Title
-            // 
-            this.Title.DataPropertyName = "ProName";
-            this.Title.HeaderText = "🏷️ 标题";
-            this.Title.MinimumWidth = 6;
-            this.Title.Name = "Title";
-            this.Title.ReadOnly = true;
-            this.Title.Width = 170;
-            // 
-            // Type
-            // 
-            this.Type.DataPropertyName = "IsTest";
-            this.Type.HeaderText = "📑 类型";
-            this.Type.MinimumWidth = 6;
-            this.Type.Name = "Type";
-            this.Type.ReadOnly = true;
-            this.Type.Width = 85;
-            // 
-            // Point
-            // 
-            this.Point.DataPropertyName = "ProCategory";
-            this.Point.HeaderText = "📍 考点";
-            this.Point.MinimumWidth = 6;
-            this.Point.Name = "Point";
-            this.Point.ReadOnly = true;
-            this.Point.Width = 135;
-            // 
-            // TimeStamp
-            // 
-            this.TimeStamp.DataPropertyName = "InputInformation";
-            this.TimeStamp.HeaderText = "🕒 录入/修改信息";
-            this.TimeStamp.MinimumWidth = 6;
-            this.TimeStamp.Name = "TimeStamp";
-            this.TimeStamp.ReadOnly = true;
-            this.TimeStamp.Width = 125;
             // 
             // PID
             // 
@@ -278,6 +233,51 @@ namespace WindowsFormsApp1.Form1Tea.zy
             this.Delete.Text = "🗑️ 删除";
             this.Delete.UseColumnTextForButtonValue = true;
             this.Delete.Width = 125;
+            // 
+            // Num
+            // 
+            this.Num.DataPropertyName = "PID";
+            this.Num.HeaderText = "🔢 序号";
+            this.Num.MinimumWidth = 6;
+            this.Num.Name = "Num";
+            this.Num.ReadOnly = true;
+            this.Num.Width = 80;
+            // 
+            // Title
+            // 
+            this.Title.DataPropertyName = "ProName";
+            this.Title.HeaderText = "🏷️ 标题";
+            this.Title.MinimumWidth = 6;
+            this.Title.Name = "Title";
+            this.Title.ReadOnly = true;
+            this.Title.Width = 170;
+            // 
+            // Type
+            // 
+            this.Type.DataPropertyName = "IsTest";
+            this.Type.HeaderText = "📑 类型";
+            this.Type.MinimumWidth = 6;
+            this.Type.Name = "Type";
+            this.Type.ReadOnly = true;
+            this.Type.Width = 85;
+            // 
+            // Point
+            // 
+            this.Point.DataPropertyName = "ProCategory";
+            this.Point.HeaderText = "📍 考点";
+            this.Point.MinimumWidth = 6;
+            this.Point.Name = "Point";
+            this.Point.ReadOnly = true;
+            this.Point.Width = 135;
+            // 
+            // TimeStamp
+            // 
+            this.TimeStamp.DataPropertyName = "InputInformation";
+            this.TimeStamp.HeaderText = "🕒 录入/修改信息";
+            this.TimeStamp.MinimumWidth = 6;
+            this.TimeStamp.Name = "TimeStamp";
+            this.TimeStamp.ReadOnly = true;
+            this.TimeStamp.Width = 125;
             // 
             // zyovw
             // 
