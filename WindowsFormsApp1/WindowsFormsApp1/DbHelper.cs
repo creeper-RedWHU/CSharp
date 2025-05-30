@@ -4,6 +4,8 @@ using System.Data;
 using System.Data.SQLite;
 using System.IO;
 using System.Windows.Forms;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace WindowsFormsApp1
 {
@@ -85,28 +87,68 @@ namespace WindowsFormsApp1
         /// </summary>
         public static bool ValidateUser(string username, string password, string role)
         {
-            try
-            {
-                using (SQLiteConnection connection = new SQLiteConnection(ConnectionString))
-                {
-                    connection.Open();
-                    using (SQLiteCommand command = new SQLiteCommand(connection))
-                    {
-                        command.CommandText = "SELECT COUNT(*) FROM Users WHERE Username = @username AND Password = @password AND Role = @role";
-                        command.Parameters.AddWithValue("@username", username);
-                        command.Parameters.AddWithValue("@password", password);
-                        command.Parameters.AddWithValue("@role", role);
+            string dbPath = "StudentSystem.db";
+            string connStr = $"Data Source={dbPath};Version=3;";
+            string hash = PasswordHelper.HashPassword(password);
 
-                        int count = Convert.ToInt32(command.ExecuteScalar());
-                        return count > 0;
+            using (SQLiteConnection conn = new SQLiteConnection(connStr))
+            {
+                conn.Open();
+                string sql = "SELECT COUNT(*) FROM Users WHERE Username=@username AND Password=@password AND Role=@role";
+                using (SQLiteCommand cmd = new SQLiteCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@username", username);
+                    cmd.Parameters.AddWithValue("@password", hash);
+                    cmd.Parameters.AddWithValue("@role", role);
+                    long count = (long)cmd.ExecuteScalar();
+                    return count > 0;
+                }
+            }
+        }
+
+        public static void ConvertAllPasswordsToHash()
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(ConnectionString))
+            {
+                conn.Open();
+                // 读取所有用户
+                string selectSql = "SELECT Username, Password FROM Users";
+                var users = new List<(string Username, string Password)>();
+                using (SQLiteCommand cmd = new SQLiteCommand(selectSql, conn))
+                using (SQLiteDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        users.Add((reader.GetString(0), reader.GetString(1)));
+                    }
+                }
+                // 更新为哈希
+                foreach (var user in users)
+                {
+                    string hash = PasswordHelper.HashPassword(user.Password);
+                    string updateSql = "UPDATE Users SET Password=@pwd WHERE Username=@username";
+                    using (SQLiteCommand cmd = new SQLiteCommand(updateSql, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@pwd", hash);
+                        cmd.Parameters.AddWithValue("@username", user.Username);
+                        cmd.ExecuteNonQuery();
                     }
                 }
             }
-            catch (Exception ex)
+        }
+    }
+
+    public static class PasswordHelper
+    {
+        public static string HashPassword(string password)
+        {
+            using (SHA256 sha = SHA256.Create())
             {
-                MessageBox.Show($"验证用户时出错: {ex.Message}", "错误",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
+                byte[] bytes = sha.ComputeHash(Encoding.UTF8.GetBytes(password));
+                StringBuilder sb = new StringBuilder();
+                foreach (byte b in bytes)
+                    sb.Append(b.ToString("x2"));
+                return sb.ToString();
             }
         }
     }

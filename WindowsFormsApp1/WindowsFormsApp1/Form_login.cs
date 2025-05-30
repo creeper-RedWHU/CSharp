@@ -21,6 +21,9 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
 
+            // 启动时自动将所有明文密码转换为哈希（只需调用一次）
+            DbHelper.ConvertAllPasswordsToHash();
+
             // 设置无边框窗体
             this.FormBorderStyle = FormBorderStyle.None;
 

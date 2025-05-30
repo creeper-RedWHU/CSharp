@@ -87,10 +87,10 @@
             this.rolePanel.Controls.Add(this.cboRole);
             this.rolePanel.Controls.Add(this.lblRole);
             this.rolePanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.rolePanel.Location = new System.Drawing.Point(32, 280);
+            this.rolePanel.Location = new System.Drawing.Point(32, 246);
             this.rolePanel.Name = "rolePanel";
             this.rolePanel.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
-            this.rolePanel.Size = new System.Drawing.Size(334, 83);
+            this.rolePanel.Size = new System.Drawing.Size(334, 62);
             this.rolePanel.TabIndex = 3;
             // 
             // cboRole
@@ -99,10 +99,10 @@
             this.cboRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboRole.Font = new System.Drawing.Font("微软雅黑", 10F);
             this.cboRole.FormattingEnabled = true;
-            this.cboRole.Location = new System.Drawing.Point(0, 43);
+            this.cboRole.Location = new System.Drawing.Point(0, 52);
             this.cboRole.Margin = new System.Windows.Forms.Padding(0, 0, 0, 8);
             this.cboRole.Name = "cboRole";
-            this.cboRole.Size = new System.Drawing.Size(334, 35);
+            this.cboRole.Size = new System.Drawing.Size(334, 43);
             this.cboRole.TabIndex = 1;
             // 
             // lblRole
@@ -114,7 +114,7 @@
             this.lblRole.Location = new System.Drawing.Point(0, 12);
             this.lblRole.Name = "lblRole";
             this.lblRole.Padding = new System.Windows.Forms.Padding(0, 0, 0, 4);
-            this.lblRole.Size = new System.Drawing.Size(126, 31);
+            this.lblRole.Size = new System.Drawing.Size(169, 40);
             this.lblRole.TabIndex = 0;
             this.lblRole.Text = "👥 登录角色";
             // 
@@ -123,10 +123,10 @@
             this.passwordPanel.Controls.Add(this.txtPassword);
             this.passwordPanel.Controls.Add(this.lblPassword);
             this.passwordPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.passwordPanel.Location = new System.Drawing.Point(32, 201);
+            this.passwordPanel.Location = new System.Drawing.Point(32, 184);
             this.passwordPanel.Name = "passwordPanel";
             this.passwordPanel.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
-            this.passwordPanel.Size = new System.Drawing.Size(334, 79);
+            this.passwordPanel.Size = new System.Drawing.Size(334, 62);
             this.passwordPanel.TabIndex = 2;
             // 
             // txtPassword
@@ -134,11 +134,11 @@
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPassword.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtPassword.Font = new System.Drawing.Font("微软雅黑", 11F);
-            this.txtPassword.Location = new System.Drawing.Point(0, 43);
+            this.txtPassword.Location = new System.Drawing.Point(0, 52);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(0, 0, 0, 8);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '●';
-            this.txtPassword.Size = new System.Drawing.Size(334, 37);
+            this.txtPassword.Size = new System.Drawing.Size(334, 46);
             this.txtPassword.TabIndex = 1;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
@@ -151,7 +151,7 @@
             this.lblPassword.Location = new System.Drawing.Point(0, 12);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Padding = new System.Windows.Forms.Padding(0, 0, 0, 4);
-            this.lblPassword.Size = new System.Drawing.Size(126, 31);
+            this.lblPassword.Size = new System.Drawing.Size(169, 40);
             this.lblPassword.TabIndex = 0;
             this.lblPassword.Text = "🔒 登录密码";
             // 
@@ -163,7 +163,7 @@
             this.usernamePanel.Location = new System.Drawing.Point(32, 122);
             this.usernamePanel.Name = "usernamePanel";
             this.usernamePanel.Padding = new System.Windows.Forms.Padding(0, 12, 0, 0);
-            this.usernamePanel.Size = new System.Drawing.Size(334, 79);
+            this.usernamePanel.Size = new System.Drawing.Size(334, 62);
             this.usernamePanel.TabIndex = 1;
             // 
             // txtUsername
@@ -171,10 +171,10 @@
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtUsername.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtUsername.Font = new System.Drawing.Font("微软雅黑", 11F);
-            this.txtUsername.Location = new System.Drawing.Point(0, 43);
+            this.txtUsername.Location = new System.Drawing.Point(0, 52);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(0, 0, 0, 8);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(334, 37);
+            this.txtUsername.Size = new System.Drawing.Size(334, 46);
             this.txtUsername.TabIndex = 1;
             // 
             // lblUsername
@@ -186,7 +186,7 @@
             this.lblUsername.Location = new System.Drawing.Point(0, 12);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Padding = new System.Windows.Forms.Padding(0, 0, 0, 4);
-            this.lblUsername.Size = new System.Drawing.Size(126, 31);
+            this.lblUsername.Size = new System.Drawing.Size(169, 40);
             this.lblUsername.TabIndex = 0;
             this.lblUsername.Text = "👤 用户账号";
             // 
@@ -207,7 +207,7 @@
             this.lblSubtitle.ForeColor = System.Drawing.Color.Gray;
             this.lblSubtitle.Location = new System.Drawing.Point(0, 48);
             this.lblSubtitle.Name = "lblSubtitle";
-            this.lblSubtitle.Size = new System.Drawing.Size(334, 39);
+            this.lblSubtitle.Size = new System.Drawing.Size(334, 32);
             this.lblSubtitle.TabIndex = 1;
             this.lblSubtitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -258,7 +258,7 @@
             this.lblHeader.ForeColor = System.Drawing.Color.White;
             this.lblHeader.Location = new System.Drawing.Point(20, 13);
             this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(326, 31);
+            this.lblHeader.Size = new System.Drawing.Size(434, 42);
             this.lblHeader.TabIndex = 0;
             this.lblHeader.Text = "教学作业考试一体化在线平台";
             this.lblHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Title_MouseDown);
@@ -266,7 +266,7 @@
             // 
             // Form_login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(940, 656);
