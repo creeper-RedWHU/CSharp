@@ -44,6 +44,7 @@ namespace EduAdminApp.Forms
             this.lblTitle = new System.Windows.Forms.Label();
             this.sidebarPanel = new System.Windows.Forms.Panel();
             this.navigationPanel = new System.Windows.Forms.Panel();
+            this.btnAudit = new System.Windows.Forms.Button();
             this.btnTeacher = new System.Windows.Forms.Button();
             this.btnStudent = new System.Windows.Forms.Button();
             this.sidebarHeader = new System.Windows.Forms.Panel();
@@ -174,6 +175,7 @@ namespace EduAdminApp.Forms
             // 
             // navigationPanel
             // 
+            this.navigationPanel.Controls.Add(this.btnAudit);
             this.navigationPanel.Controls.Add(this.btnTeacher);
             this.navigationPanel.Controls.Add(this.btnStudent);
             this.navigationPanel.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -182,6 +184,24 @@ namespace EduAdminApp.Forms
             this.navigationPanel.Padding = new System.Windows.Forms.Padding(10);
             this.navigationPanel.Size = new System.Drawing.Size(200, 1166);
             this.navigationPanel.TabIndex = 1;
+            // 
+            // btnAudit
+            // 
+            this.btnAudit.BackColor = System.Drawing.Color.FromArgb(155, 89, 182);
+            this.btnAudit.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAudit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAudit.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold);
+            this.btnAudit.ForeColor = System.Drawing.Color.White;
+            this.btnAudit.Location = new System.Drawing.Point(10, 160);
+            this.btnAudit.Margin = new System.Windows.Forms.Padding(0, 0, 0, 15);
+            this.btnAudit.Name = "btnAudit";
+            this.btnAudit.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnAudit.Size = new System.Drawing.Size(180, 75);
+            this.btnAudit.TabIndex = 2;
+            this.btnAudit.Text = "📝 审核管理";
+            this.btnAudit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAudit.UseVisualStyleBackColor = false;
+            this.btnAudit.Click += new System.EventHandler(this.btnAudit_Click);
             // 
             // btnTeacher
             // 
@@ -450,6 +470,7 @@ namespace EduAdminApp.Forms
         private System.Windows.Forms.Panel sidebarHeader;
         private System.Windows.Forms.Label lblNavigation;
         private System.Windows.Forms.Panel navigationPanel;
+        private System.Windows.Forms.Button btnAudit;
         private System.Windows.Forms.Button btnTeacher;
         private System.Windows.Forms.Button btnStudent;
         private System.Windows.Forms.Panel mainContentPanel;

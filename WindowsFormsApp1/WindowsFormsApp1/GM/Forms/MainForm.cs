@@ -12,14 +12,57 @@ using System.Threading.Tasks; // 顶部添加
 using EduAdminApp.DAL;
 using EduAdminApp.Models;
 using EduAdminApp.Forms;
+using System.Data.SqlClient; // 顶部添加
+using System.Data.SQLite; // 顶部添加
+
 // 移除 MaterialSkin 引用
 
 namespace EduAdminApp.Forms
 {
     public partial class MainForm : Form  // 改为普通 Form
     {
-        private enum ViewMode { Student, Teacher }
+        private enum ViewMode { Student, Teacher, Audit } // 新增 Audit
         private ViewMode currentMode = ViewMode.Student;
+
+        // 敏感词列表
+        private readonly List<string> sensitiveWords = new List<string>
+{
+    // 政治相关（涉政）
+    "中国", "台湾", "西藏", "香港独立", "法轮功", "六四", "共产党", "民主运动",
+
+    // 涉黄低俗
+    "黄片", "裸照", "A片", "约炮", "开房", "床上运动", "啪啪啪", "AV", "鸡",
+
+    // 暴力恐怖
+    "炸弹", "恐袭", "杀人", "枪击", "血腥", "自杀", "爆炸", "人体炸弹",
+
+    // 侮辱谩骂
+    "傻逼", "滚", "去死", "妈的", "狗东西", "死全家", "畜生", "王八蛋", "SB",
+
+    // 宗教敏感
+    "真主", "圣战", "异教徒", "伊斯兰国", "ISIS", "穆罕默德漫画",
+
+    // 国家相关（涉外/民族）
+    "美国", "日本鬼子", "韩国棒子", "越共", "白皮猪",
+
+    // 违禁品相关
+    "毒品", "冰毒", "大麻", "鸦片", "走私", "贩毒", "枪支", "军火","吸毒",
+
+    // 网络敏感行为
+    "翻墙", "VPN", "代理服务器", "境外势力", "推特", "telegram",
+
+    // 其他禁忌内容
+    "邪教", "迷信", "跳大神", "轮回转世", "邪术"
+};
+
+        // 审核数据结构
+        private class AuditItem
+        {
+            public int Id { get; set; }
+            public string 类型 { get; set; }
+            public string 内容 { get; set; }
+            public string 来源表 { get; set; }
+        }
 
         private List<Student> students = new List<Student>();
         private List<Teacher> teachers = new List<Teacher>();
@@ -30,11 +73,10 @@ namespace EduAdminApp.Forms
             InitializeComponent();
             this.Load += MainForm_Load;
             this.Resize += MainForm_Resize;
-
             dataGridViewMain.DataBindingComplete += DataGridViewMain_DataBindingComplete;
-
-            // 初始化样式
-            InitializeStyles();
+            dataGridViewMain.CellFormatting += dataGridViewMain_CellFormatting;
+            dataGridViewMain.CellContentClick += dataGridViewMain_CellContentClick; // 新增
+            btnAudit.Click += btnAudit_Click; // 新增
         }
 
         private void InitializeStyles()
@@ -135,6 +177,7 @@ namespace EduAdminApp.Forms
         {
             if (btn == btnStudent) return Color.FromArgb(52, 152, 219);
             if (btn == btnTeacher) return Color.FromArgb(39, 174, 96);
+            if (btn == btnAudit) return Color.FromArgb(155, 89, 182); // 新增
             return Color.Gray;
         }
 
@@ -250,23 +293,71 @@ namespace EduAdminApp.Forms
             }
         }
 
+        private void btnAudit_Click(object sender, EventArgs e)
+        {
+            SetActiveNavigationButton(btnAudit);
+            currentMode = ViewMode.Audit;
+
+            // 先设置标题
+            uiLabel1.Text = "📝 内容审核管理";
+            uiLabel1.Refresh(); // 强制刷新
+
+            // 隐藏下方操作按钮
+            btnAdd.Visible = false;
+            btnEdit.Visible = false;
+            btnDelete.Visible = false;
+            btnExportExcel.Visible = false;
+
+            // 再加载数据
+            LoadAuditData();
+        }
+
+        private void btnStudent_Click(object sender, EventArgs e)
+        {
+            SetActiveNavigationButton(btnStudent);
+            currentMode = ViewMode.Student;
+            uiLabel1.Text = "👨‍🎓 学生信息管理";
+
+            // 显示下方操作按钮
+            btnAdd.Visible = true;
+            btnEdit.Visible = true;
+            btnDelete.Visible = true;
+            btnExportExcel.Visible = true;
+
+            try
+            {
+                students = StudentDAL.GetAll();
+                dataGridViewMain.DataSource = null;
+                dataGridViewMain.Columns.Clear();
+                dataGridViewMain.DataSource = students;
+                AdjustGridViewLayout();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("获取学生数据失败：" + ex.Message, "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void btnTeacher_Click(object sender, EventArgs e)
         {
             SetActiveNavigationButton(btnTeacher);
             currentMode = ViewMode.Teacher;
+            uiLabel1.Text = "👩‍🏫 教师信息管理";
 
-            // 开启后台线程查询
+            // 显示下方操作按钮
+            btnAdd.Visible = true;
+            btnEdit.Visible = true;
+            btnDelete.Visible = true;
+            btnExportExcel.Visible = true;
+
             Task.Run(() =>
             {
                 try
                 {
                     var teachersResult = TeacherDAL.GetAll();
-
-                    // 正则表达式
                     Regex phoneRegex = new Regex(@"^\d{11}$");
                     Regex emailRegex = new Regex(@"^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$");
                     Regex nameRegex = new Regex(@"^[\u4e00-\u9fa5A-Za-z]{2,20}$");
-
                     var filteredTeachers = teachersResult
                         .Where(t =>
                             !string.IsNullOrEmpty(t.Phone) && phoneRegex.IsMatch(t.Phone) &&
@@ -275,12 +366,13 @@ namespace EduAdminApp.Forms
                         )
                         .OrderBy(t => t.Id)
                         .ToList();
-
-                    // 回到主线程更新UI
                     this.Invoke((MethodInvoker)delegate
                     {
                         teachers = teachersResult;
+                        dataGridViewMain.DataSource = null;
+                        dataGridViewMain.Columns.Clear();
                         dataGridViewMain.DataSource = filteredTeachers;
+                        AdjustGridViewLayout();
                     });
                 }
                 catch (Exception ex)
@@ -291,21 +383,6 @@ namespace EduAdminApp.Forms
                     });
                 }
             });
-        }
-
-        private void btnStudent_Click(object sender, EventArgs e)
-        {
-            SetActiveNavigationButton(btnStudent);
-            currentMode = ViewMode.Student;
-            try
-            {
-                students = StudentDAL.GetAll();
-                dataGridViewMain.DataSource = students;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("获取学生数据失败：" + ex.Message, "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -348,9 +425,82 @@ namespace EduAdminApp.Forms
             }
         }
 
+        private void LoadAuditData()
+        {
+            string connStr = "Data Source=StudentSystem.db";
+            var auditList = new List<AuditItem>();
+            using (SQLiteConnection conn = new SQLiteConnection(connStr))
+            {
+                conn.Open();
+                using (SQLiteCommand cmd = new SQLiteCommand("SELECT QID, Content FROM Question", conn))
+                using (SQLiteDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        auditList.Add(new AuditItem
+                        {
+                            Id = reader.GetInt32(0),
+                            类型 = "问题",
+                            内容 = reader.GetString(1),
+                            来源表 = "Question"
+                        });
+                    }
+                }
+                using (SQLiteCommand cmd = new SQLiteCommand("SELECT AID, Content FROM Answer", conn))
+                using (SQLiteDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        auditList.Add(new AuditItem
+                        {
+                            Id = reader.GetInt32(0),
+                            类型 = "回答",
+                            内容 = reader.GetString(1),
+                            来源表 = "Answer"
+                        });
+                    }
+                }
+            }
+            dataGridViewMain.DataSource = null;
+            dataGridViewMain.Columns.Clear();
+            dataGridViewMain.DataSource = auditList;
+
+            // 只在审核界面添加“操作”按钮列
+            if (!dataGridViewMain.Columns.Contains("操作"))
+            {
+                DataGridViewButtonColumn btnCol = new DataGridViewButtonColumn();
+                btnCol.Name = "操作";
+                btnCol.HeaderText = "操作";
+                btnCol.Text = "删除";
+                btnCol.UseColumnTextForButtonValue = true;
+                btnCol.Width = 80;
+                dataGridViewMain.Columns.Add(btnCol);
+            }
+            AdjustGridViewLayout();
+        }
+
+        // 审核内容敏感词标红
         private void dataGridViewMain_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            if (e.Value != null)
+            if (currentMode == ViewMode.Audit && dataGridViewMain.Columns[e.ColumnIndex].Name == "内容" && e.Value != null)
+            {
+                string content = e.Value.ToString();
+                foreach (var word in sensitiveWords)
+                {
+                    if (content.Contains(word))
+                    {
+                        dataGridViewMain.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.ForeColor = Color.Red;
+                        dataGridViewMain.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.Font = new Font(dataGridViewMain.Font, FontStyle.Bold);
+                        break;
+                    }
+                    else
+                    {
+                        dataGridViewMain.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.ForeColor = Color.Black;
+                        dataGridViewMain.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.Font = dataGridViewMain.Font;
+                    }
+                }
+            }
+            else if (e.Value != null)
             {
                 dataGridViewMain.Rows[e.RowIndex].Cells[e.ColumnIndex].ToolTipText = e.Value.ToString();
             }
@@ -388,6 +538,7 @@ namespace EduAdminApp.Forms
         {
             base.OnLoad(e);
             dataGridViewMain.CellFormatting += dataGridViewMain_CellFormatting;
+            dataGridViewMain.CellContentClick += dataGridViewMain_CellContentClick; // 新增
         }
 
         private Point mPoint;
@@ -555,6 +706,46 @@ namespace EduAdminApp.Forms
                     catch (Exception ex)
                     {
                         MessageBox.Show("导出失败：" + ex.Message, "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
+        // 审核删除按钮事件
+        private void dataGridViewMain_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (currentMode == ViewMode.Audit && dataGridViewMain.Columns[e.ColumnIndex].Name == "操作" && e.RowIndex >= 0)
+            {
+                var item = dataGridViewMain.Rows[e.RowIndex].DataBoundItem as AuditItem;
+                if (item == null) return;
+
+                if (MessageBox.Show("确定要删除该内容吗？", "确认删除", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    string connStr = "Data Source=StudentSystem.db";
+                    string sql = "";
+                    string idField = "";
+                    if (item.来源表 == "Question")
+                    {
+                        sql = "DELETE FROM Question WHERE QID=@id";
+                        idField = "QID";
+                    }
+                    else if (item.来源表 == "Answer")
+                    {
+                        sql = "DELETE FROM Answer WHERE AID=@id";
+                        idField = "AID";
+                    }
+                    if (!string.IsNullOrEmpty(sql))
+                    {
+                        using (SQLiteConnection conn = new SQLiteConnection(connStr))
+                        {
+                            conn.Open();
+                            using (SQLiteCommand cmd = new SQLiteCommand(sql, conn))
+                            {
+                                cmd.Parameters.AddWithValue("@id", item.Id);
+                                cmd.ExecuteNonQuery();
+                            }
+                        }
+                        LoadAuditData();
                     }
                 }
             }
