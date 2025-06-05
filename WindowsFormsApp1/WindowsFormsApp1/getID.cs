@@ -14,7 +14,6 @@ namespace WindowsFormsApp1
     {
         private const  string ConnectionString = "Data Source=StudentSystem.db;Version=3;Pooling=True;";
 
-        // 通用原子操作模板 
         private static int AtomicIncrement(string columnName)
         {
             using var conn = new SQLiteConnection(ConnectionString);
