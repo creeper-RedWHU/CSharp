@@ -162,6 +162,7 @@ namespace WindowsFormsApp1
 
         private void GoToFinal(int id)
         {
+
             PYFinal pyfinal = new PYFinal(id);
             panel3.Controls.Clear();
             panel3.Controls.Add(pyfinal);

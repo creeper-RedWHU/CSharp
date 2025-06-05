@@ -193,7 +193,7 @@ namespace WindowsFormsApp1.Form1Tea._5exam
                     {
                         while (reader.Read())
                         {
-                            CommitMent cm = new CommitMent
+                            /*CommitMent cm = new CommitMent
                             {
                                 StudentID = reader.GetInt32(reader.GetOrdinal("StudentID")),
                                 HID = reader.GetInt32(reader.GetOrdinal("HID")),
@@ -202,6 +202,16 @@ namespace WindowsFormsApp1.Form1Tea._5exam
                                 Score = reader.GetInt32(reader.GetOrdinal("Score")),
                                 CommitTime = reader["CommitTime"]?.ToString(),
                                 FeedBack = reader["FeedBack"]?.ToString()
+                            };*/
+                            CommitMent cm = new CommitMent
+                            {
+                                StudentID = reader["StudentID"] != DBNull.Value ? reader.GetInt32(reader.GetOrdinal("StudentID")) : 0,
+                                HID = reader["HID"] != DBNull.Value ? reader.GetInt32(reader.GetOrdinal("HID")) : 0,
+                                PID = reader["PID"] != DBNull.Value ? reader.GetInt32(reader.GetOrdinal("PID")) : 0,
+                                Answer = reader["Answer"] != DBNull.Value ? reader["Answer"].ToString() : "",
+                                Score = reader["Score"] != DBNull.Value ? reader.GetInt32(reader.GetOrdinal("Score")) : 0,
+                                CommitTime = reader["CommitTime"] != DBNull.Value ? reader["CommitTime"].ToString() : "",
+                                FeedBack = reader["FeedBack"] != DBNull.Value ? reader["FeedBack"].ToString() : ""
                             };
                             list.Add(cm);
                         }

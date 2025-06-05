@@ -1,14 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-
+using MaterialSkin.Controls;
 namespace WindowsFormsApp1.student
 {
     public partial class InputBoxForm : Form
@@ -20,6 +13,23 @@ namespace WindowsFormsApp1.student
             InitializeComponent();
             this.Text = title;
             label1.Text = prompt;
+
+            // 美化窗口圆角
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
+            this.BackColor = Color.WhiteSmoke;
+
+            // 设置焦点
+            this.Load += (s, e) => textBox1.Focus();
+
+            // 按下Enter等同提交
+            textBox1.KeyDown += (s, e) =>
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    btnOK.PerformClick();
+                    e.SuppressKeyPress = true;
+                }
+            };
         }
 
         private void btnOK_Click(object sender, EventArgs e)
@@ -34,7 +44,4 @@ namespace WindowsFormsApp1.student
             this.Close();
         }
     }
-
-
-    
 }
